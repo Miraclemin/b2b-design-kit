@@ -1,6 +1,6 @@
 # 外贸网站设计助手（b2b-design-kit）
 
-给 Codex 用的 skill：把「网站视觉实验室」里搭好的页面结构，变成外贸 B2B 网站的设计图，再交给 WordPress Builder 按图实现。
+给 Codex 用的 skill：把「网站视觉实验室」里搭好的页面结构，做成可以打开的整页 HTML 预览，确认后交给 WordPress Builder 实现。
 
 - 在线实验室：https://qunyuai.com/lab
 - 出品：群鱼学院
@@ -10,30 +10,33 @@
 外贸老板做网站，最难的是"不会描述想要的设计"。这个 skill 把设计拆成两步，让人**选**而不是**描述**：
 
 1. **定结构**：在网站视觉实验室里选行业、套用整页方案，再拖拽调整首页、产品聚合页、详情页的模块，最后点「复制提示词」。
-2. **定风格、出图**：把提示词粘贴给 Codex。skill 先做行业风格调研，给 2–3 个方向让你选，然后分段出设计图、自查，按编号或白话改图。
+2. **定风格、做预览**：把提示词粘贴给 Codex。skill 先做行业风格调研，用同一个首屏做 2–3 个风格版本让你选；再用生图工具生成统一色调的照片，把三个页面做成整页 HTML 预览。你可以双击打开试交互、缩窄窗口看手机效果，按编号或白话修改。
+
+为什么不让 AI 整页画图：布局已经定好，整页生图会漏模块、丢小字、写错中文。HTML 预览照代码拼，一个不少；生图只用来生成照片。
 
 ## 和 WordPress Builder 的关系
 
-本 skill 是 WordPress Builder 的**外挂补丁**，只接管"出设计图"这一段，**不修改 WordPress Builder 的任何文件**。它靠 WordPress Builder 自带的三条规则接上：
+本 skill 是 WordPress Builder 的**外挂补丁**，只接管"出设计图"这一段，**不修改 WordPress Builder 的任何文件**。它靠 WordPress Builder 自带的规则接上：
 
 | WordPress Builder 的规则 | 本 skill 怎么用 |
 |---|---|
-| 已有用户选定图稿时直接继续，不重复生成或确认 | 选定的图存进 `design/selected/`，它直接按图实现 |
+| 已有用户选定图稿时直接继续，不重复生成或确认 | 你确认的预览整页截图存进 `design/selected/`，它直接按图实现 |
+| 用户明确要求跳过生图时按其要求执行并记录 | 设计记录里注明「用 HTML 预览选样」 |
 | 在项目现有设计文档中标明选定图稿、对应路由和版本 | `design/design-spec.md` 末尾写「已选定图稿」表 |
 | 选定设计的局部修正不重新启动出图选样 | 以后按编号改模块，不会推翻重来 |
 
 选定后还会在网站项目的 `AGENTS.md` 里追加三行说明，新开对话也能接上。
 
-没用实验室、项目里也没有 `design/design-spec.md` 时，本 skill 不会启用，WordPress Builder 照原样工作。
+没用实验室、项目里也没有 `design/design-spec.md` 时，本 skill 不会启用，WordPress Builder 照原样整页生图、实现。
 
 ```
 WordPress Builder：需求、页面架构
         ↓
 网站视觉实验室：拖拽组合页面结构 → 复制提示词
         ↓
-本 skill：记录结构 → 风格调研 → 分段出图 → 自查 → 你选定 → 写好记录
+本 skill：记录结构 → 风格调研 → 首屏风格对比 → 生成照片 → 整页 HTML 预览 → 自查 → 你确认 → 写好记录
         ↓
-WordPress Builder：按"已选定图稿"实现、上线
+WordPress Builder：按"已选定图稿"实现、上线（样式变量、照片和交互代码从 design/preview/ 取）
 ```
 
 ## 安装
@@ -49,7 +52,7 @@ WordPress Builder：按"已选定图稿"实现、上线
 
 1. 打开 https://qunyuai.com/lab（或本仓库的 `b2b-design-kit/picker.html`），选行业，套用一套整页方案，再按需调整。
 2. 点「复制提示词」，粘贴到 Codex 的网站项目对话里。
-3. 按 Codex 的引导选风格方向、看设计图、用编号改，例如"首屏换成 X01""C5 移到 F1 前面""去掉 M09"。
+3. 按 Codex 的引导选风格方向、看整页预览、用编号改，例如"首屏换成 X01""C5 移到 F1 前面""去掉 M09"。
 4. 确认后，Codex 会交给 WordPress Builder 实现。
 
 ## 里面有什么
@@ -59,7 +62,7 @@ WordPress Builder：按"已选定图稿"实现、上线
 | `SKILL.md` | 给 Codex 的工作说明 |
 | `library.json` | 组件库：45 个积木、18 个高光组件、12 个动效、3 个挂件、10 种行业类型 × 3 套整页方案、30 个行业 |
 | `picker.html` | 离线版网站视觉实验室，浏览器直接打开 |
-| `references/review.md` | 出图后的自查表 |
+| `references/review.md` | 预览自查表 |
 | `references/translate.md` | 白话翻译表："太乱""不大气"对应什么设计问题 |
 | `images/web/` | 30 个行业的示例配图（AI 生成，只用于预览） |
 

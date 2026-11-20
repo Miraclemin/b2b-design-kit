@@ -386,7 +386,7 @@ function mspec(m){return '#### '+m.id+' '+m.name+'\n- 用在：'+m.where+'\n- �
 function wspec(w){return '#### '+w.id+' '+w.name+'\n- 作用：'+w.use+'\n- 位置：'+w.where+'\n- 注意：'+w.avoid+'\n\n'+F+'html\n'+w.html+'\n'+F+'\n\n'+F+'css\n'+w.css+'\n'+F+'\n\n'+F+'js\n'+w.js+'\n'+F+'\n'}
 function imgSpec(i){const sc=i.scene,d={hero:sc.hero,factory:sc.factory,qc:sc.qc,product:i.product+'的产品照',cat1:i.cats[0]+'的产品照',cat2:i.cats[1]+'的产品照',cat3:i.cats[2]+'的产品照',cat4:i.cats[3]+'的产品照',app1:i.apps[0]+'场景中使用产品的画面',app2:i.apps[1]+'场景中使用产品的画面'};
   return Object.keys(LIB.roles).map(r=>'- '+r+'（'+LIB.roles[r]+'）：'+d[r]).join('\n')}
-// 从积木代码里取出图上要出现的文字（含小字），出图时逐字画出
+// 从积木代码里取出页面上要出现的文字（含小字），做预览时逐字放进去
 function texts(id,i){const d=new DOMParser().parseFromString('<body>'+fill(BL[id].html,i)+'</body>','text/html').body,out=[];
   d.querySelectorAll('[aria-hidden="true"],svg,script,style,template,.sl:not(.on)').forEach(e=>e.remove());
   const role=e=>e.matches('.eyebrow')?'小标题':e.matches('h1,h2,.sec-title')?'标题':e.matches('.sec-sub')?'说明':e.matches('.btn,button,label')?'按钮':e.matches('.link')||/→$/.test(e.textContent.trim())?'链接':e.matches('h3,h4,b,strong,dt,summary,.hd')?'小标题':e.matches('p,li,dd')?'说明':'小字';
@@ -405,31 +405,35 @@ const RULES='- 文字、数字、认证、客户都换成我建站简报里的�
  '- 保留原有的询盘表单、询盘来源记录、多语言切换和在线聊天；每个模块没内容时整块不显示，不留空框。\n';
 function fullPrompt(c){const i=IN[c.ind],t=TY[i.type];
   const all=[...new Set(Object.keys(PAGES).flatMap(p=>page(c[p])))];
-  const list=ids=>page(ids).map((id,k)=>(k+1)+'. '+id+' '+BL[id].name+(isX(id)?'（高光）':'')+'：'+BL[id].use+'\n   图上文字：'+texts(id,i)).join('\n');
+  const list=ids=>page(ids).map((id,k)=>(k+1)+'. '+id+' '+BL[id].name+(isX(id)?'（高光）':'')+'：'+BL[id].use+'\n   页面文字：'+texts(id,i)).join('\n');
   return '【网站视觉实验室 · 页面结构方案】\n设计码：'+code(c)+'\n\n请使用「外贸网站设计助手」（b2b-design-kit）skill 处理这份页面结构方案。没有安装这个 skill，也请按下面的步骤执行。\n\n'+
   '## 一、这份方案定了什么、没定什么\n- 已定：首页、产品聚合页、详情页的模块组合和顺序（布局积木），高光组件（X 开头），全站动效（M 开头），全站挂件（W 开头）。\n- 没定：视觉风格（配色、字体、图片调性）。参考代码里的颜色和字体只是中性占位，用来说明结构，不代表最终风格。视觉风格在下一步结合行业调研再定。\n\n'+
   '## 二、行业和买家\n- 行业：'+i.name+'（'+t.name+'：'+t.focus+'）\n- 买家最关心：'+i.concerns.join('、')+'\n- 可用的信任证明：'+i.proof+'\n\n'+
   '## 三、页面结构\n'+Object.keys(PAGES).map(p=>'### '+PAGES[p]+'\n'+list(c[p])).join('\n\n')+'\n\n### 全站动效\n'+(c.motion.map(id=>'- '+id+' '+MO[id].name+'：'+MO[id].where).join('\n')||'- 无')+'\n\n### 全站挂件\n'+((c.widget||[]).map(id=>'- '+id+' '+WG[id].name+'：'+WG[id].use).join('\n')||'- 无')+'\n\n'+
-  '## 四、请按这个顺序做\n1. 把这整段内容保存到网站项目的 design/design-spec.md（已有就覆盖），第一行写设计码。\n'+
-  '2. 风格调研：结合行业、目标买家和我的建站简报，参考 3–5 个同行头部网站和优秀 B2B 网站，提出 2–3 个视觉风格方向。每个方向说明配色、字体、图片调性、参考网站和适合的理由，让我选。\n'+
-  '3. 按我选的风格，用 Codex 的生图工具为首页、产品聚合页、详情页出设计图，文字用中文：\n'+
-  '   - 分段出图再拼接：一张图装不下整页，模块会被省略、小字会糊。每页按模块顺序分段，首屏单独一段，其余每段 2–3 个模块；每段都是 1440px 宽的电脑端画面，配色、字体、圆角、留白保持一致。出完后用 Python（Pillow）按顺序竖向拼成整页长图 design/mockups/home.png、category.png、detail.png。\n'+
-  '   - 每个模块都要画：按第三部分的模块和顺序，一个都不能少、不能合并、不能自己加。没有真实素材的模块（客户 logo、证书、视频等）也要画出来，用灰色占位框写「客户 logo 待补」这类字样。「没内容时整块不显示」只用于正式网站，不用于设计图。\n'+
-  '   - 小字也要画：每段的生图提示词里逐字写进对应模块的「图上文字」，小标题、说明、卡片名、参数、按钮、链接都要有，并且清晰可读。图上文字里的公司名、数字、产品名是样例：建站简报里有真实资料的就换成真实的，没有的照样例画，文字的位置和数量不变。\n'+
-  '   - 高光组件画出最有代表性的一帧，在图旁用一句话说明它怎么动。\n'+
-  '4. 出图后先自查。先核对两件事：① 模块齐全：拿第三部分的编号逐块对照拼好的整页图，少了或被合并的，重出那一段再拼；② 小字齐全：每个模块的「图上文字」都在图上，而且看得清。再按 8 条标准检查：一屏只讲一件事；颜色不超过主色 + 强调色 + 黑白灰；字号不超过 4 档；左边缘对齐；模块之间留白充足；询价按钮一眼可见；图片比例和色调统一；缩小到手机宽度仍然清楚。不合格先自己改。\n'+
-  '5. 把设计图给我看。我可能用编号改，比如"首屏换成 X01""C5 移到 F1 前面""去掉 M09"。\n'+
-  '6. 我确认后：\n'+
-  '   - 把选定的图存到 design/selected/（home.png、category.png、detail.png）。\n'+
-  '   - 在 design/design-spec.md 末尾加「已选定图稿」表：页面 | 网址 | 图稿文件 | 日期和版本，再写上选定的视觉风格（色值、字体）。这份文件就是 WordPress Builder 说的「项目设计文档」。\n'+
-  '   - 在网站项目根目录的 AGENTS.md 末尾追加（没有就新建，不改原有内容）：「本项目设计已选定：设计记录见 design/design-spec.md，图稿在 design/selected/。按 WordPress Builder 规则这是已选定图稿，直接按图实现，不重新生图；局部修改只改受影响的部分。」这样以后新开对话也能接上。\n'+
-  '   - 然后交给 WordPress Builder skill 按图实现。实现要求：\n'+RULES+'\n'+
-  '## 五、图片位置（代码里的 data-img）\n出设计图时按下面的描述画成真实照片效果；实现网站时换成我的真实照片，没有的先占位并标"待补照片"。\n'+imgSpec(i)+'\n\n'+
+  '## 四、请按这个顺序做\n'+
+  '布局已经在实验室定好，这一步不让 AI 整页画图（会漏模块、丢小字、写错字），而是直接做成可以打开的 HTML 预览：生图工具只用来生成照片。\n'+
+  '1. 把这整段内容保存到网站项目的 design/design-spec.md（已有就覆盖），第一行写设计码。\n'+
+  '2. 风格调研：结合行业、目标买家和我的建站简报，参考 3–5 个同行头部网站和优秀 B2B 网站，提出 2–3 个视觉风格方向。每个方向写清配色（给出第六部分 :root 里每个颜色变量的色值）、标题和正文字体、圆角、图片调性、参考网站和适合的理由。\n'+
+  '3. 风格对比：把首页的首屏模块按每个方向各做一版，放进 design/preview/style-compare.html（同一个首屏、只换样式变量，上下排列并标上方向名）。用浏览器截图给我看，让我选一个方向。\n'+
+  '4. 生成照片：按我选的方向，用 Codex 的生图工具生成第五部分列出的照片，存到 design/preview/images/<位置>.jpg（如 hero.jpg、cat1.jpg）。所有照片色调、光线统一；照片里不要文字、logo、证书和可辨认的人脸；首屏和场景图用横版，产品图用干净背景。\n'+
+  '5. 整页 HTML 预览：做 design/preview/home.html、category.html、detail.html。\n'+
+  '   - 直接用第六部分的参考代码拼页面：模块按第三部分的顺序，一个都不能少、不能合并、不能自己加；只改 :root 里的样式变量（换成选定方向的色值、字体、圆角），不改模块结构。\n'+
+  '   - 文字用第三部分每个模块的「页面文字」，小标题、说明、卡片名、参数、按钮、链接都要有。其中的公司名、数字、产品名是样例：建站简报里有真实资料的就换成真实的，没有的保留样例。\n'+
+  '   - data-img 的位置换成第 4 步生成的照片。没有真实素材的模块（客户 logo、证书、视频等）也要显示，用灰色占位框写「客户 logo 待补」这类字样。「没内容时整块不显示」只用于正式网站，不用于预览。\n'+
+  '   - 把选中的动效和挂件代码也加进去，三个页面共用一份 preview.css 和 preview.js，用浏览器直接打开就能看，不依赖外部网络。\n'+
+  '6. 自查：用浏览器（无头 Chrome 或 Playwright）打开三个页面，分别按 1440px 和 390px 宽截整页图，存到 design/preview/shots/。先核对：① 模块齐全，按编号逐块对照；② 页面文字齐全；③ 控制台没有报错，轮播、标签页、弹窗等交互能用；④ 手机宽度没有横向滚动条、没有挤坏。再按 8 条标准检查：一屏只讲一件事；颜色不超过主色 + 强调色 + 黑白灰；字号不超过 4 档；左边缘对齐；模块之间留白充足；询价按钮一眼可见；图片比例和色调统一；手机上标题和按钮清楚。不合格先自己改。\n'+
+  '7. 给我看：每个页面只发一张电脑端整页截图（用 Markdown 图片显示），附上 HTML 文件位置，告诉我可以双击打开试交互、缩窄窗口看手机效果。我可能用编号改（"首屏换成 X01""C5 移到 F1 前面""去掉 M09"），也可能说"太乱了""不够大气"。改完重新截图给我看。\n'+
+  '8. 我确认后：\n'+
+  '   - 把三个页面的电脑端整页截图复制到 design/selected/（home.png、category.png、detail.png），这就是 WordPress Builder 说的「已选定图稿」；design/preview/ 保留，作为实现时的样式和交互依据。\n'+
+  '   - 在 design/design-spec.md 末尾加「已选定图稿」表：页面 | 网址 | 图稿文件 | HTML 预览 | 日期和版本，写上选定的视觉风格（色值、字体），并注明「本项目用 HTML 预览选样，图稿是用户确认过的预览截图」。这份文件就是 WordPress Builder 说的「项目设计文档」。\n'+
+  '   - 在网站项目根目录的 AGENTS.md 末尾追加（没有就新建，不改原有内容）：「本项目设计已选定：设计记录见 design/design-spec.md，图稿在 design/selected/，HTML 预览在 design/preview/（样式变量、模块结构和交互代码的实现依据）。按 WordPress Builder 规则这是已选定图稿，直接实现，不重新生图；局部修改只改受影响的部分。」这样以后新开对话也能接上。\n'+
+  '   - 然后交给 WordPress Builder skill 按图实现，样式变量、照片和交互代码从 design/preview/ 取。实现要求：\n'+RULES+'\n'+
+  '## 五、照片位置（代码里的 data-img）\n第 4 步生成照片时按下面的描述；实现网站时换成我的真实照片，没有的先占位并标"待补照片"。\n'+imgSpec(i)+'\n\n'+
   '## 六、参考代码（结构和交互的依据；颜色、字体是中性占位）\n### 基础样式和占位变量\n'+F+'css\n'+TOKENS.replace(/;/g,';\n  ').replace('{','{\n  ').replace(/}$/,'\n}')+'\n'+LIB.base+F+'\n\n### 模块（每个只列一次）\n'+all.map(id=>spec(BL[id],i)).join('\n')+
   (c.motion.length?'\n### 动效（原生 CSS/JS，无依赖，已尊重"减少动态效果"）\n'+c.motion.map(id=>mspec(MO[id])).join('\n'):'')+
   ((c.widget||[]).length?'\n### 全站挂件（W02 询盘弹窗必须接原有的询盘表单和来源记录）\n'+c.widget.map(id=>wspec(WG[id])).join('\n'):'')}
 function widgetPrompt(w){return '【网站视觉实验室 · 挂件 '+w.id+'】\n\n请使用「外贸网站设计助手」（b2b-design-kit）skill。把这个全站挂件加到我的页面结构方案（design/design-spec.md）；网站已经实现的话，直接加到主题里（HTML 放页脚模板，CSS 放主题样式，JS 放主题脚本），号码、二维码、邮箱用我的真实资料，在本地预览给我看。\n\n'+wspec(w)}
-function blockPrompt(b){return '【网站视觉实验室 · 组件 '+b.id+'】\n\n请使用「外贸网站设计助手」（b2b-design-kit）skill。把下面这个组件加入我的页面结构方案（design/design-spec.md）的「'+PAGES[st.page]+'」。没说位置时先问我；如果是首屏类，替换原来的首屏。改完只重出受影响的那一段设计图，再重新拼成整页；这个组件的「图上文字」要逐字画出来，小字也要有。参考代码里的颜色和字体是中性占位，按我选定的风格来。\n\n图上文字：'+texts(b.id,ind())+'\n\n'+RULES+'\n'+spec(b,ind())}
+function blockPrompt(b){return '【网站视觉实验室 · 组件 '+b.id+'】\n\n请使用「外贸网站设计助手」（b2b-design-kit）skill。把下面这个组件加入我的页面结构方案（design/design-spec.md）的「'+PAGES[st.page]+'」。没说位置时先问我；如果是首屏类，替换原来的首屏。已有 HTML 预览（design/preview/）的话，把它加进预览、重新截图给我看；这个组件的「页面文字」都要有，小字也要有。参考代码里的颜色和字体是中性占位，按我选定的风格来。\n\n页面文字：'+texts(b.id,ind())+'\n\n'+RULES+'\n'+spec(b,ind())}
 function motionPrompt(m){return '【网站视觉实验室 · 动效 '+m.id+'】\n\n请使用「外贸网站设计助手」（b2b-design-kit）skill。把这个动效加到我的页面结构方案（design/design-spec.md）的全站动效里；网站已经实现的话，直接加到主题里（CSS 放主题样式，JS 放主题脚本并在页脚加载），在本地预览给我看。一个站动效保持 2–3 个。\n\n'+mspec(m)}
 function copy(t,msg){const done=()=>toast(msg||'已复制');
   if(navigator.clipboard&&window.isSecureContext!==false)navigator.clipboard.writeText(t).then(done,()=>fb(t,done));else fb(t,done)}
