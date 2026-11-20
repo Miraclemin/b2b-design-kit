@@ -412,6 +412,7 @@
    "html": "<header class=\"b-n1\"><div class=\"wrap\">\n  <a class=\"logo hd\">{{brand}}</a>\n  <nav><a>产品中心</a><a>应用领域</a><a>关于我们</a><a>新闻资讯</a><a>联系我们</a></nav>\n  <div class=\"r\"><span class=\"lang\">中文 ▾</span><a class=\"btn\">获取报价</a></div>\n</div></header>",
    "css": ".b-n1{background:var(--c-bg);border-bottom:1px solid var(--c-line);position:sticky;top:0;z-index:20}\n.b-n1 .wrap{display:flex;align-items:center;gap:32px;height:76px;transition:height .25s}\n.b-n1 .logo{font-size:22px;letter-spacing:.04em}\n.b-n1 nav{display:flex;gap:28px;font-weight:600;font-size:15px;flex:1}\n.b-n1 nav a:hover{color:var(--c-accent)}\n.b-n1 .r{display:flex;align-items:center;gap:18px}\n.b-n1 .lang{font-size:14px;color:var(--c-muted)}\n.b-n1 .btn{padding:10px 18px;font-size:14px}\n@media(max-width:860px){.b-n1 nav,.b-n1 .lang{display:none}.b-n1 .wrap{justify-content:space-between}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -421,6 +422,31 @@
     "pos": "全站",
     "types": [],
     "note": "每页自动带上",
+    "needs": []
+   }
+  },
+  {
+   "id": "N3",
+   "name": "超级菜单页头",
+   "en": "Mega menu header",
+   "group": "页头页脚",
+   "use": "类目多、有二级类目时用：鼠标移到「产品中心」展开大面板，左边一级类目，中间二级类目带小图，右边推荐产品和询价按钮。买家一步找到要的产品",
+   "needs": "logo（横版 PNG/SVG）、每个一级类目和二级类目的名称和小图、一个推荐产品",
+   "edit": "logo、菜单（WordPress 原生菜单，二级菜单自动成为面板内容）、每个类目的小图、推荐产品和按钮",
+   "mobile": "手机上收进汉堡按钮，一级类目点开后显示二级类目列表，不显示小图和推荐卡",
+   "html": "<header class=\"b-n3\" data-preview-open><div class=\"wrap bar\">\n  <a class=\"logo hd\">{{brand}}</a>\n  <nav><a class=\"has-mega on\">产品中心 ▾</a><a>应用领域</a><a>关于我们</a><a>新闻资讯</a><a>联系我们</a></nav>\n  <div class=\"r\"><span class=\"lang\">中文 ▾</span><a class=\"btn\">获取报价</a></div>\n</div>\n<div class=\"mega\"><div class=\"wrap in\">\n  <ul class=\"l1\"><li class=\"on\" data-k=\"0\">{{cat1}} <i>›</i></li><li data-k=\"1\">{{cat2}} <i>›</i></li><li data-k=\"2\">{{cat3}} <i>›</i></li><li data-k=\"3\">{{cat4}} <i>›</i></li><li class=\"all\">查看全部产品 →</li></ul>\n  <div class=\"l2\">\n    <div class=\"grp on\"><a><span class=\"ph\" data-img=\"cat1\"></span>{{cat1}} 标准款</a><a><span class=\"ph\" data-img=\"product\"></span>{{cat1}} 定制款</a><a><span class=\"ph\" data-img=\"cat2\"></span>{{cat1}} 配件</a><a><span class=\"ph\" data-img=\"app1\"></span>{{cat1}} 工程方案</a></div>\n    <div class=\"grp\"><a><span class=\"ph\" data-img=\"cat2\"></span>{{cat2}} 标准款</a><a><span class=\"ph\" data-img=\"cat3\"></span>{{cat2}} 定制款</a><a><span class=\"ph\" data-img=\"app2\"></span>{{cat2}} 工程方案</a></div>\n    <div class=\"grp\"><a><span class=\"ph\" data-img=\"cat3\"></span>{{cat3}} 标准款</a><a><span class=\"ph\" data-img=\"cat4\"></span>{{cat3}} 定制款</a></div>\n    <div class=\"grp\"><a><span class=\"ph\" data-img=\"cat4\"></span>{{cat4}} 标准款</a><a><span class=\"ph\" data-img=\"cat1\"></span>{{cat4}} 配件</a></div>\n  </div>\n  <div class=\"feat card\"><div class=\"ph\" data-img=\"product\"></div><b class=\"hd\">本月主推：{{product}}</b><p>支持 OEM 定制，样品 7 天发出。</p><a class=\"btn\">获取报价</a></div>\n</div></div></header>",
+   "css": ".b-n3{background:var(--c-bg);border-bottom:1px solid var(--c-line);position:sticky;top:0;z-index:30}\n.b-n3 .bar{display:flex;align-items:center;gap:32px;height:76px}\n.b-n3 .logo{font-size:22px;letter-spacing:.04em}\n.b-n3 nav{display:flex;gap:28px;font-weight:600;font-size:15px;flex:1}\n.b-n3 nav a{padding:27px 0;border-bottom:2px solid transparent;cursor:pointer}\n.b-n3 nav a:hover,.b-n3 nav a.on{color:var(--c-accent)}\n.b-n3.open nav .has-mega{border-color:var(--c-accent)}\n.b-n3 .r{display:flex;align-items:center;gap:18px}\n.b-n3 .lang{font-size:14px;color:var(--c-muted)}\n.b-n3 .r .btn{padding:10px 18px;font-size:14px}\n.b-n3 .mega{position:absolute;left:0;right:0;top:100%;background:var(--c-bg);border-top:1px solid var(--c-line);box-shadow:0 24px 50px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(-6px);transition:.2s}\n.b-n3.open .mega{opacity:1;visibility:visible;transform:none}\n.b-n3[data-preview-open]{margin-bottom:340px}\n.b-n3 .in{display:grid;grid-template-columns:220px 1fr 260px;gap:32px;padding-top:28px;padding-bottom:32px}\n.b-n3 .l1{list-style:none;border-right:1px solid var(--c-line);padding-right:16px}\n.b-n3 .l1 li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:var(--radius-btn);font-weight:600;cursor:pointer}\n.b-n3 .l1 li.on{background:var(--c-surface);color:var(--c-accent)}\n.b-n3 .l1 i{font-style:normal;color:var(--c-muted)}\n.b-n3 .l1 .all{color:var(--c-accent);font-size:14px;margin-top:8px}\n.b-n3 .grp{display:none;grid-template-columns:repeat(2,1fr);gap:12px;align-content:start}\n.b-n3 .grp.on{display:grid}\n.b-n3 .grp a{display:flex;align-items:center;gap:12px;padding:8px;border-radius:var(--radius);font-weight:600;font-size:14px;cursor:pointer}\n.b-n3 .grp a:hover{background:var(--c-surface);color:var(--c-accent)}\n.b-n3 .grp .ph{width:64px;height:64px;flex:none;border-radius:var(--radius-btn)}\n.b-n3 .ph::after{display:none}\n.b-n3 .feat{padding:14px;display:grid;gap:8px;align-content:start}\n.b-n3 .feat .ph{aspect-ratio:4/3}\n.b-n3 .feat b{font-size:16px}\n.b-n3 .feat p{font-size:13px;color:var(--c-muted)}\n.b-n3 .feat .btn{justify-content:center;padding:10px 16px;font-size:14px}\n@media(max-width:860px){.b-n3 nav,.b-n3 .lang,.b-n3 .mega{display:none}.b-n3 .bar{justify-content:space-between}.b-n3[data-preview-open]{margin-bottom:0}}",
+   "ref": "自有 · 类目多时自动启用",
+   "js": "document.querySelectorAll('.b-n3').forEach(function(h){\n  var t=h.querySelector('.has-mega'),m=h.querySelector('.mega'),l1=[].slice.call(h.querySelectorAll('.l1 li[data-k]')),g=h.querySelectorAll('.grp'),timer;\n  // 预览时默认展开，方便看效果；正式网站去掉 data-preview-open，默认收起\n  if(h.hasAttribute('data-preview-open'))h.classList.add('open');\n  function open(){clearTimeout(timer);h.classList.add('open')}\n  function close(){timer=setTimeout(function(){h.classList.remove('open');h.removeAttribute('data-preview-open')},180)}\n  t.addEventListener('mouseenter',open);m.addEventListener('mouseenter',open);\n  t.addEventListener('mouseleave',close);m.addEventListener('mouseleave',close);\n  t.addEventListener('click',function(e){e.preventDefault();h.classList.toggle('open')});\n  l1.forEach(function(li){li.addEventListener('mouseenter',function(){l1.forEach(function(x){x.classList.remove('on')});li.classList.add('on');\n    g.forEach(function(x,i){x.classList.toggle('on',i===+li.dataset.k)})})});\n  document.addEventListener('keydown',function(e){if(e.key==='Escape')h.classList.remove('open')});\n});",
+   "fit": {
+    "pages": [
+     "首页",
+     "产品聚合页",
+     "详情页"
+    ],
+    "pos": "全站",
+    "types": [],
+    "note": "类目多、有二级类目时换掉 N1；画布顶部的页头条可以一键切换",
     "needs": []
    }
   },
@@ -436,6 +462,7 @@
    "html": "<footer class=\"b-n2\"><div class=\"wrap\">\n  <div class=\"top\">\n    <div><div class=\"logo hd\">{{brand}}</div><p>{{sub}}</p></div>\n    <div><b>产品中心</b><a>{{cat1}}</a><a>{{cat2}}</a><a>{{cat3}}</a><a>{{cat4}}</a></div>\n    <div><b>关于我们</b><a>公司简介</a><a>工厂实力</a><a>资质证书</a><a>新闻资讯</a></div>\n    <div><b>联系方式</b><a>sales@example.com</a><a>+86 000 0000 0000</a><a>WhatsApp 在线咨询</a><a>中国某市工业路 1 号</a></div>\n  </div>\n  <div class=\"bot\"><span>© 2026 {{brand}} 版权所有</span><span>隐私政策 · Cookie 政策</span></div>\n</div></footer>",
    "css": ".b-n2{background:var(--c-dark);color:var(--c-on-dark);padding:72px 0 28px}\n.b-n2 .top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px}\n.b-n2 .logo{font-size:22px;margin-bottom:12px}\n.b-n2 p{opacity:.7;font-size:14px;max-width:300px}\n.b-n2 b{display:block;margin-bottom:14px;font-size:15px}\n.b-n2 a{display:block;opacity:.72;font-size:14px;margin-bottom:9px}\n.b-n2 a:hover{opacity:1}\n.b-n2 .bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.14);margin-top:48px;padding-top:22px;font-size:13px;opacity:.6}\n@media(max-width:860px){.b-n2 .top{grid-template-columns:1fr 1fr}}\n@media(max-width:560px){.b-n2 .top{grid-template-columns:1fr}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -460,6 +487,7 @@
    "html": "<section class=\"b-h1\"><div class=\"wrap\">\n  <div class=\"txt\">\n    <span class=\"eyebrow\">{{industry}}源头工厂</span>\n    <h1 class=\"hd\">{{headline}}</h1>\n    <p>{{sub}}</p>\n    <div class=\"acts\"><a class=\"btn\">获取报价</a><a class=\"btn ghost\">查看产品</a></div>\n    <ul><li>工厂直供</li><li>支持 OEM / ODM</li><li>7 天出样</li></ul>\n  </div>\n  <div class=\"ph img\" data-img=\"hero\" data-label=\"首屏大图\"></div>\n</div></section>",
    "css": ".b-h1{padding:72px 0 88px;background:linear-gradient(180deg,var(--c-surface),var(--c-bg))}\n.b-h1 .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}\n.b-h1 h1{font-size:clamp(34px,4.4vw,58px);margin:14px 0 18px}\n.b-h1 p{font-size:18px;color:var(--c-muted);max-width:520px}\n.b-h1 .acts{display:flex;gap:14px;margin:30px 0 26px;flex-wrap:wrap}\n.b-h1 ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap;font-size:14px;font-weight:600}\n.b-h1 li::before{content:\"✓\";color:var(--c-accent);margin-right:6px}\n.b-h1 .img{aspect-ratio:4/3.4}\n@media(max-width:860px){.b-h1 .wrap{grid-template-columns:1fr}.b-h1 .btn{flex:1;justify-content:center}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -482,6 +510,7 @@
    "html": "<section class=\"b-h2\"><div class=\"ph bg\" data-img=\"hero\" data-label=\"通栏场景大图\"></div><div class=\"shade\"></div>\n  <div class=\"wrap\">\n    <span class=\"eyebrow\">{{industry}}</span>\n    <h1 class=\"hd\">{{headline}}</h1>\n    <p>{{sub}}</p>\n    <div class=\"acts\"><a class=\"btn\">获取报价</a><a class=\"btn ghost\">浏览产品</a></div>\n  </div>\n</section>",
    "css": ".b-h2{position:relative;min-height:620px;display:flex;align-items:center;color:#fff;overflow:hidden}\n.b-h2 .bg{position:absolute;inset:0;border-radius:0}\n.b-h2 .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.66),rgba(0,0,0,.15) 70%)}\n.b-h2 .wrap{position:relative;width:100%}\n.b-h2 .eyebrow{color:#fff;opacity:.85}\n.b-h2 h1{font-size:clamp(36px,5vw,66px);max-width:760px;margin:14px 0 18px}\n.b-h2 p{font-size:19px;max-width:560px;opacity:.88}\n.b-h2 .acts{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}\n@media(max-width:560px){.b-h2{min-height:520px}.b-h2 .shade{background:rgba(0,0,0,.55)}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -509,6 +538,7 @@
    "html": "<section class=\"b-h3\"><div class=\"wrap\">\n  <span class=\"eyebrow\">新品 · {{product}}</span>\n  <h1 class=\"hd\">{{headline}}</h1>\n  <p>{{sub}}</p>\n  <div class=\"acts\"><a class=\"btn\">申请样品</a><a class=\"btn ghost\">完整参数</a></div>\n  <div class=\"ph img\" data-img=\"product\" data-label=\"主推产品图\"></div>\n  <div class=\"specs\"><div><b>CE · RoHS</b><span>认证齐全</span></div><div><b>7 天</b><span>打样周期</span></div><div><b>500 件</b><span>起订量</span></div><div><b>OEM</b><span>logo 和包装定制</span></div></div>\n</div></section>",
    "css": ".b-h3{padding:80px 0 72px;text-align:center;background:radial-gradient(70% 60% at 50% 70%,var(--c-surface),var(--c-bg))}\n.b-h3 h1{font-size:clamp(34px,4.6vw,60px);max-width:860px;margin:14px auto 16px}\n.b-h3 p{font-size:18px;color:var(--c-muted);max-width:600px;margin:0 auto}\n.b-h3 .acts{display:flex;gap:14px;justify-content:center;margin:28px 0 44px;flex-wrap:wrap}\n.b-h3 .img{max-width:620px;aspect-ratio:16/9;margin:0 auto}\n.b-h3 .specs{display:grid;grid-template-columns:repeat(4,1fr);max-width:820px;margin:40px auto 0;border-top:1px solid var(--c-line)}\n.b-h3 .specs div{padding:20px 8px}\n.b-h3 .specs b{display:block;font-size:20px;font-family:var(--font-head)}\n.b-h3 .specs span{font-size:13px;color:var(--c-muted)}\n@media(max-width:560px){.b-h3 .specs{grid-template-columns:1fr 1fr}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -534,6 +564,7 @@
    "html": "<section class=\"b-h4\"><div class=\"wrap\">\n  <div class=\"txt\">\n    <span class=\"eyebrow\">工厂直供 · {{industry}}</span>\n    <h1 class=\"hd\">{{headline}}</h1>\n    <p>{{sub}}</p>\n    <ul><li>12 小时内回复</li><li>合格采购商免费寄样</li><li>支持 OEM 贴牌</li></ul>\n  </div>\n  <form class=\"card form\" onsubmit=\"return false\">\n    <b class=\"hd\">免费获取报价</b>\n    <input placeholder=\"您的姓名\"><input placeholder=\"企业邮箱\"><input placeholder=\"产品和数量\">\n    <textarea rows=\"3\" placeholder=\"请描述您的需求\"></textarea>\n    <button class=\"btn\">提交询盘</button><small>我们不会泄露您的任何信息</small>\n  </form>\n</div></section>",
    "css": ".b-h4{background:var(--c-dark);color:var(--c-on-dark);padding:80px 0}\n.b-h4 .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}\n.b-h4 h1{font-size:clamp(32px,4vw,52px);margin:14px 0 16px}\n.b-h4 p{font-size:18px;opacity:.78}\n.b-h4 ul{list-style:none;margin-top:26px;display:grid;gap:10px;font-weight:600}\n.b-h4 li::before{content:\"✓\";color:var(--c-accent);margin-right:10px}\n.b-h4 .form{padding:30px;display:grid;gap:12px;color:var(--c-ink)}\n.b-h4 .form b{font-size:22px;margin-bottom:4px}\n.b-h4 input,.b-h4 textarea{width:100%;padding:12px 14px;border:1px solid var(--c-line);border-radius:var(--radius-btn);font:inherit;background:var(--c-bg);color:var(--c-ink)}\n.b-h4 .btn{justify-content:center}\n.b-h4 small{color:var(--c-muted);text-align:center}\n@media(max-width:860px){.b-h4 .wrap{grid-template-columns:1fr}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -556,6 +587,7 @@
    "html": "<section class=\"b-h5\"><div class=\"wrap\">\n  <div class=\"txt\">\n    <h1 class=\"hd\">{{headline}}</h1>\n    <p>{{sub}}</p>\n    <div class=\"acts\"><a class=\"btn\">批发采购</a><a class=\"btn ghost\">OEM 定制</a></div>\n  </div>\n  <div class=\"pics\"><div class=\"ph a\" data-img=\"app1\" data-label=\"产品使用场景\"></div><div class=\"ph b\" data-img=\"product\" data-label=\"产品特写\"></div><div class=\"badge\">起订<br><b>300</b>件</div></div>\n</div></section>",
    "css": ".b-h5{padding:72px 0 96px;background:var(--c-surface);overflow:hidden}\n.b-h5 .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}\n.b-h5 h1{font-size:clamp(40px,6vw,82px);line-height:1.02}\n.b-h5 p{font-size:19px;color:var(--c-muted);margin:22px 0 30px;max-width:480px}\n.b-h5 .acts{display:flex;gap:14px;flex-wrap:wrap}\n.b-h5 .pics{position:relative;height:460px}\n.b-h5 .ph{position:absolute;box-shadow:0 24px 50px rgba(0,0,0,.18)}\n.b-h5 .a{width:68%;height:78%;right:0;top:0;transform:rotate(3deg)}\n.b-h5 .b{width:52%;height:56%;left:0;bottom:0;transform:rotate(-4deg)}\n.b-h5 .badge{position:absolute;left:44%;top:6%;width:104px;height:104px;border-radius:50%;background:var(--c-accent);color:var(--c-on-accent);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;font-weight:700;line-height:1.1;text-align:center;animation:b-h5spin 14s linear infinite}\n.b-h5 .badge b{font-size:28px}\n@keyframes b-h5spin{to{transform:rotate(360deg)}}\n@media(max-width:860px){.b-h5 .wrap{grid-template-columns:1fr}.b-h5 .pics{height:340px}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -581,6 +613,7 @@
    "html": "<section class=\"b-h6\"><div class=\"grid-bg\"></div><div class=\"wrap\">\n  <div class=\"top\">\n    <div class=\"txt\"><span class=\"eyebrow\">{{industry}}解决方案</span><h1 class=\"hd\">{{headline}}</h1><p>{{sub}}</p>\n      <div class=\"acts\"><a class=\"btn\">咨询工程师</a><a class=\"btn ghost\">查看方案</a></div></div>\n    <div class=\"ph img\" data-img=\"hero\" data-label=\"设备 / 产品主图\"></div>\n  </div>\n  <div class=\"stats\"><div><b>{{s1n}}</b><span>{{s1l}}</span></div><div><b>{{s2n}}</b><span>{{s2l}}</span></div><div><b>{{s3n}}</b><span>{{s3l}}</span></div><div><b>{{s4n}}</b><span>{{s4l}}</span></div></div>\n</div></section>",
    "css": ".b-h6{position:relative;background:var(--c-dark);color:var(--c-on-dark);padding:88px 0 40px;overflow:hidden}\n.b-h6 .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(70% 70% at 70% 30%,#000,transparent)}\n.b-h6 .grid-bg::after{content:\"\";position:absolute;width:520px;height:520px;right:-80px;top:-160px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--c-accent) 45%,transparent),transparent 65%)}\n.b-h6 .wrap{position:relative}\n.b-h6 .top{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}\n.b-h6 h1{font-size:clamp(34px,4.6vw,60px);margin:14px 0 18px}\n.b-h6 p{font-size:18px;opacity:.75}\n.b-h6 .acts{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}\n.b-h6 .img{aspect-ratio:4/3;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 30px 60px rgba(0,0,0,.4)}\n.b-h6 .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border-top:1px solid rgba(255,255,255,.14)}\n.b-h6 .stats div{padding:24px 0}\n.b-h6 .stats b{display:block;font-size:30px;font-family:var(--font-head);color:var(--c-accent)}\n.b-h6 .stats span{font-size:14px;opacity:.7}\n@media(max-width:860px){.b-h6 .top{grid-template-columns:1fr}.b-h6 .stats{grid-template-columns:1fr 1fr}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -608,6 +641,7 @@
    "html": "<section class=\"b-h7\"><div class=\"wrap\">\n  <div class=\"crumb\">首页 / 产品中心 / <b>{{cat1}}</b></div>\n  <h1 class=\"hd\">{{cat1}}</h1>\n  <p>按规格、性能和材质对比型号。所有{{cat1}}出厂前均经过检测，支持 OEM 贴牌。</p>\n</div></section>",
    "css": ".b-h7{background:var(--c-surface);padding:48px 0 52px;border-bottom:1px solid var(--c-line)}\n.b-h7 .crumb{font-size:13px;color:var(--c-muted);margin-bottom:14px}\n.b-h7 .crumb b{color:var(--c-ink)}\n.b-h7 h1{font-size:clamp(30px,3.6vw,46px);margin-bottom:12px}\n.b-h7 p{color:var(--c-muted);max-width:720px;font-size:17px}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "产品聚合页",
@@ -631,6 +665,7 @@
    "html": "<section class=\"b-h8\"><div class=\"ph bg\" data-img=\"app1\" data-label=\"类目场景大图\"></div><div class=\"shade\"></div><div class=\"wrap\">\n  <div class=\"crumb\">首页 / 产品系列</div><h1 class=\"hd\">{{cat1}}</h1><p>浏览全部{{cat1}}系列，支持贴牌定制和工程批量供货。</p>\n</div></section>",
    "css": ".b-h8{position:relative;min-height:380px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}\n.b-h8 .bg{position:absolute;inset:0;border-radius:0}\n.b-h8 .shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.62),transparent 70%)}\n.b-h8 .wrap{position:relative;width:100%;padding-bottom:48px}\n.b-h8 .crumb{font-size:13px;opacity:.8;margin-bottom:10px}\n.b-h8 h1{font-size:clamp(34px,4.6vw,60px)}\n.b-h8 p{max-width:560px;opacity:.88;margin-top:10px}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "产品聚合页"
@@ -657,6 +692,7 @@
    "html": "<section class=\"b-t1\"><div class=\"wrap\">\n  <div><b class=\"hd\">{{s1n}}</b><span>{{s1l}}</span></div><div><b class=\"hd\">{{s2n}}</b><span>{{s2l}}</span></div>\n  <div><b class=\"hd\">{{s3n}}</b><span>{{s3l}}</span></div><div><b class=\"hd\">{{s4n}}</b><span>{{s4l}}</span></div>\n</div></section>",
    "css": ".b-t1{background:var(--c-primary);color:var(--c-on-primary)}\n.b-t1 .wrap{display:grid;grid-template-columns:repeat(4,1fr)}\n.b-t1 .wrap>div{padding:34px 20px;border-left:1px solid rgba(255,255,255,.14)}\n.b-t1 .wrap>div:first-child{border-left:0}\n.b-t1 b{display:block;font-size:36px;color:var(--c-accent)}\n.b-t1 span{font-size:14px;opacity:.75}\n@media(max-width:860px){.b-t1 .wrap{grid-template-columns:1fr 1fr}.b-t1 .wrap>div{border-left:0}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -679,6 +715,7 @@
    "html": "<section class=\"b-t2\"><div class=\"wrap\">\n  <span class=\"lbl\">资质认证</span>\n  <div class=\"row\"><i>CE</i><i>ISO 9001</i><i>RoHS</i><i>REACH</i><i>SGS</i><i>BSCI</i></div>\n</div></section>",
    "css": ".b-t2{padding:30px 0;border-bottom:1px solid var(--c-line);background:var(--c-bg)}\n.b-t2 .wrap{display:flex;align-items:center;gap:32px;flex-wrap:wrap}\n.b-t2 .lbl{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--c-muted)}\n.b-t2 .row{display:flex;gap:14px;flex-wrap:wrap;flex:1}\n.b-t2 i{font-style:normal;font-weight:800;font-size:15px;padding:10px 18px;border:2px solid var(--c-line);border-radius:var(--radius);color:var(--c-ink);letter-spacing:.04em}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -707,6 +744,7 @@
    "html": "<section class=\"b-t3 sec\"><div class=\"wrap\">\n  <div class=\"sec-head center\"><span class=\"eyebrow\">合作客户</span><h2 class=\"hd sec-title\">40 多个国家的品牌与我们长期合作</h2><p class=\"sec-sub\">合作客户都已授权展示，更多案例可以向销售索取。</p></div>\n  <div class=\"logos\"><i>客户 A</i><i>客户 B</i><i>客户 C</i><i>客户 D</i><i>客户 E</i><i>客户 F</i></div>\n</div></section>",
    "css": ".b-t3 .logos{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}\n.b-t3 i{font-style:normal;height:76px;display:flex;align-items:center;justify-content:center;border:1px solid var(--c-line);border-radius:var(--radius);font-weight:800;letter-spacing:.08em;color:var(--c-muted);filter:grayscale(1);opacity:.7;transition:.25s}\n.b-t3 i:hover{opacity:1;color:var(--c-accent);border-color:var(--c-accent)}\n@media(max-width:860px){.b-t3 .logos{grid-template-columns:repeat(3,1fr)}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -729,6 +767,7 @@
    "html": "<section class=\"b-t4 sec alt\"><div class=\"wrap\">\n  <div class=\"q hd\">“三年前我们换成了{{brand}}。每一柜货的质量都很稳定，有问题几个小时内就有人回复。”</div>\n  <div class=\"who\"><div class=\"ph av\" data-label=\"\"></div><div><b>某德国客户</b><span>采购经理 · 德国</span></div></div>\n</div></section>",
    "css": ".b-t4 .wrap{max-width:900px;text-align:center}\n.b-t4 .q{font-size:clamp(22px,2.6vw,32px);line-height:1.4}\n.b-t4 .q::before{content:\"\";display:block;width:48px;height:4px;background:var(--c-accent);margin:0 auto 28px}\n.b-t4 .who{display:flex;align-items:center;gap:14px;justify-content:center;margin-top:30px;text-align:left}\n.b-t4 .av{width:56px;height:56px;border-radius:50%}\n.b-t4 .av::after{display:none}\n.b-t4 b{display:block}\n.b-t4 span{font-size:14px;color:var(--c-muted)}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -752,6 +791,7 @@
    "html": "<section class=\"b-c1 sec\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">产品系列</span><h2 class=\"hd sec-title\">为您的项目找到合适的{{industry}}产品</h2><p class=\"sec-sub\">按系列浏览，每个系列都支持 OEM 定制和样品。</p></div>\n  <div class=\"grid g4\">\n    <a class=\"it\"><div class=\"ph\" data-img=\"cat1\" data-label=\"类目图\"></div><b class=\"hd\">{{cat1}}</b><span>查看系列 →</span></a>\n    <a class=\"it\"><div class=\"ph\" data-img=\"cat2\" data-label=\"类目图\"></div><b class=\"hd\">{{cat2}}</b><span>查看系列 →</span></a>\n    <a class=\"it\"><div class=\"ph\" data-img=\"cat3\" data-label=\"类目图\"></div><b class=\"hd\">{{cat3}}</b><span>查看系列 →</span></a>\n    <a class=\"it\"><div class=\"ph\" data-img=\"cat4\" data-label=\"类目图\"></div><b class=\"hd\">{{cat4}}</b><span>查看系列 →</span></a>\n  </div>\n</div></section>",
    "css": ".b-c1 .it{display:block}\n.b-c1 .ph{aspect-ratio:4/5;transition:transform .4s}\n.b-c1 .it:hover .ph{transform:translateY(-6px)}\n.b-c1 b{display:block;font-size:20px;margin:16px 0 4px}\n.b-c1 span{font-size:14px;font-weight:700;color:var(--c-accent)}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -775,6 +815,7 @@
    "html": "<section class=\"b-c2 sec alt\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">我们提供</span><h2 class=\"hd sec-title\">一个供应商，解决每一个环节</h2><p class=\"sec-sub\">从选型、打样到包装、物流，都有专人对接。</p></div>\n  <div class=\"grid g4\">\n    <div class=\"card it\"><div class=\"ico\">01</div><b class=\"hd\">{{cat1}}</b><p>按您的标准选型、检测和交付，资料文件齐全。</p><a class=\"link\">了解更多 →</a></div>\n    <div class=\"card it\"><div class=\"ico\">02</div><b class=\"hd\">{{cat2}}</b><p>从试单到长期供货合同，数量灵活。</p><a class=\"link\">了解更多 →</a></div>\n    <div class=\"card it\"><div class=\"ico\">03</div><b class=\"hd\">{{cat3}}</b><p>工程师协助匹配您的应用场景和当地法规。</p><a class=\"link\">了解更多 →</a></div>\n    <div class=\"card it\"><div class=\"ico\">04</div><b class=\"hd\">{{cat4}}</b><p>定制选项清楚，交期明确，出货前检验。</p><a class=\"link\">了解更多 →</a></div>\n  </div>\n</div></section>",
    "css": ".b-c2 .it{padding:28px;transition:.25s}\n.b-c2 .it:hover{border-color:var(--c-accent);transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.08)}\n.b-c2 b{display:block;font-size:19px;margin:20px 0 10px}\n.b-c2 p{color:var(--c-muted);font-size:15px;margin-bottom:18px}\n.b-c2 .link{font-size:14px}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -802,6 +843,7 @@
    "html": "<section class=\"b-c3 sec\"><div class=\"wrap\">\n  <aside class=\"card\"><b>筛选</b>\n    <div class=\"grp\"><span>材质</span><label><i class=\"on\"></i>黄铜</label><label><i></i>不锈钢</label><label><i></i>碳钢</label></div>\n    <div class=\"grp\"><span>规格</span><label><i></i>小号</label><label><i class=\"on\"></i>中号</label><label><i></i>大号</label></div>\n    <div class=\"grp\"><span>认证</span><label><i></i>CE</label><label><i></i>UL</label></div>\n  </aside>\n  <div class=\"list\"><div class=\"bar\"><span>共 <b>12</b> 款产品</span><span>排序：热门 ▾</span></div>\n    <div class=\"grid g3\">\n      <a class=\"card p\"><div class=\"ph\" data-img=\"product\" data-label=\"产品图\"></div><b>{{product}}</b><small>黄铜 · 中号 · 标准款</small></a>\n      <a class=\"card p\"><div class=\"ph\" data-img=\"cat2\" data-label=\"产品图\"></div><b>{{cat1}} 专业款</b><small>不锈钢 · 中号 · 加强款</small></a>\n      <a class=\"card p\"><div class=\"ph\" data-img=\"cat3\" data-label=\"产品图\"></div><b>{{cat1}} 经济款</b><small>黄铜 · 小号 · 标准款</small></a>\n    </div></div>\n</div></section>",
    "css": ".b-c3 .wrap{display:grid;grid-template-columns:240px 1fr;gap:32px;align-items:start}\n.b-c3 aside{padding:22px;position:sticky;top:96px}\n.b-c3 aside>b{display:block;font-size:17px;margin-bottom:8px}\n.b-c3 .grp{border-top:1px solid var(--c-line);padding:14px 0 6px}\n.b-c3 .grp span{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--c-muted);margin-bottom:8px}\n.b-c3 label{display:flex;align-items:center;gap:10px;font-size:15px;margin-bottom:8px;cursor:pointer}\n.b-c3 label i{width:16px;height:16px;border:2px solid var(--c-line);border-radius:3px}\n.b-c3 label i.on{background:var(--c-accent);border-color:var(--c-accent)}\n.b-c3 .bar{display:flex;justify-content:space-between;font-size:14px;color:var(--c-muted);margin-bottom:18px}\n.b-c3 .p{display:block;padding:14px;transition:.25s}\n.b-c3 .p:hover{border-color:var(--c-accent)}\n.b-c3 .p .ph{aspect-ratio:1}\n.b-c3 .p b{display:block;margin:14px 0 2px}\n.b-c3 .p small{color:var(--c-muted)}\n@media(max-width:860px){.b-c3 .wrap{grid-template-columns:1fr}.b-c3 aside{position:static}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "产品聚合页"
@@ -827,6 +869,7 @@
    "html": "<section class=\"b-c4 sec\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">型号对比</span><h2 class=\"hd sec-title\">按参数选型</h2><p class=\"sec-sub\">关键参数一目了然，找不到合适型号可以发图纸定制。</p></div>\n  <div class=\"tw\"><table>\n    <tr><th>型号</th><th>A-100</th><th>A-200</th><th class=\"hl\">A-300 <em>热销</em></th><th>A-400</th></tr>\n    <tr><td>规格 / 容量</td><td>小</td><td>中</td><td class=\"hl\">大</td><td>特大</td></tr>\n    <tr><td>额定性能</td><td>标准</td><td>标准</td><td class=\"hl\">加强</td><td>加强</td></tr>\n    <tr><td>材质</td><td>黄铜</td><td>黄铜</td><td class=\"hl\">316 不锈钢</td><td>316 不锈钢</td></tr>\n    <tr><td>起订量</td><td>1,000 件</td><td>500 件</td><td class=\"hl\">300 件</td><td>100 件</td></tr>\n    <tr><td>交期</td><td>20 天</td><td>25 天</td><td class=\"hl\">25 天</td><td>35 天</td></tr>\n    <tr><td></td><td><a class=\"link\">询价 →</a></td><td><a class=\"link\">询价 →</a></td><td class=\"hl\"><a class=\"btn\">获取报价</a></td><td><a class=\"link\">询价 →</a></td></tr>\n  </table></div>\n</div></section>",
    "css": ".b-c4 .tw{overflow-x:auto;border:1px solid var(--c-line);border-radius:var(--radius)}\n.b-c4 table{border-collapse:collapse;width:100%;min-width:680px;font-size:15px}\n.b-c4 th,.b-c4 td{padding:16px 18px;border-bottom:1px solid var(--c-line);text-align:center}\n.b-c4 th{font-family:var(--font-head);font-size:16px;background:var(--c-surface)}\n.b-c4 td:first-child,.b-c4 th:first-child{text-align:left;font-weight:700;position:sticky;left:0;background:var(--c-surface)}\n.b-c4 .hl{background:color-mix(in srgb,var(--c-accent) 9%,var(--c-card))}\n.b-c4 th.hl{background:color-mix(in srgb,var(--c-accent) 16%,var(--c-card))}\n.b-c4 em{display:block;font-style:normal;font-size:11px;color:var(--c-accent);text-transform:uppercase;letter-spacing:.1em}\n.b-c4 tr:last-child td{border-bottom:0}\n.b-c4 .btn{padding:9px 16px;font-size:13px}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "产品聚合页",
@@ -854,6 +897,7 @@
    "html": "<section class=\"b-c5 sec alt\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">热销产品</span><h2 class=\"hd sec-title\">采购商最常下单的产品</h2><p class=\"sec-sub\">每款都有现货样品，标明起订量，可直接询价。</p></div>\n  <div class=\"grid g4\">\n    <a class=\"card p\"><div class=\"ph\" data-img=\"product\" data-label=\"产品图\"></div><div class=\"in\"><b class=\"hd\">{{product}}</b><dl><dt>材质</dt><dd>黄铜</dd><dt>规格</dt><dd>中号</dd><dt>起订量</dt><dd>500 件</dd></dl><span class=\"link\">获取价格 →</span></div></a>\n    <a class=\"card p\"><div class=\"ph\" data-img=\"cat2\" data-label=\"产品图\"></div><div class=\"in\"><b class=\"hd\">{{cat2}} X1</b><dl><dt>材质</dt><dd>不锈钢</dd><dt>规格</dt><dd>小号</dd><dt>起订量</dt><dd>300 件</dd></dl><span class=\"link\">获取价格 →</span></div></a>\n    <a class=\"card p\"><div class=\"ph\" data-img=\"cat3\" data-label=\"产品图\"></div><div class=\"in\"><b class=\"hd\">{{cat3}} S2</b><dl><dt>材质</dt><dd>黄铜</dd><dt>规格</dt><dd>中号</dd><dt>起订量</dt><dd>500 件</dd></dl><span class=\"link\">获取价格 →</span></div></a>\n    <a class=\"card p\"><div class=\"ph\" data-img=\"cat4\" data-label=\"产品图\"></div><div class=\"in\"><b class=\"hd\">{{cat4}} K3</b><dl><dt>材质</dt><dd>碳钢</dd><dt>规格</dt><dd>大号</dd><dt>起订量</dt><dd>200 件</dd></dl><span class=\"link\">获取价格 →</span></div></a>\n  </div>\n</div></section>",
    "css": ".b-c5 .p{display:block;overflow:hidden;transition:.25s}\n.b-c5 .p:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(0,0,0,.1)}\n.b-c5 .ph{aspect-ratio:1;border-radius:0}\n.b-c5 .in{padding:18px 20px 22px}\n.b-c5 b{display:block;font-size:17px;margin-bottom:12px}\n.b-c5 dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14px;margin-bottom:14px}\n.b-c5 dt{color:var(--c-muted)}\n.b-c5 .link{font-size:14px}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -877,6 +921,7 @@
    "html": "<section class=\"b-c6 sec\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">主打系列</span><h2 class=\"hd sec-title\">{{cat1}}系列</h2><p class=\"sec-sub\">和采购商一起设计，适合持续返单。</p></div>\n  <div class=\"mosaic\"><a class=\"ph big\" data-img=\"cat1\" data-label=\"主打系列大图\"><span class=\"tag\">{{cat1}}</span></a><a class=\"ph\" data-img=\"cat2\" data-label=\"细节图\"><span class=\"tag\">{{cat2}}</span></a><a class=\"ph\" data-img=\"cat3\" data-label=\"场景图\"><span class=\"tag\">{{cat3}}</span></a></div>\n</div></section>",
    "css": ".b-c6 .mosaic{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:260px 260px;gap:20px}\n.b-c6 .big{grid-row:span 2}\n.b-c6 .ph{display:block;transition:.4s}\n.b-c6 .ph:hover{filter:brightness(1.08)}\n.b-c6 .tag{position:absolute;left:20px;top:20px;background:var(--c-bg);color:var(--c-ink);font-weight:700;padding:8px 14px;border-radius:var(--radius-btn);font-size:14px}\n@media(max-width:860px){.b-c6 .mosaic{grid-template-columns:1fr;grid-template-rows:300px 200px 200px}.b-c6 .big{grid-row:auto}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -903,6 +948,7 @@
    "html": "<section class=\"b-c7 sec alt\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">按应用选择</span><h2 class=\"hd sec-title\">为您的行业量身打造</h2><p class=\"sec-sub\">选择您的行业，查看推荐的产品和方案。</p></div>\n  <div class=\"tabs\"><b class=\"on\">{{app1}}</b><b>{{app2}}</b><b>{{app3}}</b></div>\n  <div class=\"pane\"><div class=\"ph\" data-img=\"app1\" data-label=\"应用场景图\"></div><div><h3 class=\"hd\">{{app1}}</h3><p>面向{{app1}}客户的推荐产品、常用配置和项目案例。</p><ul><li>{{cat1}}</li><li>{{cat2}}</li><li>{{cat3}}</li></ul><a class=\"btn\">获取选型建议</a></div></div>\n</div></section>",
    "css": ".b-c7 .tabs{display:flex;gap:6px;border-bottom:2px solid var(--c-line);margin-bottom:32px;overflow-x:auto}\n.b-c7 .tabs b{padding:12px 22px;cursor:pointer;color:var(--c-muted);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap}\n.b-c7 .tabs b.on{color:var(--c-ink);border-color:var(--c-accent)}\n.b-c7 .pane{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center}\n.b-c7 .pane .ph{aspect-ratio:16/10}\n.b-c7 h3{font-size:28px;margin-bottom:12px}\n.b-c7 p{color:var(--c-muted)}\n.b-c7 ul{list-style:none;margin:20px 0 28px;display:grid;gap:8px;font-weight:600}\n.b-c7 li::before{content:\"→\";color:var(--c-accent);margin-right:10px}\n@media(max-width:860px){.b-c7 .pane{grid-template-columns:1fr}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -929,6 +975,7 @@
    "html": "<section class=\"b-c8\"><div class=\"wrap\"><div class=\"box\">\n  <div class=\"ph cover\" data-img=\"product\" data-label=\"目录封面\"></div>\n  <div class=\"txt\"><h3 class=\"hd\">下载 2026 年{{industry}}产品目录</h3><p>每个型号的完整参数、包装信息和起订量，共 48 页 PDF。</p></div>\n  <a class=\"btn\">下载 PDF</a>\n</div></div></section>",
    "css": ".b-c8{padding:56px 0}\n.b-c8 .box{display:flex;align-items:center;gap:32px;background:var(--c-surface);border:1px solid var(--c-line);border-radius:calc(var(--radius) + 4px);padding:28px 36px}\n.b-c8 .cover{width:110px;height:140px;flex:none;box-shadow:0 12px 26px rgba(0,0,0,.18);transform:rotate(-4deg)}\n.b-c8 .cover::after{display:none}\n.b-c8 .txt{flex:1}\n.b-c8 h3{font-size:24px;margin-bottom:6px}\n.b-c8 p{color:var(--c-muted)}\n@media(max-width:700px){.b-c8 .box{flex-direction:column;align-items:flex-start}.b-c8 .cover{display:none}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -956,6 +1003,7 @@
    "html": "<section class=\"b-f1 sec\"><div class=\"wrap\">\n  <div class=\"row\"><div class=\"ph\" data-img=\"factory\" data-label=\"工厂车间实拍\"></div><div class=\"txt\"><span class=\"eyebrow\">我们的工厂</span><h2 class=\"hd sec-title\">从原料到成品，全部自己生产</h2><p>12,000㎡ 厂房里完成加工、装配和检测，每一个环节的质量和交期都在我们手里。</p><a class=\"link\">参观工厂 →</a></div></div>\n  <div class=\"row rev\"><div class=\"ph\" data-img=\"qc\" data-label=\"质检测试实拍\"></div><div class=\"txt\"><span class=\"eyebrow\">质量控制</span><h2 class=\"hd sec-title\">每一件产品出厂前都经过检测</h2><p>来料检验、过程抽检、100% 成品测试，每一批都有可下载的检测报告。</p><a class=\"link\">了解质检流程 →</a></div></div>\n</div></section>",
    "css": ".b-f1 .row{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}\n.b-f1 .row+.row{margin-top:88px}\n.b-f1 .rev .ph{order:2}\n.b-f1 .ph{aspect-ratio:5/4}\n.b-f1 p{color:var(--c-muted);font-size:17px;margin-bottom:22px}\n@media(max-width:860px){.b-f1 .row{grid-template-columns:1fr;gap:28px}.b-f1 .rev .ph{order:0}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -979,6 +1027,7 @@
    "html": "<section class=\"b-f2 sec dark\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">走进{{brand}}</span><h2 class=\"hd sec-title\">看看您的订单在哪里生产</h2><p class=\"sec-sub\">全部是生产现场实拍，不是图库照片。</p></div>\n  <div class=\"wall\"><div class=\"ph a\" data-img=\"factory\" data-label=\"车间全景\"></div><div class=\"ph\" data-img=\"product\" data-label=\"产品\"></div><div class=\"ph\" data-img=\"qc\" data-label=\"检测\"></div><div class=\"ph\" data-img=\"cat1\" data-label=\"成品\"></div><div class=\"ph\" data-img=\"hero\" data-label=\"现场\"></div></div>\n</div></section>",
    "css": ".b-f2 .wall{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:16px}\n.b-f2 .a{grid-row:span 2}\n@media(max-width:860px){.b-f2 .wall{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:170px}.b-f2 .a{grid-column:span 2;grid-row:auto}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -1005,6 +1054,7 @@
    "html": "<section class=\"b-f3 sec alt\"><div class=\"wrap\">\n  <div class=\"sec-head center\"><span class=\"eyebrow\">核心能力</span><h2 class=\"hd sec-title\">您需要的，我们一站完成</h2><p class=\"sec-sub\">研发、生产、检测、出口都在自己手里，交期和质量更可控。</p></div>\n  <div class=\"grid g3\">\n    <div class=\"it\"><div class=\"ico\">01</div><div><b class=\"hd\">{{cat1}}</b><p>高精度设备，公差稳定可重复。</p></div></div>\n    <div class=\"it\"><div class=\"ico\">02</div><div><b class=\"hd\">{{cat2}}</b><p>从 1 件样品到 10 万件批量，数量灵活。</p></div></div>\n    <div class=\"it\"><div class=\"ico\">03</div><div><b class=\"hd\">{{cat3}}</b><p>工程师审核每一张图纸，并提出降本建议。</p></div></div>\n    <div class=\"it\"><div class=\"ico\">04</div><div><b class=\"hd\">{{cat4}}</b><p>阳极氧化、电镀、喷涂和装配都在厂内完成。</p></div></div>\n    <div class=\"it\"><div class=\"ico\">05</div><div><b class=\"hd\">检测</b><p>可提供三坐标报告和首件检验。</p></div></div>\n    <div class=\"it\"><div class=\"ico\">06</div><div><b class=\"hd\">快速报价</b><p>上传图纸，24 小时内收到详细报价。</p></div></div>\n  </div>\n</div></section>",
    "css": ".b-f3 .it{display:flex;gap:18px;padding:26px;background:var(--c-card);border:1px solid var(--c-line);border-radius:var(--radius)}\n.b-f3 b{display:block;font-size:18px;margin-bottom:6px}\n.b-f3 p{color:var(--c-muted);font-size:15px}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -1032,6 +1082,7 @@
    "html": "<section class=\"b-f4 sec\"><div class=\"wrap\">\n  <div class=\"cols\"><div class=\"sec-head\"><span class=\"eyebrow\">生产设备</span><h2 class=\"hd sec-title\">我们的设备</h2><p class=\"sec-sub\">设备清单公开透明，您可以清楚知道我们能做什么。</p><a class=\"btn\">下载完整清单</a></div>\n  <div class=\"tw\"><table>\n    <tr><th>设备</th><th>品牌</th><th>数量</th><th>加工能力</th></tr>\n    <tr><td>五轴加工中心</td><td>（填写品牌）</td><td>6</td><td>最大 650 × 500 mm</td></tr>\n    <tr><td>数控车床</td><td>（填写品牌）</td><td>18</td><td>Ø 3–400 mm</td></tr>\n    <tr><td>激光切割机</td><td>（填写品牌）</td><td>4</td><td>钢板最厚 25 mm</td></tr>\n    <tr><td>三坐标测量仪</td><td>（填写品牌）</td><td>2</td><td>±0.002 mm</td></tr>\n  </table></div></div>\n</div></section>",
    "css": ".b-f4 .cols{display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start}\n.b-f4 .sec-head .btn{margin-top:24px}\n.b-f4 .tw{overflow-x:auto;border:1px solid var(--c-line);border-radius:var(--radius)}\n.b-f4 table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}\n.b-f4 th,.b-f4 td{padding:15px 18px;border-bottom:1px solid var(--c-line);text-align:left}\n.b-f4 th{background:var(--c-surface);font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--c-muted)}\n.b-f4 tr:last-child td{border-bottom:0}\n@media(max-width:860px){.b-f4 .cols{grid-template-columns:1fr}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -1056,6 +1107,7 @@
    "html": "<section class=\"b-f5 sec alt\"><div class=\"wrap\">\n  <div class=\"sec-head center\"><span class=\"eyebrow\">发展历程</span><h2 class=\"hd sec-title\">和客户一起成长</h2><p class=\"sec-sub\">专注这个行业多年，产能和认证一步步扩大。</p></div>\n  <div class=\"line\">\n    <div><b class=\"hd\">2008</b><span>公司成立</span><p>从一个车间、12 个人起步。</p></div>\n    <div><b class=\"hd\">2013</b><span>首次出口</span><p>第一批货柜发往欧洲。</p></div>\n    <div><b class=\"hd\">2018</b><span>新厂投产</span><p>搬进 12,000㎡ 新厂房。</p></div>\n    <div><b class=\"hd\">2026</b><span>出口 40 多国</span><p>服务全球经销商和品牌。</p></div>\n  </div>\n</div></section>",
    "css": ".b-f5 .line{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative;padding-top:34px}\n.b-f5 .line::before{content:\"\";position:absolute;left:0;right:0;top:9px;height:2px;background:var(--c-line)}\n.b-f5 .line>div{position:relative}\n.b-f5 .line>div::before{content:\"\";position:absolute;top:-33px;left:0;width:18px;height:18px;border-radius:50%;background:var(--c-accent);box-shadow:0 0 0 5px var(--c-surface)}\n.b-f5 b{font-size:32px;color:var(--c-accent);display:block}\n.b-f5 span{font-weight:700;display:block;margin:2px 0 6px}\n.b-f5 p{color:var(--c-muted);font-size:15px}\n@media(max-width:760px){.b-f5 .line{grid-template-columns:1fr;padding:0 0 0 34px}.b-f5 .line::before{left:8px;right:auto;top:0;bottom:0;width:2px;height:auto}.b-f5 .line>div::before{top:6px;left:-34px}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -1081,6 +1133,7 @@
    "html": "<section class=\"b-f6 sec\"><div class=\"wrap\">\n  <div class=\"sec-head center\"><span class=\"eyebrow\">质量保证</span><h2 class=\"hd sec-title\">每个订单都要过 5 道检验</h2><p class=\"sec-sub\">来料、过程、成品层层把关，每批都有检测报告。</p></div>\n  <div class=\"steps\">\n    <div><i>1</i><b>来料检验</b><p>核对原材料证明。</p></div>\n    <div><i>2</i><b>首件确认</b><p>首件合格才开始量产。</p></div>\n    <div><i>3</i><b>过程抽检</b><p>每 2 小时随机抽检。</p></div>\n    <div><i>4</i><b>成品测试</b><p>100% 功能测试。</p></div>\n    <div><i>5</i><b>出货检验</b><p>发给您照片和报告。</p></div>\n  </div>\n</div></section>",
    "css": ".b-f6 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}\n.b-f6 .steps>div{text-align:center;padding:26px 16px;border:1px solid var(--c-line);border-radius:var(--radius);background:var(--c-card);position:relative}\n.b-f6 .steps>div:not(:last-child)::after{content:\"→\";position:absolute;right:-14px;top:40px;color:var(--c-accent);font-weight:800;z-index:1}\n.b-f6 i{font-style:normal;width:44px;height:44px;border-radius:50%;background:var(--c-accent);color:var(--c-on-accent);display:inline-flex;align-items:center;justify-content:center;font-weight:800}\n.b-f6 b{display:block;margin:14px 0 6px;font-family:var(--font-head)}\n.b-f6 p{font-size:14px;color:var(--c-muted)}\n@media(max-width:860px){.b-f6 .steps{grid-template-columns:1fr}.b-f6 .steps>div::after{display:none}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -1108,6 +1161,7 @@
    "html": "<section class=\"b-a1 sec\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">应用领域</span><h2 class=\"hd sec-title\">我们的产品用在哪里</h2><p class=\"sec-sub\">看看同行客户在什么场景下使用我们的产品。</p></div>\n  <div class=\"grid g3\">\n    <a class=\"it\"><div class=\"ph\" data-img=\"app1\" data-label=\"应用场景\"></div><div class=\"cap\"><b class=\"hd\">{{app1}}</b><p>全球{{app1}}客户日常在用，久经考验。</p></div></a>\n    <a class=\"it\"><div class=\"ph\" data-img=\"app2\" data-label=\"应用场景\"></div><div class=\"cap\"><b class=\"hd\">{{app2}}</b><p>按当地标准匹配配置。</p></div></a>\n    <a class=\"it\"><div class=\"ph\" data-img=\"hero\" data-label=\"应用场景\"></div><div class=\"cap\"><b class=\"hd\">{{app3}}</b><p>工程项目供货，资料和技术支持齐全。</p></div></a>\n  </div>\n</div></section>",
    "css": ".b-a1 .it{position:relative;display:block;border-radius:var(--radius);overflow:hidden}\n.b-a1 .ph{aspect-ratio:3/4;border-radius:0;transition:transform .5s}\n.b-a1 .ph::after{display:none}\n.b-a1 .it:hover .ph{transform:scale(1.05)}\n.b-a1 .cap{position:absolute;left:0;right:0;bottom:0;padding:26px;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent)}\n.b-a1 b{font-size:22px;display:block}\n.b-a1 p{font-size:14px;opacity:.85;margin-top:4px}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -1132,6 +1186,7 @@
    "html": "<section class=\"b-a2 sec alt\"><div class=\"wrap\">\n  <div class=\"ph img\" data-img=\"app1\" data-label=\"项目现场照片\"></div>\n  <div class=\"txt\"><span class=\"eyebrow\">客户案例 · {{app1}}</span><h2 class=\"hd sec-title\">一家德国经销商如何把交期缩短 40%</h2>\n    <dl><dt>挑战</dt><dd>原供应商供货不稳定，交期长。</dd><dt>方案</dt><dd>专属生产排期、安全库存、每周进度报告。</dd></dl>\n    <div class=\"nums\"><div><b class=\"hd\">-40%</b><span>交期缩短</span></div><div><b class=\"hd\">0.1%</b><span>不良率</span></div><div><b class=\"hd\">3 年</b><span>持续合作</span></div></div>\n    <a class=\"link\">阅读完整案例 →</a></div>\n</div></section>",
    "css": ".b-a2 .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}\n.b-a2 .img{aspect-ratio:4/5}\n.b-a2 dl{display:grid;gap:4px;margin:8px 0 24px}\n.b-a2 dt{font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--c-accent);margin-top:12px}\n.b-a2 dd{color:var(--c-muted)}\n.b-a2 .nums{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line);margin-bottom:22px}\n.b-a2 .nums div{padding:18px 0}\n.b-a2 .nums b{font-size:28px;display:block}\n.b-a2 .nums span{font-size:13px;color:var(--c-muted)}\n@media(max-width:860px){.b-a2 .wrap{grid-template-columns:1fr}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -1158,6 +1213,7 @@
    "html": "<section class=\"b-a3 sec dark\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">服务行业</span><h2 class=\"hd sec-title\">按行业找方案</h2><p class=\"sec-sub\">选择您的行业，查看匹配的产品和案例。</p></div>\n  <div class=\"grid g3\">\n    <a class=\"it\"><b class=\"hd\">{{app1}}</b><p>{{app1}}的常用配置和案例。</p><span>→</span></a>\n    <a class=\"it\"><b class=\"hd\">{{app2}}</b><p>{{app2}}的常用配置和案例。</p><span>→</span></a>\n    <a class=\"it\"><b class=\"hd\">{{app3}}</b><p>{{app3}}的常用配置和案例。</p><span>→</span></a>\n    <a class=\"it\"><b class=\"hd\">品牌贴牌</b><p>完整的 OEM 贴牌合作方案。</p><span>→</span></a>\n    <a class=\"it\"><b class=\"hd\">经销商</b><p>备货计划和区域独家代理。</p><span>→</span></a>\n    <a class=\"it\"><b class=\"hd\">工程项目</b><p>大型项目的工程技术支持。</p><span>→</span></a>\n  </div>\n</div></section>",
    "css": ".b-a3 .it{display:block;padding:30px;border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);position:relative;transition:.25s}\n.b-a3 .it:hover{background:color-mix(in srgb,var(--c-accent) 18%,transparent);border-color:var(--c-accent)}\n.b-a3 b{font-size:20px;display:block;margin-bottom:8px}\n.b-a3 p{opacity:.7;font-size:15px}\n.b-a3 span{position:absolute;right:26px;top:26px;color:var(--c-accent);font-size:22px}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -1183,6 +1239,7 @@
    "html": "<section class=\"b-a4 sec\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">工程案例</span><h2 class=\"hd sec-title\">遍布全球的酒店、住宅和办公空间</h2><p class=\"sec-sub\">部分已完工项目，可以索取更多同类案例。</p></div>\n  <div class=\"mas\">\n    <figure class=\"ph t\" data-img=\"hero\" data-label=\"\"><figcaption>某酒店 · 迪拜</figcaption></figure><figure class=\"ph\" data-img=\"app1\" data-label=\"\"><figcaption>某住宅 · 悉尼</figcaption></figure>\n    <figure class=\"ph\" data-img=\"app2\" data-label=\"\"><figcaption>某办公楼 · 伦敦</figcaption></figure><figure class=\"ph t\" data-img=\"cat1\" data-label=\"\"><figcaption>某别墅 · 迈阿密</figcaption></figure>\n    <figure class=\"ph\" data-img=\"cat2\" data-label=\"\"><figcaption>某公寓 · 柏林</figcaption></figure><figure class=\"ph\" data-img=\"cat3\" data-label=\"\"><figcaption>某展厅 · 多伦多</figcaption></figure>\n  </div>\n</div></section>",
    "css": ".b-a4 .mas{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:200px;gap:16px}\n.b-a4 .t{grid-row:span 2}\n.b-a4 figure::after{display:none}\n.b-a4 figcaption{position:absolute;left:14px;bottom:12px;background:var(--c-bg);color:var(--c-ink);font-size:13px;font-weight:700;padding:6px 12px;border-radius:var(--radius-btn)}\n@media(max-width:760px){.b-a4 .mas{grid-template-columns:1fr 1fr;grid-auto-rows:150px}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -1208,6 +1265,7 @@
    "html": "<section class=\"b-p1 sec alt\"><div class=\"wrap\">\n  <div class=\"sec-head center\"><span class=\"eyebrow\">合作流程</span><h2 class=\"hd sec-title\">从询盘到交货，只需 4 步</h2><p class=\"sec-sub\">流程清楚，每一步都有专人跟进，随时知道订单进度。</p></div>\n  <div class=\"grid g4\">\n    <div class=\"st\"><i class=\"hd\">01</i><b>发送询盘</b><p>告诉我们产品、数量和目的地。</p></div>\n    <div class=\"st\"><i class=\"hd\">02</i><b>24 小时报价</b><p>价格、交期和包装方案。</p></div>\n    <div class=\"st\"><i class=\"hd\">03</i><b>确认样品</b><p>3–7 天寄出样品。</p></div>\n    <div class=\"st\"><i class=\"hd\">04</i><b>生产交货</b><p>检验、包装，按时发货。</p></div>\n  </div>\n</div></section>",
    "css": ".b-p1 .st{padding:28px;background:var(--c-card);border-radius:var(--radius);border-top:4px solid var(--c-accent)}\n.b-p1 i{font-style:normal;font-size:40px;color:var(--c-accent);opacity:.9;display:block;line-height:1}\n.b-p1 b{display:block;font-size:18px;margin:16px 0 6px}\n.b-p1 p{color:var(--c-muted);font-size:15px}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -1230,6 +1288,7 @@
    "html": "<section class=\"b-p2 sec\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">OEM / ODM 定制</span><h2 class=\"hd sec-title\">做成您自己的品牌</h2><p class=\"sec-sub\">低起订量定制，生产前先出效果图确认。</p></div>\n  <div class=\"grid g4\">\n    <div class=\"it\"><div class=\"ph\" data-img=\"product\" data-label=\"Logo 示意\"></div><b class=\"hd\">您的 logo</b><p>印刷、镭雕或标签。</p></div>\n    <div class=\"it\"><div class=\"ph\" data-img=\"cat1\" data-label=\"配色示意\"></div><b class=\"hd\">颜色</b><p>可按潘通色号调色。</p></div>\n    <div class=\"it\"><div class=\"ph\" data-img=\"cat2\" data-label=\"包装示意\"></div><b class=\"hd\">包装</b><p>彩盒、说明书、条形码。</p></div>\n    <div class=\"it\"><div class=\"ph\" data-img=\"cat3\" data-label=\"功能示意\"></div><b class=\"hd\">功能</b><p>材质和功能可调整。</p></div>\n  </div>\n</div></section>",
    "css": ".b-p2 .ph{aspect-ratio:1;margin-bottom:16px}\n.b-p2 b{display:block;font-size:19px;margin-bottom:4px}\n.b-p2 p{color:var(--c-muted);font-size:15px}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -1256,6 +1315,7 @@
    "html": "<section class=\"b-d1\"><div class=\"wrap\">\n  <div class=\"gal\"><div class=\"ph main\" data-img=\"product\" data-label=\"主图（点击放大）\"></div><div class=\"th\"><i class=\"ph on\" data-img=\"product\"></i><i class=\"ph\" data-img=\"cat1\"></i><i class=\"ph\" data-img=\"qc\"></i><i class=\"ph\" data-img=\"app1\"></i></div></div>\n  <div class=\"info\">\n    <div class=\"crumb\">产品中心 / {{cat1}}</div>\n    <h1 class=\"hd\">{{product}}</h1>\n    <p>{{sub}}</p>\n    <dl><dt>材质</dt><dd>（按实际填写）</dd><dt>规格范围</dt><dd>小号 – 特大号</dd><dt>性能等级</dt><dd>标准 / 加强</dd><dt>起订量</dt><dd>500 件</dd><dt>交期</dt><dd>25 天</dd></dl>\n    <div class=\"acts\"><a class=\"btn\">获取报价</a><a class=\"btn ghost\">规格书 PDF</a></div>\n    <div class=\"tags\"><span>CE</span><span>ISO 9001</span><span>支持 OEM</span></div>\n  </div>\n</div></section>",
    "css": ".b-d1{padding:48px 0 72px}\n.b-d1 .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start}\n.b-d1 .main{aspect-ratio:1;cursor:zoom-in}\n.b-d1 .th{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}\n.b-d1 .th i{aspect-ratio:1;border:2px solid transparent;cursor:pointer}\n.b-d1 .th i::after{display:none}\n.b-d1 .th i.on{border-color:var(--c-accent)}\n.b-d1 .crumb{font-size:13px;color:var(--c-muted)}\n.b-d1 h1{font-size:clamp(28px,3.2vw,40px);margin:10px 0 14px}\n.b-d1 p{color:var(--c-muted)}\n.b-d1 dl{display:grid;grid-template-columns:140px 1fr;margin:26px 0;border-top:1px solid var(--c-line)}\n.b-d1 dt,.b-d1 dd{padding:12px 0;border-bottom:1px solid var(--c-line);font-size:15px}\n.b-d1 dt{color:var(--c-muted)}\n.b-d1 dd{font-weight:600}\n.b-d1 .acts{display:flex;gap:12px;flex-wrap:wrap}\n.b-d1 .tags{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap}\n.b-d1 .tags span{font-size:13px;font-weight:700;padding:6px 12px;background:var(--c-surface);border-radius:var(--radius-btn)}\n@media(max-width:860px){.b-d1 .wrap{grid-template-columns:1fr}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "详情页"
@@ -1278,6 +1338,7 @@
    "html": "<section class=\"b-d2 sec alt\"><div class=\"wrap\">\n  <div class=\"head\"><h2 class=\"hd sec-title\">技术参数</h2><a class=\"link\">下载 PDF ↓</a></div>\n  <div class=\"tw\"><table>\n    <tr><th>型号</th><th>规格</th><th>性能等级</th><th>工作温度</th><th>重量</th><th>包装</th></tr>\n    <tr><td>A-15</td><td>小号</td><td>加强</td><td>-20 ~ 120 °C</td><td>0.18 kg</td><td>200 件/箱</td></tr>\n    <tr><td>A-25</td><td>中号</td><td>加强</td><td>-20 ~ 120 °C</td><td>0.42 kg</td><td>100 件/箱</td></tr>\n    <tr><td>A-50</td><td>大号</td><td>标准</td><td>-20 ~ 120 °C</td><td>1.35 kg</td><td>30 件/箱</td></tr>\n    <tr><td>A-80</td><td>特大号</td><td>标准</td><td>-20 ~ 150 °C</td><td>3.10 kg</td><td>10 件/箱</td></tr>\n  </table></div>\n</div></section>",
    "css": ".b-d2 .head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:20px}\n.b-d2 .tw{overflow-x:auto;background:var(--c-card);border:1px solid var(--c-line);border-radius:var(--radius)}\n.b-d2 table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px;font-variant-numeric:tabular-nums}\n.b-d2 th,.b-d2 td{padding:14px 18px;border-bottom:1px solid var(--c-line);text-align:left}\n.b-d2 th{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--c-muted)}\n.b-d2 tr:nth-child(odd) td{background:color-mix(in srgb,var(--c-surface) 60%,transparent)}\n.b-d2 tr:last-child td{border-bottom:0}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "详情页"
@@ -1304,6 +1365,7 @@
    "html": "<section class=\"b-d3 sec\"><div class=\"wrap\">\n  <div class=\"tabs\"><b class=\"on\">产品概述</b><b>技术参数</b><b>应用场景</b><b>资料下载</b><b>常见问题</b></div>\n  <div class=\"pane\"><div><h3 class=\"hd\">采购商为什么选择{{product}}</h3><p>{{sub}}每一件都在自己工厂装配和检测，批次记录可追溯，包装按您的市场定制。</p>\n    <ul><li>用料扎实，做工精细</li><li>性能稳定，经过长期测试</li><li>颜色和 logo 可定制</li></ul></div><div class=\"ph\" data-img=\"cat2\" data-label=\"细节图\"></div></div>\n</div></section>",
    "css": ".b-d3 .tabs{display:flex;gap:4px;border-bottom:2px solid var(--c-line);margin-bottom:36px;overflow-x:auto}\n.b-d3 .tabs b{padding:12px 22px;cursor:pointer;color:var(--c-muted);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap}\n.b-d3 .tabs b.on{color:var(--c-ink);border-color:var(--c-accent)}\n.b-d3 .pane{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}\n.b-d3 h3{font-size:26px;margin-bottom:12px}\n.b-d3 p{color:var(--c-muted)}\n.b-d3 ul{list-style:none;margin-top:20px;display:grid;gap:10px;font-weight:600}\n.b-d3 li::before{content:\"✓\";color:var(--c-accent);margin-right:10px}\n.b-d3 .ph{aspect-ratio:4/3}\n@media(max-width:860px){.b-d3 .pane{grid-template-columns:1fr}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "详情页"
@@ -1326,6 +1388,7 @@
    "html": "<section class=\"b-d4 sec alt\"><div class=\"wrap\">\n  <h2 class=\"hd sec-title\">资料下载</h2>\n  <div class=\"grid g3\">\n    <a class=\"card f\"><i>PDF</i><div><b>产品规格书</b><span>2.1 MB · 2026 年更新</span></div><em>↓</em></a>\n    <a class=\"card f\"><i>PDF</i><div><b>CE 认证证书</b><span>0.8 MB</span></div><em>↓</em></a>\n    <a class=\"card f\"><i>PDF</i><div><b>安装说明书</b><span>3.4 MB</span></div><em>↓</em></a>\n  </div>\n</div></section>",
    "css": ".b-d4 .sec-title{margin-bottom:24px}\n.b-d4 .f{display:flex;align-items:center;gap:16px;padding:18px 20px;transition:.2s}\n.b-d4 .f:hover{border-color:var(--c-accent)}\n.b-d4 i{font-style:normal;font-size:12px;font-weight:800;background:var(--c-accent);color:var(--c-on-accent);padding:10px 8px;border-radius:4px}\n.b-d4 .f div{flex:1}\n.b-d4 b{display:block;font-size:15px}\n.b-d4 span{font-size:13px;color:var(--c-muted)}\n.b-d4 em{font-style:normal;font-size:20px;color:var(--c-accent)}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "详情页"
@@ -1352,6 +1415,7 @@
    "html": "<section class=\"b-d5 sec\"><div class=\"wrap\">\n  <div class=\"head\"><h2 class=\"hd sec-title\">您可能还需要</h2><a class=\"link\">全部{{cat1}} →</a></div>\n  <div class=\"grid g4\">\n    <a class=\"p\"><div class=\"ph\" data-img=\"cat1\" data-label=\"产品图\"></div><b>{{cat1}} 小号</b><span>适合小型项目</span></a>\n    <a class=\"p\"><div class=\"ph\" data-img=\"cat2\" data-label=\"产品图\"></div><b>{{cat2}} 标准款</b><span>最常用</span></a>\n    <a class=\"p\"><div class=\"ph\" data-img=\"cat3\" data-label=\"产品图\"></div><b>{{cat3}} 加强款</b><span>适合重载工况</span></a>\n    <a class=\"p\"><div class=\"ph\" data-img=\"cat4\" data-label=\"产品图\"></div><b>{{cat4}} 配件</b><span>配套使用</span></a>\n  </div>\n</div></section>",
    "css": ".b-d5 .head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;margin-bottom:22px}\n.b-d5 .p{display:block}\n.b-d5 .ph{aspect-ratio:1;transition:.3s}\n.b-d5 .p:hover .ph{transform:translateY(-4px)}\n.b-d5 b{display:block;margin:12px 0 2px}\n.b-d5 span{font-size:14px;color:var(--c-muted)}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "详情页"
@@ -1374,6 +1438,7 @@
    "html": "<section class=\"b-d8 sec\"><div class=\"wrap\">\n  <article class=\"doc\">\n    <span class=\"eyebrow\">详细介绍</span>\n    <h2 class=\"hd sec-title\">{{product}}：结构、应用与选型</h2>\n    <p>这里是后台可以自由编辑的完整正文，不是一句简介。按买家的真实问题组织内容：产品结构、适用场景、怎样选型、和其他型号的区别。</p>\n    <figure><div class=\"ph\" data-img=\"factory\" data-label=\"正文插图：产品细节或生产现场\"></div><figcaption>图片下方可以写说明文字</figcaption></figure>\n    <h3 class=\"hd\">适用场景</h3>\n    <p>{{app1}}、{{app2}}等场景都在使用。可以继续插入视频，让买家直观看到产品工作的样子。</p>\n    <div class=\"vid ph\" data-img=\"app1\" data-label=\"视频嵌入位置\"><b>▶</b></div>\n    <h3 class=\"hd\">主要参数</h3>\n    <table><tr><th>项目</th><th>参数</th></tr><tr><td>材质</td><td>按实际填写</td></tr><tr><td>规格范围</td><td>小号 – 特大号</td></tr><tr><td>起订量</td><td>500 件</td></tr><tr><td>交期</td><td>25–35 天</td></tr></table>\n    <p>正文写多长都可以，右侧表单会一直跟着，到这一块结束时停下。</p>\n  </article>\n  <aside class=\"side\"><form class=\"card form\" onsubmit=\"return false\">\n    <b class=\"hd\">询问配置与报价</b><p>工作日 12 小时内回复</p>\n    <input placeholder=\"姓名 *\"><input placeholder=\"工作邮箱 *\"><input placeholder=\"公司 / 国家\"><textarea rows=\"4\" placeholder=\"采购需求 *\"></textarea>\n    <button class=\"btn\">发送询盘</button>\n  </form></aside>\n</div></section>",
    "css": ".b-d8 .wrap{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:56px;align-items:start}\n.b-d8 .doc>p{color:var(--c-muted);font-size:17px;margin-bottom:18px}\n.b-d8 .doc h3{font-size:22px;margin:34px 0 12px}\n.b-d8 figure{margin:26px 0}\n.b-d8 figure .ph{aspect-ratio:16/9}\n.b-d8 figcaption{font-size:13px;color:var(--c-muted);margin-top:8px}\n.b-d8 .vid{aspect-ratio:16/9;margin:8px 0 18px;display:flex;align-items:center;justify-content:center}\n.b-d8 .vid b{width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;position:relative;z-index:1}\n.b-d8 table{width:100%;border-collapse:collapse;font-size:15px;margin-bottom:18px}\n.b-d8 th,.b-d8 td{border-bottom:1px solid var(--c-line);padding:11px 12px;text-align:left}\n.b-d8 th{background:var(--c-surface);font-weight:700}\n.b-d8 .side{position:sticky;top:96px}\n.b-d8 .form{padding:26px;display:grid;gap:10px;box-shadow:0 16px 40px rgba(0,0,0,.07)}\n.b-d8 .form>b{font-size:21px}\n.b-d8 .form>p{font-size:13px;color:var(--c-muted);margin-top:-4px}\n.b-d8 input,.b-d8 textarea{width:100%;padding:11px 13px;border:1px solid var(--c-line);border-radius:var(--radius-btn);font:inherit;background:var(--c-bg);color:var(--c-ink)}\n.b-d8 .btn{justify-content:center}\n@media(max-width:900px){.b-d8 .wrap{grid-template-columns:1fr;gap:36px}.b-d8 .side{position:static}}",
    "ref": "群鱼学院五步法教程 · 类目与详情下部结构",
+   "js": "",
    "fit": {
     "pages": [
      "产品聚合页",
@@ -1397,6 +1462,7 @@
    "html": "<section class=\"b-q1 sec alt\"><div class=\"wrap\">\n  <div class=\"faq\"><span class=\"eyebrow\">常见问题</span><h2 class=\"hd sec-title\">采购商常问的问题</h2>\n    <details open><summary>起订量是多少？</summary><p>标准款每个型号 500 件，试单可以多型号混批。</p></details>\n    <details><summary>可以拿样品吗？</summary><p>可以，3–7 天寄出，首单下单后样品费可抵扣。</p></details>\n    <details><summary>交期多久？</summary><p>收到定金后 25–35 天，视数量而定。</p></details>\n    <details><summary>支持 OEM 吗？</summary><p>支持，logo、颜色、包装和资料都可以定制。</p></details>\n  </div>\n  <form class=\"card form\" onsubmit=\"return false\"><b class=\"hd\">获取报价</b><p>工作日 12 小时内回复。</p>\n    <div class=\"two\"><input placeholder=\"姓名 *\"><input placeholder=\"邮箱 *\"></div><input placeholder=\"公司 / 国家\">\n    <textarea rows=\"4\" placeholder=\"产品、数量和要求 *\"></textarea>\n    <label class=\"up\">＋ 上传图纸或文件（可选）</label><button class=\"btn\">提交询盘</button></form>\n</div></section>",
    "css": ".b-q1 .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}\n.b-q1 details{border-bottom:1px solid var(--c-line);padding:18px 0}\n.b-q1 summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-size:17px}\n.b-q1 summary::-webkit-details-marker{display:none}\n.b-q1 summary::after{content:\"+\";color:var(--c-accent);font-size:22px;line-height:1;transition:transform .25s}\n.b-q1 details[open] summary::after{transform:rotate(45deg)}\n.b-q1 details p{color:var(--c-muted);margin-top:10px}\n.b-q1 .form{padding:32px;display:grid;gap:12px;box-shadow:0 20px 50px rgba(0,0,0,.06)}\n.b-q1 .form>b{font-size:24px}\n.b-q1 .form>p{color:var(--c-muted);font-size:14px;margin-top:-6px}\n.b-q1 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}\n.b-q1 input,.b-q1 textarea{width:100%;padding:12px 14px;border:1px solid var(--c-line);border-radius:var(--radius-btn);font:inherit;background:var(--c-bg);color:var(--c-ink)}\n.b-q1 .up{font-size:14px;color:var(--c-accent);font-weight:700;cursor:pointer}\n.b-q1 .btn{justify-content:center}\n@media(max-width:860px){.b-q1 .wrap{grid-template-columns:1fr}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -1421,6 +1487,7 @@
    "html": "<section class=\"b-q2\"><div class=\"wrap\"><div class=\"box\">\n  <div><h2 class=\"hd\">准备好为下一个订单询价了吗？</h2><p>把需求发给我们，销售工程师 12 小时内回复。</p></div>\n  <div class=\"acts\"><a class=\"btn\">获取报价</a><a class=\"btn ghost\">WhatsApp 咨询</a></div>\n</div></div></section>",
    "css": ".b-q2{padding:72px 0}\n.b-q2 .box{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;background:var(--c-accent);color:var(--c-on-accent);border-radius:calc(var(--radius) + 6px);padding:48px 56px;position:relative;overflow:hidden}\n.b-q2 .box::before{content:\"\";position:absolute;right:-60px;top:-80px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.12)}\n.b-q2 h2{font-size:clamp(24px,2.8vw,36px);max-width:620px}\n.b-q2 p{opacity:.85;margin-top:8px}\n.b-q2 .acts{display:flex;gap:12px;position:relative;flex-wrap:wrap}\n.b-q2 .btn{background:var(--c-on-accent);color:var(--c-accent);border-color:var(--c-on-accent)}\n.b-q2 .btn.ghost{background:transparent;color:var(--c-on-accent)}\n@media(max-width:560px){.b-q2 .box{padding:32px 24px}.b-q2 .btn{flex:1;justify-content:center}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
@@ -1445,6 +1512,7 @@
    "html": "<section class=\"b-q3 sec\"><div class=\"wrap\">\n  <div class=\"info\"><span class=\"eyebrow\">联系我们</span><h1 class=\"hd sec-title\">聊聊您的项目</h1>\n    <ul><li><b>邮箱</b>sales@example.com</li><li><b>电话 / WhatsApp</b>+86 000 0000 0000</li><li><b>工厂地址</b>中国某市工业路 1 号</li><li><b>工作时间</b>周一至周六 8:30–18:00（北京时间）</li></ul>\n    <div class=\"ph map\" data-label=\"地图\"></div></div>\n  <form class=\"card form\" onsubmit=\"return false\"><b class=\"hd\">给我们留言</b><input placeholder=\"姓名 *\"><input placeholder=\"邮箱 *\"><input placeholder=\"公司\"><textarea rows=\"5\" placeholder=\"有什么可以帮您？*\"></textarea><button class=\"btn\">发送</button></form>\n</div></section>",
    "css": ".b-q3 .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}\n.b-q3 ul{list-style:none;display:grid;gap:16px;margin:10px 0 28px}\n.b-q3 li b{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--c-muted)}\n.b-q3 .map{aspect-ratio:16/9}\n.b-q3 .form{padding:32px;display:grid;gap:12px}\n.b-q3 .form b{font-size:22px}\n.b-q3 input,.b-q3 textarea{width:100%;padding:12px 14px;border:1px solid var(--c-line);border-radius:var(--radius-btn);font:inherit;background:var(--c-bg);color:var(--c-ink)}\n.b-q3 .btn{justify-content:center}\n@media(max-width:860px){.b-q3 .wrap{grid-template-columns:1fr}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [],
     "pos": "中段",
@@ -1465,6 +1533,7 @@
    "html": "<div class=\"b-q4\"><div class=\"wrap\">\n  <span><b>需要{{cat1}}的报价？</b>12 小时内回复您。</span>\n  <div class=\"acts\"><a class=\"btn ghost\">WhatsApp</a><a class=\"btn\">获取报价</a></div>\n</div></div>",
    "css": ".b-q4{position:sticky;bottom:0;z-index:15;background:var(--c-primary);color:var(--c-on-primary);box-shadow:0 -8px 24px rgba(0,0,0,.12)}\n.b-q4 .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}\n.b-q4 .acts{display:flex;gap:10px}\n.b-q4 .btn{padding:10px 18px;font-size:14px}\n@media(max-width:560px){.b-q4 span{display:none}.b-q4 .acts{flex:1}.b-q4 .btn{flex:1;justify-content:center}}",
    "ref": "",
+   "js": "",
    "fit": {
     "pages": [
      "产品聚合页",
@@ -1488,6 +1557,7 @@
    "html": "<section class=\"b-t6 sec alt\"><div class=\"wrap\">\n  <div class=\"txt\"><span class=\"eyebrow\">客户反馈</span><h2 class=\"hd sec-title\">听听客户怎么说</h2>\n    <p class=\"sec-sub\">这些是客户发给我们的真实消息。上线后第一周就收到询盘，是我们最常听到的反馈。</p>\n    <div class=\"avs\"><i>A</i><i>L</i><i>M</i><i>S</i><i>K</i><span>200+ 客户的选择</span></div></div>\n  <div class=\"phone\"><div class=\"bar\"><span>‹</span><b>客户 A（已打码）</b><span>···</span></div>\n    <div class=\"chat\">\n      <p class=\"l\"><i></i><span>收到第一个询盘了 😄</span></p><p class=\"r\"><span>这么快！</span><i></i></p>\n      <p class=\"l\"><i></i><span>这才上线几天</span></p><p class=\"r\"><span>几号上的？</span><i></i></p>\n      <p class=\"l\"><i></i><span>有附件，是我们发布的产品，数量还不少</span></p>\n      <p class=\"l\"><i></i><span>好像是上个月底</span></p></div></div>\n</div></section>",
    "css": ".b-t6 .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}\n.b-t6 .avs{display:flex;align-items:center;margin-top:30px}\n.b-t6 .avs i{width:46px;height:46px;border-radius:50%;border:3px solid var(--c-surface);margin-left:-10px;background:var(--c-accent);color:var(--c-on-accent);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:800}\n.b-t6 .avs i:first-child{margin-left:0}\n.b-t6 .avs i:nth-child(2n){background:var(--c-primary);color:var(--c-on-primary)}\n.b-t6 .avs span{margin-left:14px;font-weight:700;color:var(--c-muted);font-size:14px}\n.b-t6 .phone{justify-self:center;width:320px;border-radius:40px;border:10px solid #15171c;background:#ececec;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.25)}\n.b-t6 .bar{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:#f6f6f6;font-size:14px;border-bottom:1px solid #ddd}\n.b-t6 .chat{padding:16px 12px 26px;display:grid;gap:12px;min-height:380px}\n.b-t6 .chat p{display:flex;align-items:flex-start;gap:8px;font-size:14px;margin:0}\n.b-t6 .chat p.r{justify-content:flex-end}\n.b-t6 .chat i{width:34px;height:34px;border-radius:6px;flex:none;background:repeating-conic-gradient(#333 0 25%,#fff 0 50%) 0 0/8px 8px}\n.b-t6 .chat p.r i{background:var(--c-accent)}\n.b-t6 .chat span{background:#fff;padding:8px 11px;border-radius:6px;max-width:200px;color:#111}\n.b-t6 .chat p.r span{background:#95ec69}\n@media(max-width:860px){.b-t6 .wrap{grid-template-columns:1fr}.b-t6 .phone{width:280px}}",
    "ref": "leizi 模板 s16 · 微信聊天截图做社会证明",
+   "js": "",
    "fit": {
     "pages": [
      "首页"
@@ -1514,6 +1584,7 @@
    "html": "<section class=\"b-q5\"><div class=\"wrap\">\n  <form class=\"card form\" onsubmit=\"return false\"><b class=\"hd\">快速询价</b>\n    <input placeholder=\"姓名 *\"><input placeholder=\"邮箱 *\"><input placeholder=\"电话 / WhatsApp\">\n    <textarea rows=\"4\" placeholder=\"产品、数量和要求 *\"></textarea>\n    <div class=\"row\"><label class=\"up\">上传附件 ⇪</label><button class=\"btn\">提交询盘</button></div></form>\n  <div class=\"faq\"><h2 class=\"hd\">常见问题</h2><p>采购前最常问的几个问题，没找到答案就直接在左边留言。</p>\n    <details name=\"b-q5\" open><summary><em>/01</em><span>起订量是多少？可以混批吗？</span><i></i></summary><p>标准款每个型号 500 件，试单可以多型号混批。</p></details>\n    <details name=\"b-q5\"><summary><em>/02</em><span>可以先拿样品吗？</span><i></i></summary><p>可以，3–7 天寄出，首单下单后样品费可抵扣。</p></details>\n    <details name=\"b-q5\"><summary><em>/03</em><span>交期多久？</span><i></i></summary><p>收到定金后 25–35 天，视数量而定。</p></details>\n    <details name=\"b-q5\"><summary><em>/04</em><span>支持 OEM 和定制包装吗？</span><i></i></summary><p>支持，logo、颜色、包装和资料都可以定制。</p></details>\n    <details name=\"b-q5\"><summary><em>/05</em><span>付款方式有哪些？</span><i></i></summary><p>T/T、信用证、PayPal，长期客户可谈账期。</p></details></div>\n</div></section>",
    "css": ".b-q5{background:var(--c-accent);color:var(--c-on-accent);padding:88px 0}\n.b-q5 .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start}\n.b-q5 .form{padding:34px;display:grid;gap:14px;color:var(--c-ink);border:0}\n.b-q5 .form b{font-size:24px}\n.b-q5 input,.b-q5 textarea{width:100%;padding:12px 2px;border:0;border-bottom:1px solid var(--c-line);font:inherit;background:transparent;color:var(--c-ink)}\n.b-q5 .row{display:flex;justify-content:space-between;align-items:center;margin-top:6px}\n.b-q5 .up{border:1px solid var(--c-accent);color:var(--c-accent);border-radius:999px;padding:7px 16px;font-size:14px;font-weight:700;cursor:pointer}\n.b-q5 .faq>h2{font-size:clamp(30px,3.4vw,44px)}\n.b-q5 .faq>p{opacity:.85;margin:8px 0 22px}\n.b-q5 details{background:var(--c-card);color:var(--c-ink);border-radius:22px;margin-bottom:12px;padding:16px 20px}\n.b-q5 summary{list-style:none;display:flex;align-items:center;gap:14px;cursor:pointer;font-weight:700}\n.b-q5 summary::-webkit-details-marker{display:none}\n.b-q5 summary em{font-style:normal;font-size:13px;color:var(--c-muted);flex:none}\n.b-q5 summary span{flex:1}\n.b-q5 summary i{width:34px;height:34px;border-radius:50%;background:var(--c-surface);flex:none;position:relative;transition:.25s}\n.b-q5 summary i::after{content:\"↓\";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;color:var(--c-muted)}\n.b-q5 details[open] summary i{background:var(--c-accent);transform:rotate(180deg)}\n.b-q5 details[open] summary i::after{color:var(--c-on-accent)}\n.b-q5 details p{margin:10px 0 0 44px;color:var(--c-muted);font-size:15px}\n@media(max-width:860px){.b-q5 .wrap{grid-template-columns:1fr}.b-q5 .form{order:2}}",
    "ref": "leizi 模板 s14 · 表单 + 编号 FAQ 色块区",
+   "js": "",
    "fit": {
     "pages": [
      "首页",
