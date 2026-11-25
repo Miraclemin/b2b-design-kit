@@ -709,12 +709,12 @@
    "en": "Certification strip",
    "group": "信任",
    "use": "一排认证标志：CE、ISO、RoHS、SGS……让买家一眼看到资质",
-   "needs": "认证证书（只放真实拥有的）",
-   "edit": "认证名称、可选上传证书文件",
+   "needs": "认证证书（只放真实拥有、还在有效期内的）",
+   "edit": "认证名称、对应市场、可选上传证书文件、说明和查看链接",
    "mobile": "手机上横向可滑动",
-   "html": "<section class=\"b-t2\"><div class=\"wrap\">\n  <span class=\"lbl\">资质认证</span>\n  <div class=\"row\"><i>CE</i><i>ISO 9001</i><i>RoHS</i><i>REACH</i><i>SGS</i><i>BSCI</i></div>\n</div></section>",
-   "css": ".b-t2{padding:30px 0;border-bottom:1px solid var(--c-line);background:var(--c-bg)}\n.b-t2 .wrap{display:flex;align-items:center;gap:32px;flex-wrap:wrap}\n.b-t2 .lbl{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--c-muted)}\n.b-t2 .row{display:flex;gap:14px;flex-wrap:wrap;flex:1}\n.b-t2 i{font-style:normal;font-weight:800;font-size:15px;padding:10px 18px;border:2px solid var(--c-line);border-radius:var(--radius);color:var(--c-ink);letter-spacing:.04em}",
-   "ref": "",
+   "html": "<section class=\"b-t2\"><div class=\"wrap\">\n  <span class=\"lbl\">资质认证</span>\n  <div class=\"row\"><i>CE<small>欧盟</small></i><i>ISO 9001<small>质量体系</small></i><i>RoHS<small>欧盟</small></i><i>REACH<small>欧盟</small></i><i>SGS<small>第三方检测</small></i><i>BSCI<small>社会责任</small></i></div>\n  <p class=\"mk\">可按您的目的市场安排检测和文件。<a class=\"link\">查看资质文件 →</a></p>\n</div></section>",
+   "css": ".b-t2{padding:30px 0;border-bottom:1px solid var(--c-line);background:var(--c-bg)}\n.b-t2 .wrap{display:flex;align-items:center;gap:32px;flex-wrap:wrap}\n.b-t2 .lbl{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--c-muted)}\n.b-t2 .row{display:flex;gap:14px;flex-wrap:wrap;flex:1}\n.b-t2 i{font-style:normal;font-weight:800;font-size:15px;line-height:1.35;padding:9px 18px;border:2px solid var(--c-line);border-radius:var(--radius);color:var(--c-ink);letter-spacing:.04em}\n.b-t2 small{display:block;font-size:12px;font-weight:500;letter-spacing:0;color:var(--c-muted)}\n.b-t2 .mk{flex-basis:100%;font-size:14px;color:var(--c-muted);margin-top:-14px}\n.b-t2 .mk .link{margin-left:10px}",
+   "ref": "目标市场说明和查看文件：刀具工厂站 · 首页合规条",
    "js": "",
    "fit": {
     "pages": [
@@ -1456,12 +1456,12 @@
    "en": "FAQ & inquiry",
    "group": "询盘",
    "use": "左边常见问题、右边询价表单。放在首页和详情页底部，转化最强",
-   "needs": "无需图片",
-   "edit": "FAQ 问答（问和答都填了才显示）；表单用原有询盘表单",
+   "needs": "对接人照片（可选）",
+   "edit": "FAQ 问答（问和答都填了才显示）；对接人姓名、职位、响应时间、电话、邮箱；表单用原有询盘表单",
    "mobile": "手机上表单在 FAQ 下面",
-   "html": "<section class=\"b-q1 sec alt\"><div class=\"wrap\">\n  <div class=\"faq\"><span class=\"eyebrow\">常见问题</span><h2 class=\"hd sec-title\">采购商常问的问题</h2>\n    <details open><summary>起订量是多少？</summary><p>标准款每个型号 500 件，试单可以多型号混批。</p></details>\n    <details><summary>可以拿样品吗？</summary><p>可以，3–7 天寄出，首单下单后样品费可抵扣。</p></details>\n    <details><summary>交期多久？</summary><p>收到定金后 25–35 天，视数量而定。</p></details>\n    <details><summary>支持 OEM 吗？</summary><p>支持，logo、颜色、包装和资料都可以定制。</p></details>\n  </div>\n  <form class=\"card form\" onsubmit=\"return false\"><b class=\"hd\">获取报价</b><p>工作日 12 小时内回复。</p>\n    <div class=\"two\"><input placeholder=\"姓名 *\"><input placeholder=\"邮箱 *\"></div><input placeholder=\"公司 / 国家\">\n    <textarea rows=\"4\" placeholder=\"产品、数量和要求 *\"></textarea>\n    <label class=\"up\">＋ 上传图纸或文件（可选）</label><button class=\"btn\">提交询盘</button></form>\n</div></section>",
-   "css": ".b-q1 .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}\n.b-q1 details{border-bottom:1px solid var(--c-line);padding:18px 0}\n.b-q1 summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-size:17px}\n.b-q1 summary::-webkit-details-marker{display:none}\n.b-q1 summary::after{content:\"+\";color:var(--c-accent);font-size:22px;line-height:1;transition:transform .25s}\n.b-q1 details[open] summary::after{transform:rotate(45deg)}\n.b-q1 details p{color:var(--c-muted);margin-top:10px}\n.b-q1 .form{padding:32px;display:grid;gap:12px;box-shadow:0 20px 50px rgba(0,0,0,.06)}\n.b-q1 .form>b{font-size:24px}\n.b-q1 .form>p{color:var(--c-muted);font-size:14px;margin-top:-6px}\n.b-q1 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}\n.b-q1 input,.b-q1 textarea{width:100%;padding:12px 14px;border:1px solid var(--c-line);border-radius:var(--radius-btn);font:inherit;background:var(--c-bg);color:var(--c-ink)}\n.b-q1 .up{font-size:14px;color:var(--c-accent);font-weight:700;cursor:pointer}\n.b-q1 .btn{justify-content:center}\n@media(max-width:860px){.b-q1 .wrap{grid-template-columns:1fr}}",
-   "ref": "",
+   "html": "<section class=\"b-q1 sec alt\"><div class=\"wrap\">\n  <div class=\"faq\"><span class=\"eyebrow\">常见问题</span><h2 class=\"hd sec-title\">采购商常问的问题</h2>\n    <details open><summary>起订量是多少？</summary><p>标准款每个型号 500 件，试单可以多型号混批。</p></details>\n    <details><summary>可以拿样品吗？</summary><p>可以，3–7 天寄出，首单下单后样品费可抵扣。</p></details>\n    <details><summary>交期多久？</summary><p>收到定金后 25–35 天，视数量而定。</p></details>\n    <details><summary>支持 OEM 吗？</summary><p>支持，logo、颜色、包装和资料都可以定制。</p></details>\n  </div>\n  <form class=\"card form\" onsubmit=\"return false\"><b class=\"hd\">获取报价</b><p>写清型号、数量和目的市场，报价更快。</p>\n    <div class=\"desk\"><span class=\"av\">A</span><div><b>销售顾问 Amy（示例）</b><small>工厂直接对接 · 工作日 12 小时内回复</small><div class=\"ls\"><a href=\"#\">+86 000 0000 0000</a><a href=\"#\">sales@example.com</a></div></div></div>\n    <div class=\"two\"><input placeholder=\"姓名 *\"><input placeholder=\"邮箱 *\"></div><input placeholder=\"公司 / 国家\">\n    <textarea rows=\"4\" placeholder=\"产品、数量和要求 *\"></textarea>\n    <label class=\"up\">＋ 上传图纸或文件（可选）</label><button class=\"btn\">提交询盘</button></form>\n</div></section>",
+   "css": ".b-q1 .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}\n.b-q1 details{border-bottom:1px solid var(--c-line);padding:18px 0}\n.b-q1 summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-size:17px}\n.b-q1 summary::-webkit-details-marker{display:none}\n.b-q1 summary::after{content:\"+\";color:var(--c-accent);font-size:22px;line-height:1;transition:transform .25s}\n.b-q1 details[open] summary::after{transform:rotate(45deg)}\n.b-q1 details p{color:var(--c-muted);margin-top:10px}\n.b-q1 .form{padding:32px;display:grid;gap:12px;box-shadow:0 20px 50px rgba(0,0,0,.06)}\n.b-q1 .form>b{font-size:24px}\n.b-q1 .form>p{color:var(--c-muted);font-size:14px;margin-top:-6px}\n.b-q1 .desk{display:flex;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--c-line);border-left:3px solid var(--c-accent);border-radius:var(--radius);margin:4px 0}\n.b-q1 .av{flex:none;width:48px;height:48px;border-radius:50%;background:var(--c-accent);color:var(--c-on-accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px}\n.b-q1 .desk b{display:block;font-size:15px}\n.b-q1 .desk small{color:var(--c-muted);font-size:13px}\n.b-q1 .ls{display:flex;gap:4px 14px;flex-wrap:wrap;font-size:13px;margin-top:3px}\n.b-q1 .ls a{color:var(--c-accent);font-weight:600}\n.b-q1 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}\n.b-q1 input,.b-q1 textarea{width:100%;padding:12px 14px;border:1px solid var(--c-line);border-radius:var(--radius-btn);font:inherit;background:var(--c-bg);color:var(--c-ink)}\n.b-q1 .up{font-size:14px;color:var(--c-accent);font-weight:700;cursor:pointer}\n.b-q1 .btn{justify-content:center}\n@media(max-width:860px){.b-q1 .wrap{grid-template-columns:1fr}}",
+   "ref": "对接人卡：刀具工厂站 · 询价表单",
    "js": "",
    "fit": {
     "pages": [
@@ -1598,6 +1598,225 @@
    }
   },
   {
+   "id": "C9",
+   "name": "多级类目树 + 型号搜索",
+   "en": "",
+   "group": "产品与类目",
+   "use": "左边是可展开的多级类目树，右边上面能按型号或关键词搜索，下面是带型号标签的产品卡。型号几百上千个时，采购商能按类目逛，也能直接搜型号",
+   "needs": "产品图（统一比例）、型号、类目层级",
+   "edit": "类目树和产品自动读取；搜索接网站自己的产品搜索；卡片显示型号、名称、一行参数",
+   "mobile": "手机上类目树收成一个按钮，点开才展开；产品两列",
+   "html": "<section class=\"b-c9 sec\"><div class=\"wrap\">\n  <aside class=\"card\"><details class=\"panel\" open><summary>产品类目</summary><nav aria-label=\"产品类目\">\n    <button type=\"button\" data-f=\"\" class=\"on\">全部产品</button>\n    <details open><summary>{{cat1}}</summary><div><button type=\"button\" data-f=\"a1\">{{cat1}} 标准款</button><button type=\"button\" data-f=\"a2\">{{cat1}} 加强款</button></div></details>\n    <details><summary>{{cat2}}</summary><div><button type=\"button\" data-f=\"b1\">{{cat2}} 标准款</button><button type=\"button\" data-f=\"b2\">{{cat2}} 定制款</button></div></details>\n    <details><summary>{{cat3}}</summary><div><button type=\"button\" data-f=\"c1\">{{cat3}} 系列</button></div></details>\n  </nav></details></aside>\n  <div class=\"list\">\n    <form class=\"bar\" role=\"search\" onsubmit=\"return false\"><label><span>型号或关键词</span><input type=\"search\" placeholder=\"例如 A-128\"></label><button class=\"btn\">搜索</button></form>\n    <p class=\"cnt\" role=\"status\">共 <b>9</b> 款产品</p>\n    <div class=\"items\">\n      <article class=\"card p\" data-cat=\"a1\"><div class=\"ph\" data-img=\"cat1\" data-label=\"产品图\"></div><div class=\"in\"><span class=\"sku\">A-128</span><b>{{cat1}} 标准款</b><small>小号 · 起订 500 件</small></div><button type=\"button\" class=\"add\">＋ 加入询价</button></article>\n      <article class=\"card p\" data-cat=\"a1\"><div class=\"ph\" data-img=\"product\" data-label=\"产品图\"></div><div class=\"in\"><span class=\"sku\">A-153</span><b>{{product}}</b><small>中号 · 起订 500 件</small></div><button type=\"button\" class=\"add\">＋ 加入询价</button></article>\n      <article class=\"card p\" data-cat=\"a2\"><div class=\"ph\" data-img=\"cat1\" data-label=\"产品图\"></div><div class=\"in\"><span class=\"sku\">A-230</span><b>{{cat1}} 加强款</b><small>大号 · 起订 300 件</small></div><button type=\"button\" class=\"add\">＋ 加入询价</button></article>\n      <article class=\"card p\" data-cat=\"b1\"><div class=\"ph\" data-img=\"cat2\" data-label=\"产品图\"></div><div class=\"in\"><span class=\"sku\">B-011</span><b>{{cat2}} 标准款</b><small>中号 · 起订 500 件</small></div><button type=\"button\" class=\"add\">＋ 加入询价</button></article>\n      <article class=\"card p\" data-cat=\"b1\"><div class=\"ph\" data-img=\"cat2\" data-label=\"产品图\"></div><div class=\"in\"><span class=\"sku\">B-024</span><b>{{cat2}} 经济款</b><small>小号 · 起订 1,000 件</small></div><button type=\"button\" class=\"add\">＋ 加入询价</button></article>\n      <article class=\"card p\" data-cat=\"b2\"><div class=\"ph\" data-img=\"cat4\" data-label=\"产品图\"></div><div class=\"in\"><span class=\"sku\">B-090</span><b>{{cat2}} 定制款</b><small>按图定制</small></div><button type=\"button\" class=\"add\">＋ 加入询价</button></article>\n      <article class=\"card p\" data-cat=\"c1\"><div class=\"ph\" data-img=\"cat3\" data-label=\"产品图\"></div><div class=\"in\"><span class=\"sku\">C-007</span><b>{{cat3}} 小号</b><small>起订 300 件</small></div><button type=\"button\" class=\"add\">＋ 加入询价</button></article>\n      <article class=\"card p\" data-cat=\"c1\"><div class=\"ph\" data-img=\"cat3\" data-label=\"产品图\"></div><div class=\"in\"><span class=\"sku\">C-012</span><b>{{cat3}} 大号</b><small>起订 200 件</small></div><button type=\"button\" class=\"add\">＋ 加入询价</button></article>\n      <article class=\"card p\" data-cat=\"c1\"><div class=\"ph\" data-img=\"cat4\" data-label=\"产品图\"></div><div class=\"in\"><span class=\"sku\">C-020</span><b>{{cat4}} 配件</b><small>配套使用</small></div><button type=\"button\" class=\"add\">＋ 加入询价</button></article>\n    </div>\n    <p class=\"none\" hidden>没有找到这个型号。把型号或照片发给我们，帮您匹配。 <a class=\"link\">发送需求 →</a></p>\n  </div>\n</div></section>",
+   "css": ".b-c9 .wrap{display:grid;grid-template-columns:250px minmax(0,1fr);gap:32px;align-items:start}\n.b-c9 aside{position:sticky;top:96px;padding:10px 18px 16px;max-height:calc(100vh - 120px);overflow:auto}\n.b-c9 summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 0;font-weight:700;font-size:15px}\n.b-c9 summary::-webkit-details-marker{display:none}\n.b-c9 nav summary::after{content:\"+\";color:var(--c-accent);font-size:19px;line-height:1}\n.b-c9 nav details[open]>summary::after{content:\"−\"}\n.b-c9 nav details{border-top:1px solid var(--c-line)}\n.b-c9 nav details>div{border-left:2px solid var(--c-line);margin:0 0 12px 4px;padding-left:10px;display:grid;gap:2px}\n.b-c9 nav button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;padding:8px 10px;font-size:14px;border-radius:var(--radius-btn);transition:background .2s}\n.b-c9 nav button:hover{background:var(--c-surface)}\n.b-c9 nav button:focus-visible{outline:2px solid var(--c-accent)}\n.b-c9 nav button.on{background:var(--c-accent);color:var(--c-on-accent);font-weight:700}\n.b-c9 .bar{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap}\n.b-c9 .bar label{flex:1 1 220px;max-width:360px;font-size:13px;font-weight:700}\n.b-c9 .bar span{display:block;margin-bottom:6px}\n.b-c9 input{width:100%;padding:12px 14px;border:1px solid var(--c-line);border-radius:var(--radius-btn);font:inherit;font-size:15px;font-weight:400;background:var(--c-bg);color:var(--c-ink)}\n.b-c9 .bar .btn{padding:11px 22px}\n.b-c9 .cnt{font-size:14px;color:var(--c-muted);margin:16px 0}\n.b-c9 .items{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}\n.b-c9 .p{display:flex;flex-direction:column;overflow:hidden}\n.b-c9 .p[hidden]{display:none}\n.b-c9 .ph{aspect-ratio:4/3;border-radius:0}\n.b-c9 .in{padding:14px 16px 4px;flex:1}\n.b-c9 .sku{display:inline-block;border:1px solid var(--c-line);border-radius:4px;padding:2px 8px;font-size:12px;font-weight:700;letter-spacing:.03em}\n.b-c9 .in b{display:block;font-size:16px;margin:8px 0 2px}\n.b-c9 small{color:var(--c-muted);font-size:13px}\n.b-c9 .add{align-self:flex-start;margin:10px 16px 16px;padding:9px 14px;border:1px solid var(--c-accent);border-radius:var(--radius-btn);background:transparent;color:var(--c-accent);font:700 13px var(--font-body);cursor:pointer;transition:.2s}\n.b-c9 .add:hover,.b-c9 .add[aria-pressed=true]{background:var(--c-accent);color:var(--c-on-accent)}\n.b-c9 .none{padding:40px 0;color:var(--c-muted)}\n@media(max-width:860px){.b-c9 .wrap{grid-template-columns:1fr;gap:20px}.b-c9 aside{position:static;max-height:none;padding:4px 18px}.b-c9 .panel>summary::after{content:\"+\";color:var(--c-accent);font-size:20px}.b-c9 .panel[open]>summary::after{content:\"−\"}.b-c9 .items{grid-template-columns:1fr 1fr;gap:12px}.b-c9 .in{padding:12px 12px 4px}.b-c9 .add{margin:8px 12px 12px}}\n@media(min-width:861px){.b-c9 .panel>summary{pointer-events:none}}",
+   "ref": "刀具工厂站 · 产品页 · 类目树和型号搜索",
+   "js": "document.querySelectorAll('.b-c9').forEach(function(s){\n  var ps=[].slice.call(s.querySelectorAll('.p')),q=s.querySelector('input'),f='',cnt=s.querySelector('.cnt b'),none=s.querySelector('.none'),panel=s.querySelector('.panel');\n  function draw(){var k=q.value.trim().toLowerCase(),n=0;ps.forEach(function(p){var ok=(!f||p.dataset.cat===f)&&(!k||p.querySelector('.in').textContent.toLowerCase().indexOf(k)>-1);p.hidden=!ok;if(ok)n++});cnt.textContent=n;none.hidden=n>0}\n  q.addEventListener('input',draw);s.querySelector('.bar').addEventListener('submit',draw);\n  s.querySelectorAll('nav button').forEach(function(b){b.addEventListener('click',function(){f=b.dataset.f;s.querySelectorAll('nav button').forEach(function(x){x.classList.toggle('on',x===b)});draw();if(innerWidth<=860)panel.open=false})});\n  var mq=matchMedia('(max-width:860px)');function fit(){panel.open=!mq.matches}fit();mq.addEventListener('change',fit);\n  s.addEventListener('click',function(e){var b=e.target.closest('.add');if(!b||document.querySelector('.w-quote'))return;\n    var on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',on);b.textContent=on?'✓ 已选':'＋ 加入询价';\n    var sel=[].slice.call(s.querySelectorAll('.add[aria-pressed=true]')).map(function(x){return x.closest('.p').querySelector('.sku').textContent});\n    document.querySelectorAll('form textarea').forEach(function(t){var old=t.dataset.c9||'',now=sel.length?'询价型号：'+sel.join('、'):'';if(!t.value||t.value===old){t.value=now;t.dataset.c9=now}})});\n});",
+   "fit": {
+    "pages": [
+     "产品聚合页"
+    ],
+    "pos": "中段",
+    "types": [
+     "目录型",
+     "原材料型"
+    ],
+    "note": "型号上百个时代替 C3",
+    "needs": []
+   }
+  },
+  {
+   "id": "C10",
+   "name": "材料选择矩阵",
+   "en": "",
+   "group": "产品与类目",
+   "use": "把材料（或等级）按参考性能、优点、适合的销售渠道列成表；点上方的渠道，合适的行自动点亮。采购商不懂材料，也能按自己的市场选",
+   "needs": "材料或等级的真实参数",
+   "edit": "每行：材料名、参考性能、优点、适合渠道、价位；渠道按钮可增减",
+   "mobile": "手机上每种材料变成一张卡片",
+   "html": "<section class=\"b-c10 sec\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">材料选择</span><h2 class=\"hd sec-title\">按您的销售渠道选材料</h2><p class=\"sec-sub\">先点您的渠道，再看推荐的材料。拿不准就让我们推荐。</p></div>\n  <div class=\"chips\" role=\"group\" aria-label=\"销售渠道\"><button type=\"button\" data-k=\"promo\">超市促销</button><button type=\"button\" data-k=\"ecom\">跨境电商</button><button type=\"button\" data-k=\"retail\">品牌零售</button><button type=\"button\" data-k=\"gift\">高端礼品</button></div>\n  <table>\n    <thead><tr><th>材料 / 等级</th><th>参考性能</th><th>优点</th><th>适合的渠道</th><th>价位</th></tr></thead>\n    <tbody>\n      <tr data-k=\"promo\"><th>标准级<small>示例牌号 A</small></th><td data-l=\"参考性能\">基础</td><td data-l=\"优点\">成本低，日常使用够用，容易维护</td><td data-l=\"适合的渠道\">超市促销、入门套装、批发</td><td data-l=\"价位\">¥</td></tr>\n      <tr data-k=\"ecom promo\"><th>加强级<small>示例牌号 B</small></th><td data-l=\"参考性能\">中等</td><td data-l=\"优点\">性能、耐用和成本最均衡</td><td data-l=\"适合的渠道\">跨境电商、中端品牌</td><td data-l=\"价位\">¥¥</td></tr>\n      <tr data-k=\"retail ecom\"><th>专业级<small>示例牌号 C</small></th><td data-l=\"参考性能\">较高</td><td data-l=\"优点\">耐腐蚀，适合高频使用</td><td data-l=\"适合的渠道\">品牌零售、专业渠道</td><td data-l=\"价位\">¥¥¥</td></tr>\n      <tr data-k=\"gift retail\"><th>旗舰级<small>示例牌号 D</small></th><td data-l=\"参考性能\">最高</td><td data-l=\"优点\">性能和外观都有辨识度</td><td data-l=\"适合的渠道\">高端礼品、旗舰款</td><td data-l=\"价位\">¥¥¥¥</td></tr>\n    </tbody>\n  </table>\n  <div class=\"foot\"><p>性能是参考范围，以确认样品为准。</p><a class=\"btn\">让我们帮您选材料</a></div>\n</div></section>",
+   "css": ".b-c10 .chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}\n.b-c10 .chips button{padding:10px 18px;border:1px solid var(--c-line);border-radius:999px;background:var(--c-card);color:var(--c-ink);font:700 14px var(--font-body);cursor:pointer;transition:.2s}\n.b-c10 .chips button:hover{border-color:var(--c-accent)}\n.b-c10 .chips button[aria-pressed=true]{background:var(--c-accent);border-color:var(--c-accent);color:var(--c-on-accent)}\n.b-c10 table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--c-line);border-radius:var(--radius);overflow:hidden;font-size:15px}\n.b-c10 th,.b-c10 td{text-align:left;padding:18px 20px;vertical-align:top}\n.b-c10 thead th{background:var(--c-dark);color:var(--c-on-dark);font-size:14px;padding:14px 20px}\n.b-c10 tbody tr{transition:opacity .3s}\n.b-c10 tbody tr+tr>*{border-top:1px solid var(--c-line)}\n.b-c10 tbody th{background:var(--c-surface);font-size:16px;border-left:4px solid transparent;transition:border-color .3s}\n.b-c10 small{display:block;font-weight:400;font-size:13px;color:var(--c-muted)}\n.b-c10 .pick tbody tr:not(.hit){opacity:.55}\n.b-c10 tr.hit td,.b-c10 tr.hit th{background:color-mix(in srgb,var(--c-accent) 9%,var(--c-card))}\n.b-c10 tr.hit th{border-left-color:var(--c-accent)}\n.b-c10 .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:22px}\n.b-c10 .foot p{font-size:14px;color:var(--c-muted)}\n@media(max-width:760px){.b-c10 table,.b-c10 tbody,.b-c10 tr,.b-c10 tbody th,.b-c10 td{display:block}.b-c10 thead{display:none}.b-c10 table{border:0}.b-c10 tbody tr{border:1px solid var(--c-line);border-radius:var(--radius);overflow:hidden;margin-bottom:14px}.b-c10 tbody tr+tr>*{border-top:0}.b-c10 td{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:9px 18px}.b-c10 td::before{content:attr(data-l);color:var(--c-muted);font-size:13px}}",
+   "ref": "刀具工厂站 · OEM 页 · 材料矩阵",
+   "js": "document.querySelectorAll('.b-c10').forEach(function(s){\n  var bs=[].slice.call(s.querySelectorAll('.chips button')),t=s.querySelector('table'),rows=[].slice.call(t.querySelectorAll('tbody tr'));\n  function pick(b){var on=b&&b.getAttribute('aria-pressed')!=='true';bs.forEach(function(x){x.setAttribute('aria-pressed',String(on&&x===b))});t.classList.toggle('pick',!!on);\n    rows.forEach(function(r){r.classList.toggle('hit',!!on&&r.dataset.k.split(' ').indexOf(b.dataset.k)>-1)})}\n  bs.forEach(function(b){b.setAttribute('aria-pressed','false');b.addEventListener('click',function(){pick(b)})});pick(bs[1]);\n});",
+   "fit": {
+    "pages": [
+     "首页",
+     "产品聚合页",
+     "详情页"
+    ],
+    "pos": "中段",
+    "types": [
+     "目录型",
+     "原材料型",
+     "图纸定制型",
+     "消费电子型"
+    ],
+    "note": "帮不懂材料的买家选",
+    "needs": []
+   }
+  },
+  {
+   "id": "F8",
+   "name": "资质文件档案",
+   "en": "",
+   "group": "工厂与能力",
+   "use": "检测报告和证书做成档案卡：缩略图、编号、日期、检测范围、是否在有效期；按目标市场筛选，一键索取完整文件。比一排认证标志更经得起查",
+   "needs": "检测报告和证书首页（敏感信息打码）",
+   "edit": "每份：缩略图、名称、机构和编号、日期、检测范围、状态、适用市场；过期的标「历史存档」",
+   "mobile": "手机上两列，缩略图在上",
+   "html": "<section class=\"b-f8 sec alt\"><div class=\"wrap\">\n  <div class=\"top\"><div class=\"sec-head\"><span class=\"eyebrow\">资质文件</span><h2 class=\"hd sec-title\">每一份报告都能查到编号</h2><p class=\"sec-sub\">按您的目标市场筛选，需要完整版可以直接索取。</p></div>\n    <div class=\"chips\" role=\"group\" aria-label=\"目标市场\"><button type=\"button\" data-k=\"\" aria-pressed=\"true\">全部</button><button type=\"button\" data-k=\"eu\" aria-pressed=\"false\">欧盟</button><button type=\"button\" data-k=\"us\" aria-pressed=\"false\">美国</button><button type=\"button\" data-k=\"gl\" aria-pressed=\"false\">工厂体系</button></div></div>\n  <div class=\"docs\">\n    <article class=\"card\" data-k=\"eu\"><div class=\"pg\"><i></i></div><div><em class=\"ok\">有效</em><b>产品安全检测报告</b><dl><dt>编号</dt><dd>示例 0001</dd><dt>日期</dt><dd>按证书填写</dd><dt>范围</dt><dd>欧盟市场标准</dd></dl><a class=\"link\">索取完整报告 →</a></div></article>\n    <article class=\"card\" data-k=\"us\"><div class=\"pg\"><i></i></div><div><em class=\"ok\">有效</em><b>材料成分检测报告</b><dl><dt>编号</dt><dd>示例 0002</dd><dt>日期</dt><dd>按证书填写</dd><dt>范围</dt><dd>美国市场标准</dd></dl><a class=\"link\">索取完整报告 →</a></div></article>\n    <article class=\"card\" data-k=\"gl\"><div class=\"pg\"><i></i></div><div><em class=\"ok\">有效</em><b>质量管理体系证书</b><dl><dt>编号</dt><dd>示例 0003</dd><dt>有效期</dt><dd>按证书填写</dd><dt>范围</dt><dd>生产与销售</dd></dl><a class=\"link\">索取完整文件 →</a></div></article>\n    <article class=\"card\" data-k=\"eu us\"><div class=\"pg\"><i></i></div><div><em>历史存档</em><b>耐用性测试报告</b><dl><dt>编号</dt><dd>示例 0004</dd><dt>日期</dt><dd>按证书填写</dd><dt>范围</dt><dd>仅限所测样品</dd></dl><a class=\"link\">询问最新报告 →</a></div></article>\n  </div>\n</div></section>",
+   "css": ".b-f8 .top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px}\n.b-f8 .sec-head{margin:0}\n.b-f8 .chips{display:flex;gap:8px;flex-wrap:wrap}\n.b-f8 .chips button{padding:9px 16px;border:1px solid var(--c-line);border-radius:999px;background:var(--c-card);color:var(--c-ink);font:700 14px var(--font-body);cursor:pointer}\n.b-f8 .chips button[aria-pressed=true]{background:var(--c-accent);border-color:var(--c-accent);color:var(--c-on-accent)}\n.b-f8 .docs{display:grid;grid-template-columns:1fr 1fr;gap:20px}\n.b-f8 article{display:grid;grid-template-columns:132px 1fr;gap:24px;padding:22px;align-items:center}\n.b-f8 article[hidden]{display:none}\n.b-f8 .pg{position:relative;aspect-ratio:.72;background:linear-gradient(var(--c-line),var(--c-line)) 16% 14%/44% 7px no-repeat,repeating-linear-gradient(var(--c-line) 0 2px,transparent 2px 11px) 50% 58%/72% 52% no-repeat,var(--c-bg);border:1px solid var(--c-line);box-shadow:0 8px 22px rgba(0,0,0,.08);transition:transform .3s}\n.b-f8 article:hover .pg{transform:translateY(-4px) rotate(-1deg)}\n.b-f8 .pg i{position:absolute;right:12%;bottom:8%;width:28px;height:28px;border-radius:50%;border:2px solid var(--c-accent);opacity:.7}\n.b-f8 em{font-style:normal;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--c-surface);color:var(--c-muted)}\n.b-f8 em.ok{background:color-mix(in srgb,var(--c-accent) 14%,transparent);color:var(--c-accent)}\n.b-f8 b{display:block;font-size:18px;margin:10px 0 8px}\n.b-f8 dl{display:grid;grid-template-columns:56px 1fr;gap:3px 10px;font-size:14px;margin-bottom:12px}\n.b-f8 dt{color:var(--c-muted)}\n@media(max-width:860px){.b-f8 .docs{gap:12px}.b-f8 article{grid-template-columns:1fr;padding:16px;gap:14px;align-items:start}.b-f8 .pg{width:96px}}\n@media(max-width:430px){.b-f8 dl{grid-template-columns:1fr;gap:0}.b-f8 dt{font-size:12px;margin-top:5px}.b-f8 b{font-size:16px}}\n@media (prefers-reduced-motion:reduce){.b-f8 .pg{transition:none}.b-f8 article:hover .pg{transform:none}}",
+   "ref": "刀具工厂站 · 质量文件页 · 报告存档",
+   "js": "document.querySelectorAll('.b-f8').forEach(function(s){\n  var bs=[].slice.call(s.querySelectorAll('.chips button'));\n  bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});\n    s.querySelectorAll('article').forEach(function(a){a.hidden=!!b.dataset.k&&a.dataset.k.split(' ').indexOf(b.dataset.k)<0})})});\n});",
+   "fit": {
+    "pages": [
+     "首页",
+     "产品聚合页",
+     "详情页"
+    ],
+    "pos": "中段",
+    "types": [
+     "原材料型",
+     "消费电子型",
+     "农食型",
+     "目录型"
+    ],
+    "note": "只放真实文件，过期的标历史存档",
+    "needs": []
+   }
+  },
+  {
+   "id": "P3",
+   "name": "买家类型分流",
+   "en": "",
+   "group": "合作流程",
+   "use": "三张大卡按买家身份分流：做自有品牌、做批发分销、做 OEM / ODM。每张写清他最关心的三件事，让买家一眼找到自己该走的路",
+   "needs": "无需图片",
+   "edit": "每张：图标、身份、一句话、三个要点、链接",
+   "mobile": "手机上一列",
+   "html": "<section class=\"b-p3 sec\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">合作方式</span><h2 class=\"hd sec-title\">您是哪一类买家？</h2><p class=\"sec-sub\">选最接近您的一种，直接看对应的起订量、打样和包装方案。</p></div>\n  <div class=\"grid g3\">\n    <a class=\"card it\"><svg viewBox=\"0 0 48 48\" aria-hidden=\"true\"><path d=\"M10 15h28l3 27H7zM17 20v-7a7 7 0 0 1 14 0v7\"/></svg><h3 class=\"hd\">自有品牌</h3><p>为您的店铺或品牌做一个系列。</p><ul><li>印您的 logo</li><li>零售彩盒和条形码</li><li>先打样再下单</li></ul><span>看品牌方案 <i>→</i></span></a>\n    <a class=\"card it\"><svg viewBox=\"0 0 48 48\" aria-hidden=\"true\"><path d=\"M4 12h24v22H4zM28 20h9l7 8v6H28M9 36a4 4 0 1 0 8 0 4 4 0 1 0-8 0M31 36a4 4 0 1 0 8 0 4 4 0 1 0-8 0\"/></svg><h3 class=\"hd\">批发分销</h3><p>从现有型号里挑，混批一柜。</p><ul><li>多型号混批</li><li>阶梯价格</li><li>稳定补货</li></ul><span>看批发方案 <i>→</i></span></a>\n    <a class=\"card it\"><svg viewBox=\"0 0 48 48\" aria-hidden=\"true\"><path d=\"M6 14 24 5l18 9v20l-18 9-18-9zM6 14l18 9 18-9M24 23v20\"/></svg><h3 class=\"hd\">OEM / ODM</h3><p>按图纸或想法开发新产品。</p><ul><li>工程评估</li><li>开模和打样</li><li>图纸保密</li></ul><span>看开发流程 <i>→</i></span></a>\n  </div>\n</div></section>",
+   "css": ".b-p3 .it{display:flex;flex-direction:column;padding:34px 30px;transition:background .3s,color .3s,border-color .3s}\n.b-p3 svg{width:52px;height:52px;fill:none;stroke:var(--c-accent);stroke-width:2;stroke-linejoin:round;stroke-linecap:round;transition:stroke .3s}\n.b-p3 h3{font-size:24px;margin:20px 0 6px}\n.b-p3 p{color:var(--c-muted);transition:color .3s}\n.b-p3 ul{list-style:none;padding:0;margin:18px 0 24px;display:grid;gap:8px;font-size:15px}\n.b-p3 li::before{content:\"✓\";color:var(--c-accent);font-weight:800;margin-right:10px;transition:color .3s}\n.b-p3 span{margin-top:auto;font-weight:700;color:var(--c-accent);transition:color .3s}\n.b-p3 span i{display:inline-block;font-style:normal;transition:transform .3s}\n.b-p3 .it:is(:hover,:focus-visible){background:var(--c-accent);border-color:var(--c-accent);color:var(--c-on-accent)}\n.b-p3 .it:is(:hover,:focus-visible) :is(p,span){color:inherit}\n.b-p3 .it:is(:hover,:focus-visible) li::before{color:inherit}\n.b-p3 .it:is(:hover,:focus-visible) svg{stroke:currentColor}\n.b-p3 .it:hover span i{transform:translateX(6px)}\n@media(max-width:860px){.b-p3 .g3{grid-template-columns:1fr}.b-p3 .it{padding:26px 24px}}\n@media (prefers-reduced-motion:reduce){.b-p3 *{transition:none!important}}",
+   "ref": "刀具工厂站 · 首页 · 采购支持三卡",
+   "js": "",
+   "fit": {
+    "pages": [
+     "首页"
+    ],
+    "pos": "中段",
+    "types": [
+     "目录型",
+     "款式型",
+     "消费电子型"
+    ],
+    "note": "按买家身份分流",
+    "needs": []
+   }
+  },
+  {
+   "id": "A6",
+   "name": "项目配方卡",
+   "en": "",
+   "group": "应用与案例",
+   "use": "不方便公开客户案例时，用「配方」代替：卖给什么渠道、用什么材料、怎么包装、起订多少，再连到对应产品。买家照着就能下单",
+   "needs": "每张 1 张产品图（可选）",
+   "edit": "每张：渠道、名称、材料、包装、起订量、产品链接",
+   "mobile": "手机上一列",
+   "html": "<section class=\"b-a6 sec alt\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">常见项目</span><h2 class=\"hd sec-title\">别的买家通常这样配</h2><p class=\"sec-sub\">三种最常见的出口配置，可以直接照着询价，也可以改。</p></div>\n  <div class=\"grid g3\">\n    <article class=\"card\"><div class=\"ph\" data-img=\"cat1\" data-label=\"产品图\"><em>跨境电商</em></div><div class=\"in\"><h3 class=\"hd\">自有品牌套装</h3><dl><dt>产品</dt><dd>{{cat1}}</dd><dt>材料</dt><dd>加强级</dd><dt>包装</dt><dd>彩盒 + logo</dd><dt>起订</dt><dd>500 套</dd></dl><a class=\"link\">按这个配置询价 →</a></div></article>\n    <article class=\"card\"><div class=\"ph\" data-img=\"cat2\" data-label=\"产品图\"><em>批发零售</em></div><div class=\"in\"><h3 class=\"hd\">走量基础款</h3><dl><dt>产品</dt><dd>{{cat2}}</dd><dt>材料</dt><dd>标准级</dd><dt>包装</dt><dd>吊卡 / 简装</dd><dt>起订</dt><dd>多型号混批</dd></dl><a class=\"link\">按这个配置询价 →</a></div></article>\n    <article class=\"card\"><div class=\"ph\" data-img=\"cat3\" data-label=\"产品图\"><em>礼品渠道</em></div><div class=\"in\"><h3 class=\"hd\">高端礼盒</h3><dl><dt>产品</dt><dd>{{cat3}}</dd><dt>材料</dt><dd>旗舰级</dd><dt>包装</dt><dd>磁吸礼盒</dd><dt>起订</dt><dd>300 套</dd></dl><a class=\"link\">按这个配置询价 →</a></div></article>\n  </div>\n</div></section>",
+   "css": ".b-a6 article{display:flex;flex-direction:column;overflow:hidden}\n.b-a6 .ph{aspect-ratio:16/10;border-radius:0}\n.b-a6 em{position:absolute;left:16px;top:16px;z-index:1;font-style:normal;font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;background:var(--c-accent);color:var(--c-on-accent)}\n.b-a6 .in{padding:24px 26px 28px;display:flex;flex-direction:column;flex:1}\n.b-a6 h3{font-size:22px}\n.b-a6 dl{display:grid;grid-template-columns:56px 1fr;margin:16px 0 22px;font-size:15px}\n.b-a6 dt,.b-a6 dd{padding:9px 0;border-bottom:1px dashed var(--c-line)}\n.b-a6 dt{color:var(--c-muted)}\n.b-a6 dd{font-weight:600}\n.b-a6 .link{margin-top:auto}\n@media(max-width:860px){.b-a6 .g3{grid-template-columns:1fr}}",
+   "ref": "刀具工厂站 · 首页 · 典型出口项目",
+   "js": "",
+   "fit": {
+    "pages": [
+     "首页",
+     "产品聚合页"
+    ],
+    "pos": "中段",
+    "types": [
+     "款式型",
+     "消费电子型",
+     "目录型"
+    ],
+    "note": "没有可公开案例时用",
+    "needs": []
+   }
+  },
+  {
+   "id": "T7",
+   "name": "客户来访照片墙",
+   "en": "",
+   "group": "信任",
+   "use": "一排客户来访、展厅洽谈的真人合影，自动一张张往左换，鼠标移上或点按钮就暂停。真人照片比文字评价可信",
+   "needs": "5 张以上真实来访照片（竖版，须征得对方同意）",
+   "edit": "照片、国家和时间（可不填）、标题",
+   "mobile": "手机上手指横滑，不自动播放",
+   "html": "<section class=\"b-t7 sec\"><div class=\"wrap\">\n  <div class=\"top\"><div><span class=\"eyebrow\">客户来访</span><h2 class=\"hd sec-title\">他们来过我们的工厂和展厅</h2></div><button type=\"button\" class=\"tg\">暂停</button></div>\n  <div class=\"win\"><div class=\"track\">\n    <figure><div class=\"ph\" data-img=\"factory\" data-label=\"来访合影（竖版）\"></div><figcaption>客户验厂</figcaption></figure>\n    <figure><div class=\"ph\" data-img=\"app1\" data-label=\"来访合影（竖版）\"></div><figcaption>展厅选样</figcaption></figure>\n    <figure><div class=\"ph\" data-img=\"qc\" data-label=\"来访合影（竖版）\"></div><figcaption>质检现场</figcaption></figure>\n    <figure><div class=\"ph\" data-img=\"app2\" data-label=\"来访合影（竖版）\"></div><figcaption>项目交流</figcaption></figure>\n    <figure><div class=\"ph\" data-img=\"hero\" data-label=\"来访合影（竖版）\"></div><figcaption>展会见面</figcaption></figure>\n  </div></div>\n</div></section>",
+   "css": ".b-t7 .top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;border-bottom:1px solid var(--c-line);margin-bottom:26px;padding-bottom:10px}\n.b-t7 .tg{flex:none;margin-bottom:14px;padding:9px 18px;border:1px solid var(--c-line);border-radius:var(--radius-btn);background:var(--c-card);color:var(--c-ink);font:700 14px var(--font-body);cursor:pointer}\n.b-t7 .win{overflow:hidden}\n.b-t7 .track{display:flex;gap:20px}\n.b-t7 .track.mv{transition:transform .9s cubic-bezier(.3,.7,.2,1)}\n.b-t7 figure{flex:none;width:calc((100% - 40px)/3);margin:0}\n.b-t7 .ph{aspect-ratio:3/4}\n.b-t7 figcaption{font-size:14px;color:var(--c-muted);margin-top:10px}\n@media(max-width:760px){.b-t7 .win{overflow-x:auto;scroll-snap-type:x mandatory}.b-t7 figure{width:78%;scroll-snap-align:start}.b-t7 .tg{display:none}}",
+   "ref": "刀具工厂站 · 首页 · 来访照片",
+   "js": "document.querySelectorAll('.b-t7').forEach(function(s){\n  var t=s.querySelector('.track'),b=s.querySelector('.tg'),on=!matchMedia('(prefers-reduced-motion: reduce)').matches,hov=false,busy=false;\n  function lab(){b.textContent=on?'暂停':'播放';b.setAttribute('aria-pressed',String(!on))}lab();\n  b.addEventListener('click',function(){on=!on;lab()});s.querySelector('.win').addEventListener('mouseenter',function(){hov=true});s.querySelector('.win').addEventListener('mouseleave',function(){hov=false});\n  setInterval(function(){if(!on||hov||busy||document.hidden||innerWidth<=760)return;var r=s.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;\n    busy=true;var w=t.children[0].offsetWidth+20;t.classList.add('mv');t.style.transform='translateX(-'+w+'px)';\n    setTimeout(function(){t.classList.remove('mv');t.appendChild(t.children[0]);t.style.transform='';busy=false},950)},4200);\n});",
+   "fit": {
+    "pages": [
+     "首页"
+    ],
+    "pos": "页尾前",
+    "types": [
+     "目录型",
+     "大型设备型",
+     "款式型"
+    ],
+    "note": "真人照片要征得同意",
+    "needs": []
+   }
+  },
+  {
+   "id": "D9",
+   "name": "选型号 + 样品确认清单",
+   "en": "",
+   "group": "产品详情",
+   "use": "左边列出同款的几个型号和差别，选好直接询价；右边是「样品要确认什么」清单，勾选后和型号一起带进询盘。减少打样来回沟通",
+   "needs": "各型号小图（可选）",
+   "edit": "型号：编号、差别、起订量；确认项：一行一条，可增减",
+   "mobile": "手机上型号在上，清单在下",
+   "html": "<section class=\"b-d9 sec alt\"><div class=\"wrap\">\n  <div><span class=\"eyebrow\">选型号</span><h2 class=\"hd sec-title\">这一款有三个型号</h2>\n    <div class=\"ms\" role=\"radiogroup\" aria-label=\"型号\">\n      <label><input type=\"radio\" checked value=\"A-128\"><span class=\"ph\" data-img=\"product\" data-label=\"\"></span><span class=\"tx\"><b>A-128</b><small>标准款，适合{{app1}}</small></span><em>起订 500 件</em></label>\n      <label><input type=\"radio\" value=\"A-129\"><span class=\"ph\" data-img=\"cat1\" data-label=\"\"></span><span class=\"tx\"><b>A-129</b><small>加强款，适合{{app2}}</small></span><em>起订 300 件</em></label>\n      <label><input type=\"radio\" value=\"A-130\"><span class=\"ph\" data-img=\"cat2\" data-label=\"\"></span><span class=\"tx\"><b>A-130</b><small>可换材料和颜色</small></span><em>起订 1,000 件</em></label>\n    </div></div>\n  <div class=\"card ck\"><h3 class=\"hd\">样品要确认什么</h3><p>勾选您关心的，我们打样时逐项拍照确认。</p>\n    <label><input type=\"checkbox\" value=\"尺寸和公差\"> 尺寸和公差</label><label><input type=\"checkbox\" value=\"材料和表面处理\"> 材料和表面处理</label><label><input type=\"checkbox\" value=\"颜色（潘通色号）\"> 颜色（潘通色号）</label><label><input type=\"checkbox\" value=\"logo 位置和工艺\"> logo 位置和工艺</label><label><input type=\"checkbox\" value=\"包装和条形码\"> 包装和条形码</label>\n    <div class=\"sum\" role=\"status\"></div>\n    <a class=\"btn go\">带着这份清单询价</a></div>\n</div></section>",
+   "css": ".b-d9 .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:start}\n.b-d9 .ms{display:grid;gap:12px;margin-top:20px}\n.b-d9 .ms label{display:grid;grid-template-columns:auto 84px 1fr auto;gap:16px;align-items:center;padding:14px 18px;border:1px solid var(--c-line);border-radius:var(--radius);background:var(--c-card);cursor:pointer;transition:border-color .2s,box-shadow .2s}\n.b-d9 .ms label:has(input:checked){border-color:var(--c-accent);box-shadow:0 0 0 1px var(--c-accent)}\n.b-d9 input{accent-color:var(--c-accent);width:18px;height:18px;flex:none}\n.b-d9 .ph{display:block;aspect-ratio:4/3}\n.b-d9 .ph::after{display:none}\n.b-d9 b{display:block;font-size:17px}\n.b-d9 small{color:var(--c-muted);font-size:14px}\n.b-d9 em{font-style:normal;font-size:14px;font-weight:700;white-space:nowrap}\n.b-d9 .ck{padding:32px}\n.b-d9 .ck h3{font-size:24px}\n.b-d9 .ck p{color:var(--c-muted);font-size:15px;margin:6px 0 14px}\n.b-d9 .ck label{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--c-line);cursor:pointer}\n.b-d9 .sum{font-size:14px;margin:18px 0;padding:12px 16px;border-left:3px solid var(--c-accent);background:var(--c-surface);white-space:pre-line}\n.b-d9 .go{width:100%;justify-content:center}\n@media(max-width:860px){.b-d9 .wrap{grid-template-columns:1fr}.b-d9 .ms label{grid-template-columns:auto 64px 1fr;gap:12px;padding:12px}.b-d9 em{grid-column:3}.b-d9 .ck{padding:24px}}",
+   "ref": "刀具工厂站 · 详情页 · 型号和样品确认",
+   "js": "document.querySelectorAll('.b-d9').forEach(function(s,n){\n  var sum=s.querySelector('.sum'),rs=s.querySelectorAll('[type=radio]');rs.forEach(function(r){r.name='b-d9-'+n});\n  function text(){var m=s.querySelector('[type=radio]:checked'),c=[].slice.call(s.querySelectorAll('[type=checkbox]:checked')).map(function(x){return x.value});\n    return '型号：'+(m?m.value:'')+'\\n样品确认：'+(c.length?c.join('、'):'待沟通')}\n  function draw(){sum.textContent=text()}s.addEventListener('change',draw);draw();\n  s.querySelector('.go').addEventListener('click',function(e){var t=[].slice.call(document.querySelectorAll('form textarea')).filter(function(x){return !x.closest('.w-modal,.w-quote')})[0],w=document.querySelector('.w-modal textarea');\n    if(t){e.preventDefault();e.stopPropagation();t.value=text();t.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});t.focus({preventScroll:true})}\n    else if(w)w.value=text()});\n});",
+   "fit": {
+    "pages": [
+     "详情页"
+    ],
+    "pos": "中段",
+    "types": [
+     "目录型",
+     "消费电子型",
+     "图纸定制型"
+    ],
+    "note": "同款多型号；接在 D1 后面",
+    "needs": []
+   }
+  },
+  {
+   "id": "R3",
+   "name": "采购指南文章",
+   "en": "",
+   "group": "内容与指南",
+   "use": "给采购商看的选购文章：标题、更新日期、阅读时间，左边目录跟着滚动并点亮当前小节，文末接询价。用来吃搜索流量，也能教买家怎么下单",
+   "needs": "头图 1 张、正文插图",
+   "edit": "标题、摘要、更新日期、正文（小标题自动生成目录）、文末按钮",
+   "mobile": "手机上目录收在正文上方，可展开",
+   "html": "<section class=\"b-r3 sec\"><div class=\"wrap\">\n  <header><span class=\"eyebrow\">采购指南</span><h2 class=\"hd\">第一次采购{{industry}}产品，需求要写清哪几件事？</h2><p>写清这几点，供应商当天就能报准价格，也少打一次样。</p><div class=\"meta\"><span>更新于 按实际填写</span><span class=\"rt\"></span></div></header>\n  <div class=\"ph pic\" data-img=\"hero\" data-label=\"文章头图\"></div>\n  <div class=\"g\">\n    <details class=\"toc\" open><summary>本页内容</summary><nav aria-label=\"本页内容\"></nav></details>\n    <article>\n      <h3 class=\"hd\">先写清楚采购单位</h3><p>「500 件」是 500 个单品，还是 500 套？如果一套有三件，两种理解差三倍。把单位写在需求的第一行，后面比价、看样、核对箱唛都用同一个单位。</p>\n      <h3 class=\"hd\">给每个样品一个编号</h3><p>让供应商给每个样品编号，并拍一张带编号的照片。之后说「3 号样品的颜色」，双方看到的是同一件东西。</p><div class=\"ph\" data-img=\"product\" data-label=\"正文插图\"></div>\n      <h3 class=\"hd\">材料、尺寸和公差</h3><p>没有图纸也没关系，写下用途和使用环境，例如{{app1}}，工程师会推荐合适的材料。关键尺寸要注明允许误差。</p>\n      <h3 class=\"hd\">包装和目的市场</h3><p>写明卖到哪个国家、走什么渠道。不同市场的标签、条形码和检测要求不一样，越早说越省钱。</p>\n      <h3 class=\"hd\">时间倒着排</h3><p>从到货日期往回推：运输、生产、确认样品、打样。把到货日期告诉供应商，比只问交期更有用。</p>\n      <div class=\"end card\"><div><b class=\"hd\">需求写好了？</b><p>发给我们，12 小时内回复报价。</p></div><a class=\"btn\">发送需求</a></div>\n    </article>\n  </div>\n</div></section>",
+   "css": ".b-r3 .wrap{max-width:1040px}\n.b-r3 header{max-width:780px}\n.b-r3 header h2{font-size:clamp(30px,4vw,48px);margin:12px 0 14px}\n.b-r3 header p{font-size:19px;color:var(--c-muted)}\n.b-r3 .meta{display:flex;gap:20px;font-size:14px;color:var(--c-muted);margin:18px 0 28px;flex-wrap:wrap}\n.b-r3 .pic{aspect-ratio:21/9}\n.b-r3 .g{display:grid;grid-template-columns:220px minmax(0,1fr);gap:56px;margin-top:44px;align-items:start}\n.b-r3 .toc{position:sticky;top:100px;border-top:2px solid var(--c-ink);padding-top:14px;font-size:14px}\n.b-r3 summary{font-weight:700;cursor:pointer;list-style:none;margin-bottom:8px}\n.b-r3 summary::-webkit-details-marker{display:none}\n.b-r3 nav a{display:block;padding:7px 0 7px 14px;border-left:2px solid var(--c-line);color:var(--c-muted);transition:color .2s,border-color .2s}\n.b-r3 nav a.on{color:var(--c-accent);border-color:var(--c-accent);font-weight:700}\n.b-r3 article h3{font-size:26px;margin:0 0 12px;scroll-margin-top:100px}\n.b-r3 article>p{font-size:17px;line-height:1.8;margin-bottom:40px}\n.b-r3 article .ph{aspect-ratio:16/9;margin:-16px 0 40px}\n.b-r3 .end{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:28px 32px}\n.b-r3 .end b{font-size:22px}\n.b-r3 .end p{color:var(--c-muted)}\n@media(min-width:861px){.b-r3 summary{pointer-events:none}}\n@media(max-width:860px){.b-r3 .g{grid-template-columns:1fr;gap:28px;margin-top:28px}.b-r3 .toc{position:static;border:1px solid var(--c-line);border-radius:var(--radius);padding:14px 18px}.b-r3 summary{margin:0}.b-r3 summary::after{content:\" ▾\"}.b-r3 .toc[open] nav{margin-top:10px}.b-r3 .pic{aspect-ratio:16/10}}",
+   "ref": "刀具工厂站 · 采购指南文章 · 粘性目录",
+   "js": "document.querySelectorAll('.b-r3').forEach(function(s,n){\n  var hs=[].slice.call(s.querySelectorAll('article h3')),nav=s.querySelector('nav'),toc=s.querySelector('.toc'),still=matchMedia('(prefers-reduced-motion: reduce)').matches;\n  var links=hs.map(function(h,i){h.id=h.id||'r3-'+n+'-'+i;var a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;nav.appendChild(a);\n    a.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();h.scrollIntoView({behavior:still?'auto':'smooth'});if(innerWidth<=860)toc.open=false;lock=1;mark(i)});return a}),lock=0;\n  function mark(k){links.forEach(function(a,i){a.classList.toggle('on',i===k)})}\n  ['wheel','touchmove','keydown'].forEach(function(v){addEventListener(v,function(){lock=0},{passive:true})});\n  s.querySelector('.rt').textContent='阅读约 '+Math.max(1,Math.round(s.querySelector('article').textContent.length/400))+' 分钟';\n  var mq=matchMedia('(max-width:860px)');function fit(){toc.open=!mq.matches}fit();mq.addEventListener('change',fit);\n  function spy(){if(lock)return;var k=0;hs.forEach(function(h,i){if(h.getBoundingClientRect().top<innerHeight*.4)k=i});mark(k)}\n  addEventListener('scroll',spy,{passive:true});spy();\n});",
+   "fit": {
+    "pages": [
+     "产品聚合页",
+     "详情页"
+    ],
+    "pos": "中段",
+    "types": [],
+    "note": "文章页首选；类目页、详情页也能放选购指南",
+    "needs": []
+   }
+  },
+  {
    "id": "X01",
    "name": "首屏大图轮播",
    "en": "",
@@ -1628,15 +1847,15 @@
    "en": "",
    "group": "高光",
    "use": "首屏是一段无声循环的工厂或产品视频，比静态图更有现场感",
-   "needs": "15–30 秒无声循环视频（MP4，1920 宽，小于 8MB）+ 一张封面图",
-   "edit": "视频文件、封面图、标题、说明、按钮",
-   "mobile": "手机上只显示封面图（不自动播放视频，省流量）",
-   "html": "<section class=\"b-x02\">\n  <div class=\"ph bg\" data-img=\"factory\" data-label=\"视频封面（没有视频时显示）\"></div>\n  <video class=\"vid\" autoplay muted loop playsinline preload=\"metadata\"><source src=\"\" type=\"video/mp4\"></video>\n  <div class=\"shade\"></div>\n  <div class=\"wrap\">\n    <span class=\"chip\"><i></i>工厂实拍</span>\n    <h1 class=\"hd\">{{headline}}</h1>\n    <p>{{sub}}</p>\n    <div class=\"acts\"><a class=\"btn\">获取报价</a><a class=\"btn ghost\">▶ 观看完整视频</a></div>\n  </div>\n  <div class=\"scroll\">向下滚动</div>\n</section>",
-   "css": ".b-x02{position:relative;height:680px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;background:#111}\n.b-x02 .bg{position:absolute;inset:0;border-radius:0;animation:x02kb 18s ease-in-out infinite alternate}\n@keyframes x02kb{from{transform:scale(1) translate(0,0)}to{transform:scale(1.12) translate(-2%,-1%)}}\n.b-x02 .vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}\n.b-x02 .shade{position:absolute;inset:0;background:radial-gradient(80% 70% at 50% 50%,rgba(0,0,0,.35),rgba(0,0,0,.7))}\n.b-x02 .wrap{position:relative;max-width:900px}\n.b-x02 .chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.1em;padding:7px 14px;border:1px solid rgba(255,255,255,.4);border-radius:999px;backdrop-filter:blur(6px)}\n.b-x02 .chip i{width:8px;height:8px;border-radius:50%;background:#ff4d4d;animation:x02rec 1.4s infinite}\n@keyframes x02rec{50%{opacity:.2}}\n.b-x02 h1{font-size:clamp(36px,5.4vw,70px);margin:22px 0 18px}\n.b-x02 p{font-size:19px;opacity:.88;max-width:620px;margin:0 auto}\n.b-x02 .acts{display:flex;gap:14px;justify-content:center;margin-top:32px;flex-wrap:wrap}\n.b-x02 .scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;opacity:.7}\n.b-x02 .scroll::after{content:\"\";display:block;width:1px;height:34px;background:#fff;margin:8px auto 0;animation:x02sc 1.8s infinite}\n@keyframes x02sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}\n@media(max-width:700px){.b-x02{height:580px}.b-x02 .vid{display:none}}\n@media (prefers-reduced-motion:reduce){.b-x02 .bg,.b-x02 .chip i,.b-x02 .scroll::after{animation:none}}",
-   "js": "document.querySelectorAll('.b-x02 .vid').forEach(function(v){\n  var src=v.querySelector('source');\n  if(!src||!src.getAttribute('src')||innerWidth<700||matchMedia('(prefers-reduced-motion: reduce)').matches){v.remove();return}\n  v.addEventListener('error',function(){v.remove()},true);\n});",
+   "needs": "15–30 秒无声循环视频（MP4，1920 宽，小于 8MB）+ 一张封面图；可选手机竖版视频（小于 3MB）",
+   "edit": "视频文件、手机竖版视频、封面图、标题、说明、按钮",
+   "mobile": "手机上有竖版视频才播放，没有就显示封面图；右下角可以暂停；视频打不开时自动换成缓慢推近的封面图",
+   "html": "<section class=\"b-x02\">\n  <div class=\"ph bg\" data-img=\"factory\" data-label=\"视频封面（没有视频时显示）\"></div>\n  <video class=\"vid\" muted loop playsinline preload=\"none\" data-src=\"\" data-mobile=\"\"></video>\n  <div class=\"shade\"></div>\n  <div class=\"wrap\">\n    <span class=\"chip\"><i></i>工厂实拍</span>\n    <h1 class=\"hd\">{{headline}}</h1>\n    <p>{{sub}}</p>\n    <div class=\"acts\"><a class=\"btn\">获取报价</a><a class=\"btn ghost\">▶ 观看完整视频</a></div>\n  </div>\n  <div class=\"scroll\">向下滚动</div>\n  <button type=\"button\" class=\"pz\" aria-pressed=\"false\">❚❚ 暂停</button>\n</section>",
+   "css": ".b-x02{position:relative;height:680px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;background:#111}\n.b-x02 .bg{position:absolute;inset:0;border-radius:0;animation:x02kb 18s ease-in-out infinite alternate}\n@keyframes x02kb{from{transform:scale(1) translate(0,0)}to{transform:scale(1.12) translate(-2%,-1%)}}\n.b-x02 .vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}\n.b-x02 .shade{position:absolute;inset:0;background:radial-gradient(80% 70% at 50% 50%,rgba(0,0,0,.35),rgba(0,0,0,.7))}\n.b-x02 .wrap{position:relative;max-width:900px}\n.b-x02 .chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.1em;padding:7px 14px;border:1px solid rgba(255,255,255,.4);border-radius:999px;backdrop-filter:blur(6px)}\n.b-x02 .chip i{width:8px;height:8px;border-radius:50%;background:#ff4d4d;animation:x02rec 1.4s infinite}\n@keyframes x02rec{50%{opacity:.2}}\n.b-x02 h1{font-size:clamp(36px,5.4vw,70px);margin:22px 0 18px}\n.b-x02 p{font-size:19px;opacity:.88;max-width:620px;margin:0 auto}\n.b-x02 .acts{display:flex;gap:14px;justify-content:center;margin-top:32px;flex-wrap:wrap}\n.b-x02 .pz{position:absolute;right:24px;bottom:24px;z-index:2;padding:9px 16px;border:1px solid rgba(255,255,255,.5);border-radius:999px;background:rgba(0,0,0,.35);color:#fff;font:600 13px var(--font-body);cursor:pointer}\n.b-x02.off .bg,.b-x02.off .chip i,.b-x02.off .scroll::after{animation-play-state:paused}\n.b-x02 .scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;opacity:.7}\n.b-x02 .scroll::after{content:\"\";display:block;width:1px;height:34px;background:#fff;margin:8px auto 0;animation:x02sc 1.8s infinite}\n@keyframes x02sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}\n@media(max-width:700px){.b-x02{height:580px}.b-x02 .scroll{display:none}}\n@media (prefers-reduced-motion:reduce){.b-x02 .bg,.b-x02 .chip i,.b-x02 .scroll::after{animation:none}}",
+   "js": "document.querySelectorAll('.b-x02').forEach(function(s){\n  var v=s.querySelector('.vid'),b=s.querySelector('.pz'),rm=matchMedia('(prefers-reduced-motion: reduce)').matches,src=v?(innerWidth<700?v.dataset.mobile:v.dataset.src):'';\n  if(v&&!src){v.remove();v=null}\n  function lab(off){s.classList.toggle('off',off);b.textContent=off?'▶ 播放':'❚❚ 暂停';b.setAttribute('aria-pressed',String(off))}\n  if(v){v.addEventListener('error',function(){if(v){v.remove();v=null}});v.muted=true;v.src=src;if(!rm)v.play().catch(function(){lab(true)})}\n  if(rm)lab(true);\n  b.addEventListener('click',function(){var off=!s.classList.contains('off');lab(off);if(v){if(off)v.pause();else v.play().catch(function(){lab(true)})}});\n});",
    "demo": false,
    "h": 700,
-   "ref": "",
+   "ref": "暂停按钮和手机竖版：刀具工厂站 · 首屏视频",
    "fit": {
     "pages": [
      "首页"
@@ -1746,16 +1965,16 @@
    "name": "出口国家地图",
    "en": "",
    "group": "高光",
-   "use": "点阵世界地图上点亮出口国家，从中国连线过去，数字滚动。一眼看到出口实力",
+   "use": "点阵世界地图上点亮出口国家，从中国连线过去；点下面的地区，对应连线高亮，询价按钮跟着变，地区自动填进表单。实心点是已出口，空心点是可以询价的市场",
    "needs": "真实的出口国家清单、出口数据",
-   "edit": "出口国家（勾选）、三个数字、标题说明",
-   "mobile": "手机上地图在文字下方，连线动画保留",
-   "html": "<section class=\"b-x06 sec dark\"><div class=\"wrap\">\n  <div class=\"txt\"><span class=\"eyebrow\">全球市场</span><h2 class=\"hd sec-title\">产品出口到 40 多个国家</h2><p class=\"sec-sub\">在北美、欧洲、中东、东南亚都有长期合作的经销商和工程客户。</p>\n    <div class=\"stats\"><div><b class=\"hd\">40+</b><span>出口国家</span></div><div><b class=\"hd\">1,200+</b><span>合作客户</span></div><div><b class=\"hd\">98%</b><span>准时交付</span></div></div></div>\n  <div class=\"map\" data-countries=\"us,ca,mx,br,cl,gb,de,fr,it,es,nl,pl,tr,ae,sa,eg,ng,za,in,vn,th,id,jp,kr,au\"></div>\n</div></section>",
-   "css": ".b-x06 .wrap{display:grid;grid-template-columns:.8fr 1.4fr;gap:48px;align-items:center}\n.b-x06 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}\n.b-x06 .stats b{display:block;font-size:34px;color:var(--c-accent)}\n.b-x06 .stats span{font-size:14px;opacity:.7}\n.b-x06 svg{width:100%;height:auto;display:block;overflow:visible}\n.b-x06 .d{fill:currentColor;opacity:.22}\n.b-x06 .ln{fill:none;stroke:var(--c-accent);stroke-width:1.4;stroke-linecap:round;opacity:.75;stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}\n.b-x06.in .ln{animation:x06draw 1.6s ease-out forwards;animation-delay:var(--dl)}\n@keyframes x06draw{to{stroke-dashoffset:0}}\n.b-x06 .pin{fill:var(--c-accent)}\n.b-x06 .pulse{fill:none;stroke:var(--c-accent);stroke-width:1.5;transform-box:fill-box;transform-origin:center;animation:x06pulse 2.4s ease-out infinite;animation-delay:var(--dl)}\n@keyframes x06pulse{0%{transform:scale(.5);opacity:.9}100%{transform:scale(3);opacity:0}}\n.b-x06 .home{fill:#fff}\n@media(max-width:860px){.b-x06 .wrap{grid-template-columns:1fr}}\n@media (prefers-reduced-motion:reduce){.b-x06 .ln{stroke-dashoffset:0;animation:none}.b-x06 .pulse{animation:none;opacity:0}}",
-   "js": "document.querySelectorAll('.b-x06').forEach(function(sec){\n  var DOTS='373,4 382,4 391,4 346,13 355,13 364,13 373,13 382,13 391,13 400,13 256,22 265,22 274,22 292,22 355,22 364,22 373,22 382,22 391,22 400,22 409,22 238,31 247,31 256,31 265,31 274,31 283,31 292,31 301,31 319,31 337,31 346,31 355,31 364,31 373,31 382,31 391,31 400,31 220,40 229,40 238,40 247,40 256,40 265,40 274,40 283,40 292,40 319,40 328,40 337,40 346,40 355,40 364,40 373,40 382,40 391,40 400,40 409,40 436,40 211,49 229,49 238,49 247,49 265,49 274,49 310,49 319,49 328,49 337,49 346,49 355,49 364,49 373,49 382,49 391,49 400,49 409,49 418,49 427,49 436,49 634,49 211,58 229,58 238,58 247,58 256,58 265,58 274,58 283,58 292,58 301,58 310,58 319,58 328,58 337,58 346,58 355,58 364,58 373,58 382,58 391,58 400,58 409,58 418,58 427,58 607,58 616,58 634,58 643,58 652,58 742,58 211,67 220,67 247,67 256,67 265,67 274,67 292,67 301,67 310,67 319,67 328,67 337,67 346,67 355,67 364,67 373,67 382,67 391,67 400,67 409,67 418,67 427,67 526,67 544,67 607,67 625,67 634,67 733,67 742,67 211,76 220,76 229,76 238,76 247,76 256,76 265,76 292,76 301,76 310,76 319,76 328,76 337,76 346,76 355,76 364,76 373,76 382,76 391,76 400,76 409,76 418,76 508,76 535,76 544,76 733,76 742,76 751,76 184,85 220,85 229,85 247,85 256,85 265,85 292,85 301,85 310,85 319,85 328,85 337,85 346,85 355,85 364,85 373,85 382,85 391,85 400,85 409,85 418,85 508,85 517,85 526,85 742,85 751,85 760,85 166,94 184,94 193,94 202,94 220,94 238,94 247,94 256,94 274,94 283,94 292,94 301,94 310,94 319,94 328,94 337,94 346,94 355,94 364,94 373,94 382,94 391,94 400,94 409,94 526,94 535,94 760,94 769,94 157,103 193,103 202,103 229,103 238,103 247,103 274,103 283,103 292,103 301,103 310,103 319,103 328,103 337,103 346,103 355,103 364,103 373,103 382,103 391,103 400,103 409,103 517,103 526,103 535,103 139,112 148,112 238,112 247,112 283,112 292,112 301,112 310,112 319,112 328,112 337,112 346,112 355,112 364,112 373,112 382,112 391,112 400,112 409,112 418,112 517,112 760,112 139,121 166,121 184,121 193,121 211,121 229,121 283,121 292,121 301,121 310,121 319,121 328,121 337,121 346,121 355,121 364,121 373,121 382,121 391,121 400,121 409,121 661,121 760,121 769,121 778,121 787,121 148,130 157,130 175,130 193,130 220,130 238,130 319,130 328,130 337,130 346,130 355,130 364,130 373,130 382,130 391,130 400,130 409,130 418,130 643,130 652,130 733,130 742,130 751,130 760,130 769,130 778,130 787,130 868,130 877,130 157,139 166,139 211,139 220,139 229,139 238,139 247,139 319,139 328,139 337,139 346,139 355,139 364,139 373,139 382,139 391,139 400,139 409,139 418,139 634,139 643,139 724,139 733,139 742,139 751,139 760,139 769,139 778,139 787,139 868,139 895,139 130,148 139,148 211,148 319,148 328,148 337,148 346,148 355,148 364,148 373,148 382,148 391,148 400,148 409,148 634,148 724,148 733,148 742,148 751,148 760,148 769,148 778,148 787,148 868,148 130,157 139,157 148,157 175,157 193,157 202,157 211,157 229,157 238,157 247,157 256,157 319,157 328,157 337,157 346,157 355,157 364,157 373,157 382,157 391,157 400,157 409,157 625,157 706,157 715,157 724,157 733,157 742,157 751,157 760,157 769,157 778,157 787,157 796,157 805,157 823,157 832,157 130,166 148,166 157,166 166,166 175,166 193,166 202,166 229,166 238,166 247,166 256,166 328,166 337,166 346,166 355,166 364,166 373,166 382,166 391,166 400,166 625,166 670,166 697,166 706,166 715,166 724,166 733,166 742,166 751,166 760,166 769,166 778,166 787,166 796,166 805,166 814,166 823,166 832,166 868,166 877,166 886,166 148,175 157,175 166,175 175,175 211,175 229,175 238,175 247,175 256,175 265,175 337,175 346,175 355,175 364,175 373,175 382,175 391,175 400,175 409,175 670,175 688,175 697,175 715,175 724,175 733,175 742,175 751,175 760,175 769,175 778,175 787,175 796,175 805,175 814,175 823,175 832,175 850,175 859,175 868,175 877,175 886,175 895,175 976,175 985,175 22,184 31,184 40,184 49,184 58,184 148,184 157,184 166,184 175,184 184,184 211,184 238,184 265,184 274,184 283,184 328,184 337,184 346,184 355,184 364,184 373,184 382,184 391,184 400,184 409,184 544,184 553,184 643,184 670,184 688,184 697,184 706,184 715,184 724,184 733,184 742,184 751,184 760,184 769,184 778,184 787,184 796,184 805,184 814,184 823,184 832,184 841,184 850,184 859,184 868,184 877,184 886,184 895,184 904,184 913,184 922,184 13,193 22,193 31,193 40,193 49,193 58,193 67,193 76,193 85,193 94,193 103,193 112,193 121,193 130,193 139,193 157,193 166,193 184,193 193,193 202,193 211,193 220,193 238,193 265,193 274,193 283,193 337,193 346,193 355,193 364,193 373,193 382,193 391,193 400,193 517,193 526,193 535,193 544,193 553,193 562,193 571,193 625,193 652,193 661,193 670,193 688,193 697,193 706,193 715,193 724,193 733,193 742,193 751,193 760,193 769,193 778,193 787,193 796,193 805,193 814,193 823,193 832,193 841,193 850,193 859,193 868,193 877,193 886,193 895,193 904,193 913,193 922,193 931,193 940,193 949,193 958,193 967,193 976,193 13,202 22,202 31,202 40,202 49,202 58,202 67,202 76,202 85,202 94,202 103,202 112,202 121,202 130,202 139,202 148,202 166,202 175,202 184,202 193,202 202,202 211,202 220,202 238,202 274,202 283,202 292,202 328,202 337,202 346,202 355,202 364,202 373,202 382,202 517,202 526,202 535,202 544,202 553,202 562,202 571,202 580,202 589,202 598,202 616,202 625,202 634,202 643,202 652,202 661,202 670,202 679,202 688,202 697,202 706,202 715,202 724,202 733,202 742,202 751,202 760,202 769,202 778,202 787,202 796,202 805,202 814,202 823,202 832,202 841,202 850,202 859,202 868,202 877,202 886,202 895,202 904,202 913,202 922,202 931,202 940,202 949,202 958,202 967,202 976,202 985,202 13,211 22,211 31,211 40,211 49,211 58,211 67,211 76,211 85,211 94,211 103,211 112,211 121,211 130,211 139,211 148,211 157,211 166,211 175,211 184,211 193,211 202,211 211,211 220,211 229,211 238,211 274,211 283,211 292,211 301,211 328,211 337,211 346,211 355,211 364,211 373,211 517,211 526,211 535,211 544,211 553,211 562,211 580,211 607,211 616,211 625,211 634,211 643,211 652,211 661,211 670,211 679,211 688,211 697,211 706,211 715,211 724,211 733,211 742,211 751,211 760,211 769,211 778,211 787,211 796,211 805,211 814,211 823,211 832,211 841,211 850,211 859,211 868,211 877,211 886,211 895,211 904,211 913,211 922,211 931,211 940,211 949,211 958,211 967,211 976,211 985,211 994,211 1003,211 13,220 22,220 31,220 40,220 49,220 58,220 67,220 76,220 85,220 94,220 103,220 112,220 121,220 130,220 139,220 148,220 157,220 166,220 175,220 184,220 193,220 202,220 211,220 220,220 229,220 238,220 265,220 274,220 283,220 328,220 337,220 346,220 355,220 418,220 427,220 436,220 517,220 526,220 553,220 562,220 571,220 589,220 598,220 607,220 616,220 625,220 634,220 643,220 652,220 661,220 670,220 679,220 688,220 697,220 706,220 715,220 724,220 733,220 742,220 751,220 760,220 769,220 778,220 787,220 796,220 805,220 814,220 823,220 832,220 841,220 850,220 859,220 868,220 877,220 886,220 895,220 904,220 913,220 922,220 931,220 940,220 949,220 958,220 967,220 976,220 994,220 31,229 40,229 49,229 58,229 67,229 76,229 85,229 94,229 103,229 112,229 121,229 130,229 139,229 148,229 157,229 166,229 175,229 184,229 193,229 202,229 211,229 220,229 238,229 247,229 274,229 283,229 292,229 337,229 346,229 355,229 418,229 508,229 517,229 526,229 544,229 553,229 562,229 571,229 580,229 589,229 598,229 607,229 616,229 625,229 634,229 643,229 652,229 661,229 670,229 679,229 688,229 697,229 706,229 715,229 724,229 733,229 742,229 751,229 760,229 769,229 778,229 787,229 796,229 805,229 814,229 823,229 832,229 841,229 850,229 859,229 868,229 877,229 886,229 895,229 904,229 913,229 922,229 931,229 940,229 949,229 958,229 967,229 976,229 13,238 22,238 31,238 40,238 49,238 58,238 67,238 76,238 85,238 94,238 103,238 112,238 121,238 130,238 139,238 148,238 157,238 166,238 175,238 184,238 193,238 202,238 211,238 256,238 283,238 337,238 346,238 355,238 499,238 508,238 517,238 535,238 544,238 553,238 562,238 571,238 580,238 589,238 598,238 607,238 616,238 625,238 634,238 643,238 652,238 661,238 670,238 679,238 688,238 697,238 706,238 715,238 724,238 733,238 742,238 751,238 760,238 769,238 778,238 787,238 796,238 805,238 814,238 823,238 832,238 841,238 850,238 859,238 868,238 877,238 886,238 895,238 904,238 913,238 922,238 931,238 940,238 949,238 958,238 967,238 13,247 22,247 31,247 40,247 67,247 76,247 85,247 94,247 103,247 112,247 121,247 130,247 139,247 148,247 157,247 166,247 175,247 184,247 193,247 202,247 256,247 265,247 274,247 346,247 490,247 499,247 508,247 517,247 535,247 544,247 553,247 562,247 571,247 580,247 589,247 598,247 607,247 616,247 625,247 634,247 643,247 652,247 661,247 670,247 679,247 688,247 697,247 706,247 715,247 724,247 733,247 742,247 751,247 760,247 769,247 778,247 787,247 796,247 805,247 814,247 823,247 832,247 841,247 850,247 859,247 868,247 877,247 886,247 895,247 904,247 940,247 949,247 22,256 31,256 40,256 49,256 85,256 94,256 103,256 112,256 121,256 130,256 139,256 148,256 157,256 166,256 175,256 184,256 193,256 202,256 256,256 265,256 274,256 292,256 499,256 508,256 517,256 526,256 544,256 553,256 562,256 571,256 580,256 589,256 598,256 607,256 616,256 625,256 634,256 643,256 652,256 661,256 670,256 679,256 688,256 697,256 706,256 715,256 724,256 733,256 742,256 751,256 760,256 769,256 778,256 787,256 796,256 805,256 814,256 823,256 832,256 841,256 850,256 859,256 868,256 904,256 931,256 94,265 103,265 112,265 121,265 130,265 139,265 148,265 157,265 166,265 175,265 184,265 193,265 202,265 211,265 265,265 274,265 283,265 292,265 301,265 463,265 508,265 517,265 526,265 544,265 553,265 562,265 571,265 580,265 589,265 598,265 607,265 616,265 625,265 634,265 643,265 652,265 661,265 670,265 679,265 688,265 697,265 706,265 715,265 724,265 733,265 742,265 751,265 760,265 769,265 778,265 787,265 796,265 805,265 814,265 823,265 832,265 841,265 850,265 859,265 922,265 931,265 22,274 112,274 121,274 130,274 139,274 148,274 157,274 166,274 175,274 184,274 193,274 202,274 211,274 220,274 229,274 265,274 274,274 283,274 292,274 301,274 463,274 499,274 508,274 535,274 544,274 553,274 562,274 571,274 580,274 589,274 598,274 607,274 616,274 625,274 634,274 643,274 652,274 661,274 670,274 679,274 688,274 697,274 706,274 715,274 724,274 733,274 742,274 751,274 760,274 769,274 778,274 787,274 796,274 805,274 814,274 823,274 832,274 841,274 850,274 913,274 922,274 103,283 112,283 121,283 130,283 139,283 148,283 157,283 166,283 175,283 184,283 193,283 202,283 211,283 220,283 229,283 238,283 256,283 265,283 274,283 283,283 292,283 301,283 310,283 454,283 472,283 508,283 517,283 526,283 535,283 544,283 553,283 562,283 571,283 580,283 589,283 598,283 607,283 616,283 625,283 634,283 643,283 652,283 661,283 670,283 679,283 688,283 697,283 706,283 715,283 724,283 733,283 742,283 751,283 760,283 769,283 778,283 787,283 796,283 805,283 814,283 823,283 832,283 841,283 850,283 868,283 913,283 922,283 121,292 130,292 139,292 148,292 157,292 166,292 175,292 184,292 193,292 202,292 211,292 220,292 229,292 238,292 247,292 256,292 265,292 274,292 283,292 292,292 301,292 310,292 463,292 472,292 490,292 499,292 508,292 517,292 526,292 535,292 544,292 553,292 562,292 571,292 580,292 589,292 598,292 607,292 616,292 625,292 634,292 643,292 652,292 661,292 670,292 679,292 688,292 697,292 706,292 715,292 724,292 733,292 742,292 751,292 760,292 769,292 778,292 787,292 796,292 805,292 814,292 823,292 832,292 841,292 850,292 859,292 868,292 121,301 130,301 139,301 148,301 157,301 166,301 175,301 184,301 193,301 202,301 211,301 220,301 229,301 238,301 247,301 256,301 265,301 274,301 283,301 481,301 490,301 499,301 508,301 517,301 526,301 535,301 544,301 553,301 562,301 571,301 580,301 589,301 598,301 607,301 616,301 625,301 634,301 643,301 652,301 661,301 670,301 679,301 688,301 697,301 706,301 715,301 724,301 733,301 742,301 751,301 760,301 769,301 778,301 787,301 796,301 805,301 814,301 823,301 832,301 841,301 850,301 859,301 868,301 877,301 130,310 139,310 148,310 157,310 166,310 175,310 184,310 193,310 202,310 211,310 220,310 238,310 247,310 256,310 265,310 274,310 283,310 292,310 310,310 319,310 463,310 472,310 481,310 490,310 499,310 508,310 517,310 526,310 535,310 544,310 553,310 562,310 571,310 580,310 589,310 598,310 607,310 616,310 625,310 634,310 643,310 652,310 661,310 670,310 679,310 688,310 697,310 706,310 715,310 724,310 733,310 742,310 751,310 760,310 769,310 778,310 787,310 796,310 805,310 814,310 823,310 832,310 841,310 850,310 859,310 130,319 139,319 148,319 157,319 166,319 175,319 184,319 193,319 202,319 211,319 220,319 229,319 238,319 256,319 265,319 274,319 283,319 292,319 301,319 472,319 481,319 490,319 499,319 508,319 517,319 526,319 535,319 544,319 553,319 571,319 580,319 589,319 598,319 607,319 625,319 634,319 643,319 652,319 661,319 670,319 679,319 688,319 697,319 706,319 715,319 724,319 733,319 742,319 751,319 760,319 769,319 778,319 787,319 796,319 805,319 814,319 823,319 832,319 841,319 850,319 859,319 130,328 139,328 148,328 157,328 166,328 175,328 184,328 193,328 202,328 211,328 220,328 238,328 247,328 256,328 265,328 274,328 454,328 463,328 472,328 481,328 490,328 508,328 526,328 535,328 544,328 553,328 589,328 598,328 607,328 625,328 634,328 643,328 652,328 661,328 670,328 679,328 688,328 697,328 706,328 715,328 724,328 733,328 742,328 751,328 760,328 769,328 778,328 787,328 796,328 805,328 814,328 823,328 832,328 841,328 850,328 877,328 130,337 139,337 148,337 157,337 166,337 175,337 184,337 193,337 202,337 211,337 220,337 229,337 238,337 247,337 256,337 265,337 454,337 463,337 472,337 499,337 517,337 535,337 544,337 562,337 571,337 580,337 589,337 598,337 607,337 634,337 643,337 652,337 661,337 670,337 679,337 688,337 697,337 706,337 715,337 724,337 733,337 742,337 751,337 760,337 769,337 778,337 787,337 796,337 805,337 814,337 823,337 832,337 130,346 139,346 148,346 157,346 166,346 175,346 184,346 193,346 202,346 211,346 220,346 229,346 238,346 247,346 256,346 454,346 463,346 472,346 535,346 553,346 562,346 571,346 580,346 589,346 598,346 607,346 634,346 643,346 652,346 661,346 670,346 679,346 688,346 697,346 706,346 715,346 724,346 733,346 742,346 751,346 760,346 769,346 778,346 787,346 796,346 832,346 868,346 139,355 148,355 157,355 166,355 175,355 184,355 193,355 202,355 211,355 220,355 229,355 238,355 247,355 256,355 481,355 490,355 499,355 580,355 589,355 598,355 607,355 616,355 625,355 634,355 643,355 652,355 661,355 670,355 679,355 688,355 697,355 706,355 715,355 724,355 733,355 742,355 751,355 760,355 769,355 778,355 787,355 796,355 805,355 832,355 859,355 868,355 148,364 157,364 166,364 175,364 184,364 193,364 202,364 211,364 220,364 229,364 238,364 247,364 454,364 463,364 472,364 481,364 490,364 499,364 580,364 589,364 598,364 607,364 616,364 625,364 634,364 643,364 652,364 661,364 670,364 679,364 688,364 697,364 706,364 715,364 724,364 733,364 742,364 751,364 760,364 769,364 778,364 787,364 796,364 805,364 841,364 166,373 175,373 184,373 193,373 202,373 211,373 220,373 229,373 238,373 454,373 463,373 472,373 481,373 490,373 499,373 508,373 517,373 526,373 535,373 544,373 553,373 562,373 571,373 580,373 589,373 598,373 607,373 616,373 625,373 634,373 643,373 652,373 661,373 670,373 679,373 688,373 697,373 706,373 715,373 724,373 733,373 742,373 751,373 760,373 769,373 778,373 787,373 796,373 805,373 157,382 166,382 175,382 184,382 193,382 247,382 445,382 454,382 463,382 472,382 481,382 490,382 499,382 508,382 517,382 526,382 535,382 544,382 553,382 562,382 580,382 589,382 598,382 607,382 625,382 634,382 643,382 652,382 661,382 670,382 679,382 688,382 697,382 706,382 715,382 724,382 733,382 742,382 751,382 760,382 769,382 778,382 787,382 796,382 805,382 175,391 184,391 193,391 256,391 436,391 445,391 454,391 463,391 472,391 481,391 490,391 499,391 508,391 517,391 526,391 535,391 544,391 553,391 562,391 571,391 580,391 589,391 598,391 607,391 616,391 670,391 679,391 688,391 697,391 706,391 715,391 724,391 733,391 742,391 751,391 760,391 769,391 778,391 787,391 796,391 805,391 814,391 184,400 193,400 256,400 427,400 436,400 445,400 454,400 463,400 472,400 481,400 490,400 499,400 508,400 517,400 526,400 535,400 544,400 553,400 562,400 571,400 589,400 598,400 607,400 616,400 625,400 634,400 670,400 679,400 688,400 697,400 706,400 715,400 724,400 733,400 742,400 751,400 760,400 769,400 778,400 787,400 184,409 193,409 202,409 220,409 274,409 436,409 445,409 454,409 463,409 472,409 481,409 490,409 499,409 508,409 517,409 526,409 535,409 544,409 553,409 562,409 571,409 598,409 607,409 616,409 625,409 634,409 679,409 688,409 697,409 706,409 742,409 751,409 760,409 769,409 220,418 229,418 238,418 436,418 445,418 454,418 463,418 472,418 481,418 490,418 499,418 508,418 517,418 526,418 535,418 544,418 553,418 562,418 571,418 580,418 598,418 607,418 616,418 688,418 697,418 751,418 760,418 769,418 778,418 814,418 238,427 436,427 445,427 454,427 463,427 472,427 481,427 490,427 499,427 508,427 517,427 526,427 535,427 544,427 553,427 562,427 571,427 580,427 589,427 598,427 625,427 688,427 697,427 769,427 778,427 814,427 238,436 265,436 283,436 292,436 301,436 445,436 454,436 463,436 472,436 481,436 490,436 499,436 508,436 517,436 526,436 535,436 544,436 553,436 562,436 571,436 580,436 589,436 598,436 607,436 616,436 751,436 769,436 265,445 274,445 283,445 292,445 301,445 310,445 445,445 454,445 463,445 472,445 490,445 499,445 508,445 517,445 526,445 535,445 544,445 553,445 562,445 571,445 580,445 589,445 598,445 607,445 760,445 823,445 265,454 274,454 283,454 292,454 301,454 310,454 319,454 328,454 508,454 517,454 526,454 535,454 544,454 553,454 562,454 571,454 580,454 589,454 598,454 751,454 760,454 796,454 256,463 265,463 274,463 283,463 292,463 301,463 310,463 319,463 328,463 337,463 508,463 517,463 526,463 535,463 544,463 553,463 562,463 571,463 580,463 589,463 760,463 787,463 796,463 841,463 256,472 265,472 274,472 283,472 292,472 301,472 310,472 319,472 328,472 337,472 346,472 355,472 364,472 508,472 517,472 526,472 535,472 544,472 553,472 562,472 571,472 580,472 769,472 796,472 814,472 841,472 850,472 859,472 868,472 877,472 256,481 265,481 274,481 283,481 292,481 301,481 310,481 319,481 328,481 337,481 346,481 355,481 364,481 373,481 517,481 526,481 535,481 544,481 553,481 562,481 571,481 580,481 778,481 868,481 877,481 886,481 256,490 265,490 274,490 283,490 292,490 301,490 310,490 319,490 328,490 337,490 346,490 355,490 364,490 373,490 517,490 526,490 535,490 544,490 553,490 562,490 571,490 580,490 823,490 895,490 265,499 274,499 283,499 292,499 301,499 310,499 319,499 328,499 337,499 346,499 355,499 364,499 517,499 526,499 535,499 544,499 553,499 562,499 571,499 580,499 841,499 850,499 877,499 274,508 283,508 292,508 301,508 310,508 319,508 328,508 337,508 346,508 355,508 364,508 508,508 517,508 526,508 535,508 544,508 553,508 562,508 571,508 580,508 607,508 832,508 841,508 850,508 859,508 877,508 283,517 292,517 301,517 310,517 319,517 328,517 337,517 346,517 355,517 517,517 526,517 535,517 544,517 553,517 562,517 571,517 607,517 823,517 832,517 841,517 850,517 859,517 868,517 877,517 886,517 283,526 292,526 301,526 310,526 319,526 328,526 337,526 346,526 355,526 517,526 526,526 535,526 544,526 553,526 562,526 571,526 598,526 607,526 796,526 805,526 814,526 823,526 832,526 841,526 850,526 859,526 868,526 877,526 886,526 283,535 292,535 301,535 310,535 319,535 328,535 337,535 517,535 526,535 535,535 544,535 553,535 562,535 796,535 805,535 814,535 823,535 832,535 841,535 850,535 859,535 868,535 877,535 886,535 895,535 904,535 283,544 292,544 301,544 310,544 319,544 328,544 337,544 526,544 535,544 544,544 553,544 562,544 796,544 805,544 814,544 823,544 832,544 841,544 850,544 859,544 868,544 877,544 886,544 895,544 904,544 274,553 283,553 292,553 301,553 310,553 319,553 328,553 526,553 535,553 544,553 553,553 805,553 814,553 823,553 832,553 841,553 850,553 859,553 868,553 877,553 886,553 895,553 274,562 283,562 292,562 301,562 310,562 319,562 526,562 535,562 544,562 805,562 814,562 859,562 868,562 877,562 886,562 895,562 274,571 283,571 292,571 301,571 310,571 868,571 877,571 886,571 895,571 274,580 283,580 292,580 301,580 877,580 967,580 274,589 283,589 886,589 958,589 967,589 274,598 283,598 958,598',C={\"cn\":[766,349],\"us\":[205,318],\"ca\":[201,205],\"mx\":[184,392],\"br\":[326,495],\"cl\":[276,558],\"gb\":[467,281],\"de\":[504,298],\"fr\":[479,317],\"it\":[508,326],\"es\":[465,339],\"nl\":[490,292],\"pl\":[527,291],\"tr\":[576,342],\"ae\":[625,400],\"sa\":[601,394],\"eg\":[561,387],\"ng\":[498,435],\"za\":[546,549],\"in\":[697,396],\"vn\":[774,414],\"th\":[760,423],\"id\":[811,471],\"jp\":[863,350],\"kr\":[832,355],\"au\":[852,538]};\n  var box=sec.querySelector('.map'),ns='http://www.w3.org/2000/svg',want=(box.dataset.countries||'').split(',');\n  var h='<svg viewBox=\"0 30 1010 590\" xmlns=\"'+ns+'\" role=\"img\" aria-label=\"出口国家地图\">';\n  DOTS.split(' ').forEach(function(p){var a=p.split(',');h+='<circle class=\"d\" cx=\"'+a[0]+'\" cy=\"'+a[1]+'\" r=\"2.7\"/>'});\n  var o=C.cn;want.forEach(function(k,n){var t=C[k];if(!t)return;var mx=(o[0]+t[0])/2,my=Math.min(o[1],t[1])-Math.abs(o[0]-t[0])*.28-20;\n    var len=Math.round(Math.hypot(t[0]-o[0],t[1]-o[1])*1.35),dl=(n*0.08).toFixed(2)+'s';\n    h+='<path class=\"ln\" style=\"--len:'+len+';--dl:'+dl+'\" d=\"M'+o[0]+' '+o[1]+'Q'+mx+' '+my+' '+t[0]+' '+t[1]+'\"/>'+\n       '<circle class=\"pulse\" style=\"--dl:'+dl+'\" cx=\"'+t[0]+'\" cy=\"'+t[1]+'\" r=\"5\"/><circle class=\"pin\" cx=\"'+t[0]+'\" cy=\"'+t[1]+'\" r=\"3.6\"/>'});\n  h+='<circle class=\"pulse\" cx=\"'+o[0]+'\" cy=\"'+o[1]+'\" r=\"8\"/><circle class=\"home\" cx=\"'+o[0]+'\" cy=\"'+o[1]+'\" r=\"6\"/></svg>';\n  box.innerHTML=h;\n  if(!('IntersectionObserver' in window)){sec.classList.add('in');return}\n  var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){sec.classList.add('in');io.disconnect()}},{threshold:.25});io.observe(sec);\n});",
+   "edit": "已出口国家、可询价国家（勾选）、地区分组、三个数字、标题说明",
+   "mobile": "手机上地图在文字下方，地区按钮自动换行，连线动画保留",
+   "html": "<section class=\"b-x06 sec dark\"><div class=\"wrap\">\n  <div class=\"txt\"><span class=\"eyebrow\">全球市场</span><h2 class=\"hd sec-title\">产品出口到 40 多个国家</h2><p class=\"sec-sub\">在北美、欧洲、中东、东南亚都有长期合作的经销商和工程客户。</p>\n    <div class=\"stats\"><div><b class=\"hd\">40+</b><span>出口国家</span></div><div><b class=\"hd\">1,200+</b><span>合作客户</span></div><div><b class=\"hd\">98%</b><span>准时交付</span></div></div></div>\n  <div class=\"mapbox\"><div class=\"map\" data-countries=\"us,ca,mx,br,cl,gb,de,fr,it,es,nl,pl,tr,ae,sa,in,vn,th,id,jp,kr,au\" data-enquiry=\"ar,eg,ng,za,nz\"></div>\n    <div class=\"legend\"><span><i></i>已出口</span><span><i class=\"o\"></i>欢迎询价</span><b class=\"now\" role=\"status\">点地区查看</b></div>\n    <div class=\"regs\" role=\"group\" aria-label=\"选择您的市场\"><button type=\"button\" data-c=\"us,ca,mx\">北美</button><button type=\"button\" data-c=\"br,cl,ar\">南美</button><button type=\"button\" data-c=\"gb,de,fr,it,es,nl,pl\">欧洲</button><button type=\"button\" data-c=\"tr,ae,sa\">中东</button><button type=\"button\" data-c=\"eg,ng,za\">非洲</button><button type=\"button\" data-c=\"in\">南亚</button><button type=\"button\" data-c=\"vn,th,id\">东南亚</button><button type=\"button\" data-c=\"jp,kr\">东亚</button><button type=\"button\" data-c=\"au,nz\">大洋洲</button></div>\n    <a class=\"btn ask\">询问您所在市场的报价</a></div>\n</div></section>",
+   "css": ".b-x06 .wrap{display:grid;grid-template-columns:.8fr 1.4fr;gap:48px;align-items:center}\n.b-x06 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}\n.b-x06 .stats b{display:block;font-size:34px;color:var(--c-accent)}\n.b-x06 .stats span{font-size:14px;opacity:.7}\n.b-x06 svg{width:100%;height:auto;display:block;overflow:visible}\n.b-x06 .d{fill:currentColor;opacity:.22}\n.b-x06 .ln{fill:none;stroke:var(--c-accent);stroke-width:1.4;stroke-linecap:round;opacity:.75;stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}\n.b-x06.in .ln{animation:x06draw 1.6s ease-out forwards;animation-delay:var(--dl)}\n@keyframes x06draw{to{stroke-dashoffset:0}}\n.b-x06 .pin{fill:var(--c-accent)}\n.b-x06 .pulse{fill:none;stroke:var(--c-accent);stroke-width:1.5;transform-box:fill-box;transform-origin:center;animation:x06pulse 2.4s ease-out infinite;animation-delay:var(--dl)}\n@keyframes x06pulse{0%{transform:scale(.5);opacity:.9}100%{transform:scale(3);opacity:0}}\n.b-x06 .home{fill:#fff}\n.b-x06 .pin.o{fill:var(--c-dark);stroke:currentColor;stroke-width:2}\n.b-x06 .ln.o{stroke:currentColor;stroke-width:1;opacity:.35}\n.b-x06 .fl{fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:.06 .94;opacity:0}\n.b-x06.in .fl{opacity:.9;animation:x06flow 3.6s linear infinite;animation-delay:var(--dl)}\n@keyframes x06flow{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}\n.b-x06 svg g.c{transition:opacity .35s}\n.b-x06 svg.sel g.c:not(.hit){opacity:.12}\n.b-x06 svg g.hit .ln{stroke-width:2.6;opacity:1}\n.b-x06 .legend{display:flex;gap:18px;align-items:center;flex-wrap:wrap;font-size:13px;margin:10px 0 14px}\n.b-x06 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--c-accent);margin-right:7px}\n.b-x06 .legend i.o{background:transparent;border:2px solid currentColor}\n.b-x06 .now{margin-left:auto}\n.b-x06 .regs{display:flex;gap:8px;flex-wrap:wrap}\n.b-x06 .regs button{padding:9px 15px;border:1px solid rgba(255,255,255,.35);border-radius:var(--radius-btn);background:transparent;color:inherit;font:600 14px var(--font-body);cursor:pointer;transition:.2s}\n.b-x06 .regs button:hover{border-color:var(--c-accent)}\n.b-x06 .regs button[aria-pressed=true]{background:var(--c-accent);border-color:var(--c-accent);color:var(--c-on-accent)}\n.b-x06 .ask{margin-top:18px}\n@media(max-width:860px){.b-x06 .wrap{grid-template-columns:1fr}}\n@media (prefers-reduced-motion:reduce){.b-x06 .ln,.b-x06.in .ln{stroke-dashoffset:0;animation:none}.b-x06 .pulse{animation:none;opacity:0}.b-x06 .fl{display:none}}",
+   "js": "document.querySelectorAll('.b-x06').forEach(function(sec){\n  var DOTS='373,4 382,4 391,4 346,13 355,13 364,13 373,13 382,13 391,13 400,13 256,22 265,22 274,22 292,22 355,22 364,22 373,22 382,22 391,22 400,22 409,22 238,31 247,31 256,31 265,31 274,31 283,31 292,31 301,31 319,31 337,31 346,31 355,31 364,31 373,31 382,31 391,31 400,31 220,40 229,40 238,40 247,40 256,40 265,40 274,40 283,40 292,40 319,40 328,40 337,40 346,40 355,40 364,40 373,40 382,40 391,40 400,40 409,40 436,40 211,49 229,49 238,49 247,49 265,49 274,49 310,49 319,49 328,49 337,49 346,49 355,49 364,49 373,49 382,49 391,49 400,49 409,49 418,49 427,49 436,49 634,49 211,58 229,58 238,58 247,58 256,58 265,58 274,58 283,58 292,58 301,58 310,58 319,58 328,58 337,58 346,58 355,58 364,58 373,58 382,58 391,58 400,58 409,58 418,58 427,58 607,58 616,58 634,58 643,58 652,58 742,58 211,67 220,67 247,67 256,67 265,67 274,67 292,67 301,67 310,67 319,67 328,67 337,67 346,67 355,67 364,67 373,67 382,67 391,67 400,67 409,67 418,67 427,67 526,67 544,67 607,67 625,67 634,67 733,67 742,67 211,76 220,76 229,76 238,76 247,76 256,76 265,76 292,76 301,76 310,76 319,76 328,76 337,76 346,76 355,76 364,76 373,76 382,76 391,76 400,76 409,76 418,76 508,76 535,76 544,76 733,76 742,76 751,76 184,85 220,85 229,85 247,85 256,85 265,85 292,85 301,85 310,85 319,85 328,85 337,85 346,85 355,85 364,85 373,85 382,85 391,85 400,85 409,85 418,85 508,85 517,85 526,85 742,85 751,85 760,85 166,94 184,94 193,94 202,94 220,94 238,94 247,94 256,94 274,94 283,94 292,94 301,94 310,94 319,94 328,94 337,94 346,94 355,94 364,94 373,94 382,94 391,94 400,94 409,94 526,94 535,94 760,94 769,94 157,103 193,103 202,103 229,103 238,103 247,103 274,103 283,103 292,103 301,103 310,103 319,103 328,103 337,103 346,103 355,103 364,103 373,103 382,103 391,103 400,103 409,103 517,103 526,103 535,103 139,112 148,112 238,112 247,112 283,112 292,112 301,112 310,112 319,112 328,112 337,112 346,112 355,112 364,112 373,112 382,112 391,112 400,112 409,112 418,112 517,112 760,112 139,121 166,121 184,121 193,121 211,121 229,121 283,121 292,121 301,121 310,121 319,121 328,121 337,121 346,121 355,121 364,121 373,121 382,121 391,121 400,121 409,121 661,121 760,121 769,121 778,121 787,121 148,130 157,130 175,130 193,130 220,130 238,130 319,130 328,130 337,130 346,130 355,130 364,130 373,130 382,130 391,130 400,130 409,130 418,130 643,130 652,130 733,130 742,130 751,130 760,130 769,130 778,130 787,130 868,130 877,130 157,139 166,139 211,139 220,139 229,139 238,139 247,139 319,139 328,139 337,139 346,139 355,139 364,139 373,139 382,139 391,139 400,139 409,139 418,139 634,139 643,139 724,139 733,139 742,139 751,139 760,139 769,139 778,139 787,139 868,139 895,139 130,148 139,148 211,148 319,148 328,148 337,148 346,148 355,148 364,148 373,148 382,148 391,148 400,148 409,148 634,148 724,148 733,148 742,148 751,148 760,148 769,148 778,148 787,148 868,148 130,157 139,157 148,157 175,157 193,157 202,157 211,157 229,157 238,157 247,157 256,157 319,157 328,157 337,157 346,157 355,157 364,157 373,157 382,157 391,157 400,157 409,157 625,157 706,157 715,157 724,157 733,157 742,157 751,157 760,157 769,157 778,157 787,157 796,157 805,157 823,157 832,157 130,166 148,166 157,166 166,166 175,166 193,166 202,166 229,166 238,166 247,166 256,166 328,166 337,166 346,166 355,166 364,166 373,166 382,166 391,166 400,166 625,166 670,166 697,166 706,166 715,166 724,166 733,166 742,166 751,166 760,166 769,166 778,166 787,166 796,166 805,166 814,166 823,166 832,166 868,166 877,166 886,166 148,175 157,175 166,175 175,175 211,175 229,175 238,175 247,175 256,175 265,175 337,175 346,175 355,175 364,175 373,175 382,175 391,175 400,175 409,175 670,175 688,175 697,175 715,175 724,175 733,175 742,175 751,175 760,175 769,175 778,175 787,175 796,175 805,175 814,175 823,175 832,175 850,175 859,175 868,175 877,175 886,175 895,175 976,175 985,175 22,184 31,184 40,184 49,184 58,184 148,184 157,184 166,184 175,184 184,184 211,184 238,184 265,184 274,184 283,184 328,184 337,184 346,184 355,184 364,184 373,184 382,184 391,184 400,184 409,184 544,184 553,184 643,184 670,184 688,184 697,184 706,184 715,184 724,184 733,184 742,184 751,184 760,184 769,184 778,184 787,184 796,184 805,184 814,184 823,184 832,184 841,184 850,184 859,184 868,184 877,184 886,184 895,184 904,184 913,184 922,184 13,193 22,193 31,193 40,193 49,193 58,193 67,193 76,193 85,193 94,193 103,193 112,193 121,193 130,193 139,193 157,193 166,193 184,193 193,193 202,193 211,193 220,193 238,193 265,193 274,193 283,193 337,193 346,193 355,193 364,193 373,193 382,193 391,193 400,193 517,193 526,193 535,193 544,193 553,193 562,193 571,193 625,193 652,193 661,193 670,193 688,193 697,193 706,193 715,193 724,193 733,193 742,193 751,193 760,193 769,193 778,193 787,193 796,193 805,193 814,193 823,193 832,193 841,193 850,193 859,193 868,193 877,193 886,193 895,193 904,193 913,193 922,193 931,193 940,193 949,193 958,193 967,193 976,193 13,202 22,202 31,202 40,202 49,202 58,202 67,202 76,202 85,202 94,202 103,202 112,202 121,202 130,202 139,202 148,202 166,202 175,202 184,202 193,202 202,202 211,202 220,202 238,202 274,202 283,202 292,202 328,202 337,202 346,202 355,202 364,202 373,202 382,202 517,202 526,202 535,202 544,202 553,202 562,202 571,202 580,202 589,202 598,202 616,202 625,202 634,202 643,202 652,202 661,202 670,202 679,202 688,202 697,202 706,202 715,202 724,202 733,202 742,202 751,202 760,202 769,202 778,202 787,202 796,202 805,202 814,202 823,202 832,202 841,202 850,202 859,202 868,202 877,202 886,202 895,202 904,202 913,202 922,202 931,202 940,202 949,202 958,202 967,202 976,202 985,202 13,211 22,211 31,211 40,211 49,211 58,211 67,211 76,211 85,211 94,211 103,211 112,211 121,211 130,211 139,211 148,211 157,211 166,211 175,211 184,211 193,211 202,211 211,211 220,211 229,211 238,211 274,211 283,211 292,211 301,211 328,211 337,211 346,211 355,211 364,211 373,211 517,211 526,211 535,211 544,211 553,211 562,211 580,211 607,211 616,211 625,211 634,211 643,211 652,211 661,211 670,211 679,211 688,211 697,211 706,211 715,211 724,211 733,211 742,211 751,211 760,211 769,211 778,211 787,211 796,211 805,211 814,211 823,211 832,211 841,211 850,211 859,211 868,211 877,211 886,211 895,211 904,211 913,211 922,211 931,211 940,211 949,211 958,211 967,211 976,211 985,211 994,211 1003,211 13,220 22,220 31,220 40,220 49,220 58,220 67,220 76,220 85,220 94,220 103,220 112,220 121,220 130,220 139,220 148,220 157,220 166,220 175,220 184,220 193,220 202,220 211,220 220,220 229,220 238,220 265,220 274,220 283,220 328,220 337,220 346,220 355,220 418,220 427,220 436,220 517,220 526,220 553,220 562,220 571,220 589,220 598,220 607,220 616,220 625,220 634,220 643,220 652,220 661,220 670,220 679,220 688,220 697,220 706,220 715,220 724,220 733,220 742,220 751,220 760,220 769,220 778,220 787,220 796,220 805,220 814,220 823,220 832,220 841,220 850,220 859,220 868,220 877,220 886,220 895,220 904,220 913,220 922,220 931,220 940,220 949,220 958,220 967,220 976,220 994,220 31,229 40,229 49,229 58,229 67,229 76,229 85,229 94,229 103,229 112,229 121,229 130,229 139,229 148,229 157,229 166,229 175,229 184,229 193,229 202,229 211,229 220,229 238,229 247,229 274,229 283,229 292,229 337,229 346,229 355,229 418,229 508,229 517,229 526,229 544,229 553,229 562,229 571,229 580,229 589,229 598,229 607,229 616,229 625,229 634,229 643,229 652,229 661,229 670,229 679,229 688,229 697,229 706,229 715,229 724,229 733,229 742,229 751,229 760,229 769,229 778,229 787,229 796,229 805,229 814,229 823,229 832,229 841,229 850,229 859,229 868,229 877,229 886,229 895,229 904,229 913,229 922,229 931,229 940,229 949,229 958,229 967,229 976,229 13,238 22,238 31,238 40,238 49,238 58,238 67,238 76,238 85,238 94,238 103,238 112,238 121,238 130,238 139,238 148,238 157,238 166,238 175,238 184,238 193,238 202,238 211,238 256,238 283,238 337,238 346,238 355,238 499,238 508,238 517,238 535,238 544,238 553,238 562,238 571,238 580,238 589,238 598,238 607,238 616,238 625,238 634,238 643,238 652,238 661,238 670,238 679,238 688,238 697,238 706,238 715,238 724,238 733,238 742,238 751,238 760,238 769,238 778,238 787,238 796,238 805,238 814,238 823,238 832,238 841,238 850,238 859,238 868,238 877,238 886,238 895,238 904,238 913,238 922,238 931,238 940,238 949,238 958,238 967,238 13,247 22,247 31,247 40,247 67,247 76,247 85,247 94,247 103,247 112,247 121,247 130,247 139,247 148,247 157,247 166,247 175,247 184,247 193,247 202,247 256,247 265,247 274,247 346,247 490,247 499,247 508,247 517,247 535,247 544,247 553,247 562,247 571,247 580,247 589,247 598,247 607,247 616,247 625,247 634,247 643,247 652,247 661,247 670,247 679,247 688,247 697,247 706,247 715,247 724,247 733,247 742,247 751,247 760,247 769,247 778,247 787,247 796,247 805,247 814,247 823,247 832,247 841,247 850,247 859,247 868,247 877,247 886,247 895,247 904,247 940,247 949,247 22,256 31,256 40,256 49,256 85,256 94,256 103,256 112,256 121,256 130,256 139,256 148,256 157,256 166,256 175,256 184,256 193,256 202,256 256,256 265,256 274,256 292,256 499,256 508,256 517,256 526,256 544,256 553,256 562,256 571,256 580,256 589,256 598,256 607,256 616,256 625,256 634,256 643,256 652,256 661,256 670,256 679,256 688,256 697,256 706,256 715,256 724,256 733,256 742,256 751,256 760,256 769,256 778,256 787,256 796,256 805,256 814,256 823,256 832,256 841,256 850,256 859,256 868,256 904,256 931,256 94,265 103,265 112,265 121,265 130,265 139,265 148,265 157,265 166,265 175,265 184,265 193,265 202,265 211,265 265,265 274,265 283,265 292,265 301,265 463,265 508,265 517,265 526,265 544,265 553,265 562,265 571,265 580,265 589,265 598,265 607,265 616,265 625,265 634,265 643,265 652,265 661,265 670,265 679,265 688,265 697,265 706,265 715,265 724,265 733,265 742,265 751,265 760,265 769,265 778,265 787,265 796,265 805,265 814,265 823,265 832,265 841,265 850,265 859,265 922,265 931,265 22,274 112,274 121,274 130,274 139,274 148,274 157,274 166,274 175,274 184,274 193,274 202,274 211,274 220,274 229,274 265,274 274,274 283,274 292,274 301,274 463,274 499,274 508,274 535,274 544,274 553,274 562,274 571,274 580,274 589,274 598,274 607,274 616,274 625,274 634,274 643,274 652,274 661,274 670,274 679,274 688,274 697,274 706,274 715,274 724,274 733,274 742,274 751,274 760,274 769,274 778,274 787,274 796,274 805,274 814,274 823,274 832,274 841,274 850,274 913,274 922,274 103,283 112,283 121,283 130,283 139,283 148,283 157,283 166,283 175,283 184,283 193,283 202,283 211,283 220,283 229,283 238,283 256,283 265,283 274,283 283,283 292,283 301,283 310,283 454,283 472,283 508,283 517,283 526,283 535,283 544,283 553,283 562,283 571,283 580,283 589,283 598,283 607,283 616,283 625,283 634,283 643,283 652,283 661,283 670,283 679,283 688,283 697,283 706,283 715,283 724,283 733,283 742,283 751,283 760,283 769,283 778,283 787,283 796,283 805,283 814,283 823,283 832,283 841,283 850,283 868,283 913,283 922,283 121,292 130,292 139,292 148,292 157,292 166,292 175,292 184,292 193,292 202,292 211,292 220,292 229,292 238,292 247,292 256,292 265,292 274,292 283,292 292,292 301,292 310,292 463,292 472,292 490,292 499,292 508,292 517,292 526,292 535,292 544,292 553,292 562,292 571,292 580,292 589,292 598,292 607,292 616,292 625,292 634,292 643,292 652,292 661,292 670,292 679,292 688,292 697,292 706,292 715,292 724,292 733,292 742,292 751,292 760,292 769,292 778,292 787,292 796,292 805,292 814,292 823,292 832,292 841,292 850,292 859,292 868,292 121,301 130,301 139,301 148,301 157,301 166,301 175,301 184,301 193,301 202,301 211,301 220,301 229,301 238,301 247,301 256,301 265,301 274,301 283,301 481,301 490,301 499,301 508,301 517,301 526,301 535,301 544,301 553,301 562,301 571,301 580,301 589,301 598,301 607,301 616,301 625,301 634,301 643,301 652,301 661,301 670,301 679,301 688,301 697,301 706,301 715,301 724,301 733,301 742,301 751,301 760,301 769,301 778,301 787,301 796,301 805,301 814,301 823,301 832,301 841,301 850,301 859,301 868,301 877,301 130,310 139,310 148,310 157,310 166,310 175,310 184,310 193,310 202,310 211,310 220,310 238,310 247,310 256,310 265,310 274,310 283,310 292,310 310,310 319,310 463,310 472,310 481,310 490,310 499,310 508,310 517,310 526,310 535,310 544,310 553,310 562,310 571,310 580,310 589,310 598,310 607,310 616,310 625,310 634,310 643,310 652,310 661,310 670,310 679,310 688,310 697,310 706,310 715,310 724,310 733,310 742,310 751,310 760,310 769,310 778,310 787,310 796,310 805,310 814,310 823,310 832,310 841,310 850,310 859,310 130,319 139,319 148,319 157,319 166,319 175,319 184,319 193,319 202,319 211,319 220,319 229,319 238,319 256,319 265,319 274,319 283,319 292,319 301,319 472,319 481,319 490,319 499,319 508,319 517,319 526,319 535,319 544,319 553,319 571,319 580,319 589,319 598,319 607,319 625,319 634,319 643,319 652,319 661,319 670,319 679,319 688,319 697,319 706,319 715,319 724,319 733,319 742,319 751,319 760,319 769,319 778,319 787,319 796,319 805,319 814,319 823,319 832,319 841,319 850,319 859,319 130,328 139,328 148,328 157,328 166,328 175,328 184,328 193,328 202,328 211,328 220,328 238,328 247,328 256,328 265,328 274,328 454,328 463,328 472,328 481,328 490,328 508,328 526,328 535,328 544,328 553,328 589,328 598,328 607,328 625,328 634,328 643,328 652,328 661,328 670,328 679,328 688,328 697,328 706,328 715,328 724,328 733,328 742,328 751,328 760,328 769,328 778,328 787,328 796,328 805,328 814,328 823,328 832,328 841,328 850,328 877,328 130,337 139,337 148,337 157,337 166,337 175,337 184,337 193,337 202,337 211,337 220,337 229,337 238,337 247,337 256,337 265,337 454,337 463,337 472,337 499,337 517,337 535,337 544,337 562,337 571,337 580,337 589,337 598,337 607,337 634,337 643,337 652,337 661,337 670,337 679,337 688,337 697,337 706,337 715,337 724,337 733,337 742,337 751,337 760,337 769,337 778,337 787,337 796,337 805,337 814,337 823,337 832,337 130,346 139,346 148,346 157,346 166,346 175,346 184,346 193,346 202,346 211,346 220,346 229,346 238,346 247,346 256,346 454,346 463,346 472,346 535,346 553,346 562,346 571,346 580,346 589,346 598,346 607,346 634,346 643,346 652,346 661,346 670,346 679,346 688,346 697,346 706,346 715,346 724,346 733,346 742,346 751,346 760,346 769,346 778,346 787,346 796,346 832,346 868,346 139,355 148,355 157,355 166,355 175,355 184,355 193,355 202,355 211,355 220,355 229,355 238,355 247,355 256,355 481,355 490,355 499,355 580,355 589,355 598,355 607,355 616,355 625,355 634,355 643,355 652,355 661,355 670,355 679,355 688,355 697,355 706,355 715,355 724,355 733,355 742,355 751,355 760,355 769,355 778,355 787,355 796,355 805,355 832,355 859,355 868,355 148,364 157,364 166,364 175,364 184,364 193,364 202,364 211,364 220,364 229,364 238,364 247,364 454,364 463,364 472,364 481,364 490,364 499,364 580,364 589,364 598,364 607,364 616,364 625,364 634,364 643,364 652,364 661,364 670,364 679,364 688,364 697,364 706,364 715,364 724,364 733,364 742,364 751,364 760,364 769,364 778,364 787,364 796,364 805,364 841,364 166,373 175,373 184,373 193,373 202,373 211,373 220,373 229,373 238,373 454,373 463,373 472,373 481,373 490,373 499,373 508,373 517,373 526,373 535,373 544,373 553,373 562,373 571,373 580,373 589,373 598,373 607,373 616,373 625,373 634,373 643,373 652,373 661,373 670,373 679,373 688,373 697,373 706,373 715,373 724,373 733,373 742,373 751,373 760,373 769,373 778,373 787,373 796,373 805,373 157,382 166,382 175,382 184,382 193,382 247,382 445,382 454,382 463,382 472,382 481,382 490,382 499,382 508,382 517,382 526,382 535,382 544,382 553,382 562,382 580,382 589,382 598,382 607,382 625,382 634,382 643,382 652,382 661,382 670,382 679,382 688,382 697,382 706,382 715,382 724,382 733,382 742,382 751,382 760,382 769,382 778,382 787,382 796,382 805,382 175,391 184,391 193,391 256,391 436,391 445,391 454,391 463,391 472,391 481,391 490,391 499,391 508,391 517,391 526,391 535,391 544,391 553,391 562,391 571,391 580,391 589,391 598,391 607,391 616,391 670,391 679,391 688,391 697,391 706,391 715,391 724,391 733,391 742,391 751,391 760,391 769,391 778,391 787,391 796,391 805,391 814,391 184,400 193,400 256,400 427,400 436,400 445,400 454,400 463,400 472,400 481,400 490,400 499,400 508,400 517,400 526,400 535,400 544,400 553,400 562,400 571,400 589,400 598,400 607,400 616,400 625,400 634,400 670,400 679,400 688,400 697,400 706,400 715,400 724,400 733,400 742,400 751,400 760,400 769,400 778,400 787,400 184,409 193,409 202,409 220,409 274,409 436,409 445,409 454,409 463,409 472,409 481,409 490,409 499,409 508,409 517,409 526,409 535,409 544,409 553,409 562,409 571,409 598,409 607,409 616,409 625,409 634,409 679,409 688,409 697,409 706,409 742,409 751,409 760,409 769,409 220,418 229,418 238,418 436,418 445,418 454,418 463,418 472,418 481,418 490,418 499,418 508,418 517,418 526,418 535,418 544,418 553,418 562,418 571,418 580,418 598,418 607,418 616,418 688,418 697,418 751,418 760,418 769,418 778,418 814,418 238,427 436,427 445,427 454,427 463,427 472,427 481,427 490,427 499,427 508,427 517,427 526,427 535,427 544,427 553,427 562,427 571,427 580,427 589,427 598,427 625,427 688,427 697,427 769,427 778,427 814,427 238,436 265,436 283,436 292,436 301,436 445,436 454,436 463,436 472,436 481,436 490,436 499,436 508,436 517,436 526,436 535,436 544,436 553,436 562,436 571,436 580,436 589,436 598,436 607,436 616,436 751,436 769,436 265,445 274,445 283,445 292,445 301,445 310,445 445,445 454,445 463,445 472,445 490,445 499,445 508,445 517,445 526,445 535,445 544,445 553,445 562,445 571,445 580,445 589,445 598,445 607,445 760,445 823,445 265,454 274,454 283,454 292,454 301,454 310,454 319,454 328,454 508,454 517,454 526,454 535,454 544,454 553,454 562,454 571,454 580,454 589,454 598,454 751,454 760,454 796,454 256,463 265,463 274,463 283,463 292,463 301,463 310,463 319,463 328,463 337,463 508,463 517,463 526,463 535,463 544,463 553,463 562,463 571,463 580,463 589,463 760,463 787,463 796,463 841,463 256,472 265,472 274,472 283,472 292,472 301,472 310,472 319,472 328,472 337,472 346,472 355,472 364,472 508,472 517,472 526,472 535,472 544,472 553,472 562,472 571,472 580,472 769,472 796,472 814,472 841,472 850,472 859,472 868,472 877,472 256,481 265,481 274,481 283,481 292,481 301,481 310,481 319,481 328,481 337,481 346,481 355,481 364,481 373,481 517,481 526,481 535,481 544,481 553,481 562,481 571,481 580,481 778,481 868,481 877,481 886,481 256,490 265,490 274,490 283,490 292,490 301,490 310,490 319,490 328,490 337,490 346,490 355,490 364,490 373,490 517,490 526,490 535,490 544,490 553,490 562,490 571,490 580,490 823,490 895,490 265,499 274,499 283,499 292,499 301,499 310,499 319,499 328,499 337,499 346,499 355,499 364,499 517,499 526,499 535,499 544,499 553,499 562,499 571,499 580,499 841,499 850,499 877,499 274,508 283,508 292,508 301,508 310,508 319,508 328,508 337,508 346,508 355,508 364,508 508,508 517,508 526,508 535,508 544,508 553,508 562,508 571,508 580,508 607,508 832,508 841,508 850,508 859,508 877,508 283,517 292,517 301,517 310,517 319,517 328,517 337,517 346,517 355,517 517,517 526,517 535,517 544,517 553,517 562,517 571,517 607,517 823,517 832,517 841,517 850,517 859,517 868,517 877,517 886,517 283,526 292,526 301,526 310,526 319,526 328,526 337,526 346,526 355,526 517,526 526,526 535,526 544,526 553,526 562,526 571,526 598,526 607,526 796,526 805,526 814,526 823,526 832,526 841,526 850,526 859,526 868,526 877,526 886,526 283,535 292,535 301,535 310,535 319,535 328,535 337,535 517,535 526,535 535,535 544,535 553,535 562,535 796,535 805,535 814,535 823,535 832,535 841,535 850,535 859,535 868,535 877,535 886,535 895,535 904,535 283,544 292,544 301,544 310,544 319,544 328,544 337,544 526,544 535,544 544,544 553,544 562,544 796,544 805,544 814,544 823,544 832,544 841,544 850,544 859,544 868,544 877,544 886,544 895,544 904,544 274,553 283,553 292,553 301,553 310,553 319,553 328,553 526,553 535,553 544,553 553,553 805,553 814,553 823,553 832,553 841,553 850,553 859,553 868,553 877,553 886,553 895,553 274,562 283,562 292,562 301,562 310,562 319,562 526,562 535,562 544,562 805,562 814,562 859,562 868,562 877,562 886,562 895,562 274,571 283,571 292,571 301,571 310,571 868,571 877,571 886,571 895,571 274,580 283,580 292,580 301,580 877,580 967,580 274,589 283,589 886,589 958,589 967,589 274,598 283,598 958,598',C={\"cn\":[766,349],\"us\":[205,318],\"ca\":[201,205],\"mx\":[184,392],\"br\":[326,495],\"cl\":[276,558],\"gb\":[467,281],\"de\":[504,298],\"fr\":[479,317],\"it\":[508,326],\"es\":[465,339],\"nl\":[490,292],\"pl\":[527,291],\"tr\":[576,342],\"ae\":[625,400],\"sa\":[601,394],\"eg\":[561,387],\"ng\":[498,435],\"za\":[546,549],\"in\":[697,396],\"vn\":[774,414],\"th\":[760,423],\"id\":[811,471],\"jp\":[863,350],\"kr\":[832,355],\"au\":[852,538]};\n  var box=sec.querySelector('.map'),ns='http://www.w3.org/2000/svg',want=(box.dataset.countries||'').split(','),ask=(box.dataset.enquiry||'').split(',').filter(Boolean);\n  var h='<svg viewBox=\"0 30 1010 590\" xmlns=\"'+ns+'\" role=\"img\" aria-label=\"出口国家地图\">';\n  DOTS.split(' ').forEach(function(p){var a=p.split(',');h+='<circle class=\"d\" cx=\"'+a[0]+'\" cy=\"'+a[1]+'\" r=\"2.7\"/>'});\n  var o=C.cn;want.concat(ask).forEach(function(k,n){var q=n>=want.length?' o':'';var t=C[k];if(!t)return;var mx=(o[0]+t[0])/2,my=Math.min(o[1],t[1])-Math.abs(o[0]-t[0])*.28-20;\n    var len=Math.round(Math.hypot(t[0]-o[0],t[1]-o[1])*1.35),dl=(n*0.08).toFixed(2)+'s';\n    var d='M'+o[0]+' '+o[1]+'Q'+mx+' '+my+' '+t[0]+' '+t[1];\n    h+='<g class=\"c\" data-k=\"'+k+'\"><path class=\"ln'+q+'\" style=\"--len:'+len+';--dl:'+dl+'\" d=\"'+d+'\"/>'+(q?'':'<path class=\"fl\" pathLength=\"1\" style=\"--dl:-'+(n*.83%3.6).toFixed(2)+'s\" d=\"'+d+'\"/><circle class=\"pulse\" style=\"--dl:'+dl+'\" cx=\"'+t[0]+'\" cy=\"'+t[1]+'\" r=\"5\"/>')+\n       '<circle class=\"pin'+q+'\" cx=\"'+t[0]+'\" cy=\"'+t[1]+'\" r=\"'+(q?4.4:3.6)+'\"/></g>'});\n  h+='<circle class=\"pulse\" cx=\"'+o[0]+'\" cy=\"'+o[1]+'\" r=\"8\"/><circle class=\"home\" cx=\"'+o[0]+'\" cy=\"'+o[1]+'\" r=\"6\"/></svg>';\n  box.innerHTML=h;\n  var svg=box.querySelector('svg'),regs=[].slice.call(sec.querySelectorAll('.regs button')),now=sec.querySelector('.now'),go=sec.querySelector('.ask'),pick='',base=go?go.textContent:'';\n  regs.forEach(function(b){b.setAttribute('aria-pressed','false');b.addEventListener('click',function(){var on=b.getAttribute('aria-pressed')!=='true',cs=b.dataset.c.split(',');\n    regs.forEach(function(x){x.setAttribute('aria-pressed',String(on&&x===b))});svg.classList.toggle('sel',on);\n    svg.querySelectorAll('g.c').forEach(function(g){g.classList.toggle('hit',on&&cs.indexOf(g.dataset.k)>-1)});\n    pick=on?b.textContent:'';now.textContent=on?pick+' · '+(cs.some(function(c){return want.indexOf(c)>-1})?'已出口':'欢迎询价'):'点地区查看';go.textContent=on?'询问'+pick+'市场的报价':base})});\n  if(go)go.addEventListener('click',function(e){var fs=[].slice.call(document.querySelectorAll('form')).filter(function(f){return !f.closest('.w-quote')&&f.getAttribute('role')!=='search'}),f=fs.filter(function(x){return !x.closest('.w-modal')})[0];\n    fs.forEach(function(x){var t=x.querySelector('[name=country],input[placeholder*=\"国家\"]')||x.querySelector('textarea');if(!t)return;var v=t.tagName==='TEXTAREA'?'目标市场：'+pick:pick;if(pick&&(!t.value||t.value===t.dataset.x06)){t.value=v;t.dataset.x06=v}});\n    if(f){e.preventDefault();e.stopPropagation();f.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}});\n  if(!('IntersectionObserver' in window)){sec.classList.add('in');return}\n  var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){sec.classList.add('in');io.disconnect()}},{threshold:.25});io.observe(sec);\n});",
    "demo": false,
-   "h": 720,
-   "ref": "",
+   "h": 820,
+   "ref": "点地区带进询盘：刀具工厂站 · 市场地图",
    "fit": {
     "pages": [
      "首页"
@@ -2112,6 +2331,38 @@
     "note": "合作流程",
     "needs": []
    }
+  },
+  {
+   "id": "X21",
+   "name": "OEM 需求配置器",
+   "en": "",
+   "group": "高光",
+   "use": "四步单选：做什么、什么材料、什么包装、多少数量；右边同步生成项目摘要，一键写进询盘表单。不会写需求的采购商也能发出一份完整询盘",
+   "needs": "无需图片",
+   "edit": "步骤标题和选项都可增减（3–5 步，每步 3–5 项）；每步保留一个「不确定，请推荐」",
+   "mobile": "手机上四步竖排，摘要在最下面",
+   "html": "<section class=\"b-x21 sec alt\"><div class=\"wrap\">\n  <div class=\"sec-head\"><span class=\"eyebrow\">定制配置</span><h2 class=\"hd sec-title\">四步说清您的需求</h2><p class=\"sec-sub\">每步选一个，右边自动生成需求单。拿不准就选「请推荐」。</p></div>\n  <div class=\"g\"><div class=\"steps\">\n    <fieldset data-t=\"产品\"><legend><i>1</i>做什么产品</legend><label><input type=\"radio\"><span>{{cat1}}</span></label><label><input type=\"radio\"><span>{{cat2}}</span></label><label><input type=\"radio\"><span>{{cat3}}</span></label><label><input type=\"radio\"><span>全新开发</span></label></fieldset>\n    <fieldset data-t=\"材料等级\"><legend><i>2</i>材料等级</legend><label><input type=\"radio\"><span>标准级 · 走量</span></label><label><input type=\"radio\"><span>加强级 · 电商主力</span></label><label><input type=\"radio\"><span>专业级 · 中高端</span></label><label><input type=\"radio\"><span>不确定，请推荐</span></label></fieldset>\n    <fieldset data-t=\"品牌和包装\"><legend><i>3</i>品牌和包装</legend><label><input type=\"radio\"><span>只印 logo，散装</span></label><label><input type=\"radio\"><span>零售彩盒</span></label><label><input type=\"radio\"><span>高端礼盒</span></label><label><input type=\"radio\"><span>不确定，请推荐</span></label></fieldset>\n    <fieldset data-t=\"预计数量\"><legend><i>4</i>预计数量</legend><label><input type=\"radio\"><span>500–1,000</span></label><label><input type=\"radio\"><span>1,000–3,000</span></label><label><input type=\"radio\"><span>3,000–10,000</span></label><label><input type=\"radio\"><span>10,000 以上</span></label></fieldset>\n  </div>\n  <aside class=\"card\"><div class=\"pr\"><b class=\"hd\">我的需求单</b><span><em>0</em> / 4</span></div><div class=\"bar\"><i></i></div><dl></dl>\n    <button type=\"button\" class=\"btn send\" disabled>用这份需求询价</button>\n    <form class=\"mini\" hidden onsubmit=\"return false\"><input type=\"email\" placeholder=\"工作邮箱 *\" aria-label=\"工作邮箱\"><textarea rows=\"5\" aria-label=\"需求\"></textarea><button class=\"btn\">提交询盘</button></form>\n    <p class=\"tip\">选完自动生成，可以再改</p></aside></div>\n</div></section>",
+   "css": ".b-x21 .g{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:28px;align-items:start}\n.b-x21 .steps{display:grid;grid-template-columns:1fr 1fr;gap:20px}\n.b-x21 fieldset{border:1px solid var(--c-line);border-radius:var(--radius);background:var(--c-card);padding:22px;min-width:0;display:grid;gap:9px;transition:border-color .3s}\n.b-x21 fieldset.ok{border-color:var(--c-accent)}\n.b-x21 legend{float:left;width:100%;display:flex;align-items:center;gap:12px;font:700 18px var(--font-head);margin-bottom:6px}\n.b-x21 legend i{width:30px;height:30px;border-radius:50%;background:var(--c-surface);color:var(--c-muted);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:14px;transition:.3s}\n.b-x21 .ok legend i{background:var(--c-accent);color:var(--c-on-accent)}\n.b-x21 label{clear:both;position:relative;cursor:pointer}\n.b-x21 input[type=radio]{position:absolute;opacity:0}\n.b-x21 label span{display:block;padding:12px 14px 12px 42px;border:1px solid var(--c-line);border-radius:var(--radius-btn);font-size:15px;transition:.2s}\n.b-x21 label span::before{content:\"\";position:absolute;left:15px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;border:2px solid var(--c-line);box-sizing:border-box;transition:.2s}\n.b-x21 label:hover span{border-color:var(--c-accent)}\n.b-x21 input:checked+span{border-color:var(--c-accent);background:color-mix(in srgb,var(--c-accent) 9%,transparent);font-weight:700}\n.b-x21 input:checked+span::before{border:5px solid var(--c-accent)}\n.b-x21 input:focus-visible+span{outline:2px solid var(--c-accent);outline-offset:2px}\n.b-x21 aside{position:sticky;top:100px;padding:26px}\n.b-x21 .pr{display:flex;justify-content:space-between;align-items:baseline;font-size:20px}\n.b-x21 .pr span{font-size:14px;color:var(--c-muted)}\n.b-x21 .pr em{font-style:normal}\n.b-x21 .bar{height:6px;border-radius:9px;background:var(--c-surface);margin:14px 0 8px;overflow:hidden}\n.b-x21 .bar i{display:block;height:100%;width:0;background:var(--c-accent);transition:width .45s cubic-bezier(.2,.7,.2,1)}\n.b-x21 dl{margin-bottom:20px}\n.b-x21 dl div{display:grid;grid-template-columns:88px 1fr;gap:8px;padding:11px 0;border-bottom:1px dashed var(--c-line);font-size:15px}\n.b-x21 dt{color:var(--c-muted)}\n.b-x21 dd{font-weight:600}\n.b-x21 dd.e{font-weight:400;color:var(--c-muted);opacity:.6}\n.b-x21 .btn{width:100%;justify-content:center}\n.b-x21 .btn[disabled]{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}\n.b-x21 .mini{display:grid;gap:10px;margin-top:12px}\n.b-x21 [hidden]{display:none}\n.b-x21 .mini input,.b-x21 .mini textarea{width:100%;padding:11px 13px;border:1px solid var(--c-line);border-radius:var(--radius-btn);font:inherit;font-size:15px;background:var(--c-bg);color:var(--c-ink)}\n.b-x21 .tip{font-size:13px;color:var(--c-muted);text-align:center;margin-top:12px}\n@media(max-width:1000px){.b-x21 .g{grid-template-columns:1fr}.b-x21 aside{position:static}}\n@media(max-width:620px){.b-x21 .steps{grid-template-columns:1fr}}\n@media (prefers-reduced-motion:reduce){.b-x21 .bar i{transition:none}}",
+   "js": "document.querySelectorAll('.b-x21').forEach(function(s,n){\n  var fs=[].slice.call(s.querySelectorAll('fieldset')),dl=s.querySelector('dl'),send=s.querySelector('.send'),mini=s.querySelector('.mini'),vals=fs.map(function(){return ''});\n  fs.forEach(function(f,i){f.querySelectorAll('input').forEach(function(r){r.name='x21-'+n+'-'+i;r.addEventListener('change',function(){vals[i]=r.nextElementSibling.textContent;f.classList.add('ok');draw()})});\n    var d=document.createElement('div'),a=document.createElement('dt'),b=document.createElement('dd');a.textContent=f.dataset.t;d.appendChild(a);d.appendChild(b);dl.appendChild(d)});\n  function text(){return '定制需求\\n'+fs.map(function(f,i){return f.dataset.t+'：'+(vals[i]||'待沟通')}).join('\\n')}\n  function draw(){var c=vals.filter(Boolean).length;s.querySelector('.pr em').textContent=c;s.querySelector('.pr span').lastChild.textContent=' / '+fs.length;s.querySelector('.bar i').style.width=c/fs.length*100+'%';send.disabled=!c;\n    dl.querySelectorAll('dd').forEach(function(d,i){d.textContent=vals[i]||'未选';d.classList.toggle('e',!vals[i])});if(!mini.hidden)mini.querySelector('textarea').value=text()}\n  send.addEventListener('click',function(){var t=[].slice.call(document.querySelectorAll('form textarea')).filter(function(x){return !x.closest('.w-modal,.w-quote,.b-x21')})[0];\n    if(t){t.value=text();t.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});t.focus({preventScroll:true})}\n    else{mini.hidden=false;send.hidden=true;mini.querySelector('textarea').value=text();mini.querySelector('input').focus()}});\n  draw();\n});",
+   "demo": false,
+   "h": 820,
+   "ref": "刀具工厂站 · OEM 页需求配置器",
+   "fit": {
+    "pages": [
+     "首页",
+     "产品聚合页",
+     "详情页"
+    ],
+    "pos": "中段",
+    "types": [
+     "消费电子型",
+     "款式型",
+     "图纸定制型",
+     "目录型"
+    ],
+    "note": "支持 OEM / ODM 的工厂",
+    "needs": []
+   }
   }
  ],
  "groups": [
@@ -2123,6 +2374,7 @@
   "应用与案例",
   "合作流程",
   "产品详情",
+  "内容与指南",
   "询盘",
   "页头页脚"
  ],
@@ -2138,7 +2390,7 @@
     "C5"
    ],
    "css": "\n.m-fu{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}\n.m-fu.in{opacity:1;transform:none}\n@media (prefers-reduced-motion:reduce){.m-fu{opacity:1;transform:none;transition:none}}",
-   "js": "\n(function(){\n  var sel='section:not(:first-of-type) .sec-head,.grid>*,.row,.wall>*,.steps>*,.mosaic>*,.mas>*,.pane,.tw,.line>*,.box';\n  var els=[].slice.call(document.querySelectorAll(sel));\n  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;\n  els.forEach(function(el){\n    if(el.closest('.b-h1,.b-h2,.b-h3,.b-h4,.b-h5,.b-h6,.b-h7,.b-h8,.b-d1,[class^=\"b-x\"]'))return;\n    var i=[].indexOf.call(el.parentNode.children,el);\n    el.classList.add('m-fu');el.style.transitionDelay=Math.min(i,5)*90+'ms';\n  });\n  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});\n  document.querySelectorAll('.m-fu').forEach(function(el){io.observe(el)});\n})();",
+   "js": "\n(function(){\n  var sel='section:not(:first-of-type) .sec-head,.grid>*,.row,.wall>*,.steps>*,.mosaic>*,.mas>*,.pane,.tw,.line>*,.box';\n  var els=[].slice.call(document.querySelectorAll(sel));\n  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;\n  els.forEach(function(el){\n    if(el.classList.contains('m-sl')||el.closest('.b-h1,.b-h2,.b-h3,.b-h4,.b-h5,.b-h6,.b-h7,.b-h8,.b-d1,[class^=\"b-x\"]'))return;\n    var i=[].indexOf.call(el.parentNode.children,el);\n    el.classList.add('m-fu');el.style.transitionDelay=Math.min(i,5)*90+'ms';\n  });\n  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});\n  document.querySelectorAll('.m-fu').forEach(function(el){io.observe(el)});\n})();",
    "fit": {
     "pages": [
      "首页",
@@ -2451,6 +2703,116 @@
     "note": "和 W01 二选一",
     "needs": []
    }
+  },
+  {
+   "id": "M13",
+   "name": "一镜到底",
+   "en": "Cinema backdrop",
+   "tag": "氛围",
+   "ref": "刀具工厂站 · 首页固定视频背景",
+   "where": "整个首页：一段工厂视频（没有视频就用工厂大图）固定在页面最底层，所有区块变成半透明深色面板从上面滑过，区块之间留缝露出画面",
+   "avoid": "画面要暗、要干净；视频小于 8MB；适合有加工火花、生产线这类画面的工厂，产品图多的浅色站不适合；手机上改用静态图",
+   "demo": [
+    "H2",
+    "T1",
+    "C1",
+    "F1",
+    "Q2"
+   ],
+   "css": "\nhtml:has(body.m-film){background:var(--c-dark)}\nbody.m-film{--c-bg:transparent;--c-surface:rgba(255,255,255,.07);--c-card:rgba(255,255,255,.07);--c-ink:var(--c-on-dark);--c-muted:color-mix(in srgb,var(--c-on-dark) 76%,transparent);--c-line:rgba(255,255,255,.2);background:transparent;color:var(--c-on-dark);isolation:isolate}\n.m-filmbg{position:fixed!important;inset:0;z-index:-1;overflow:hidden;pointer-events:none;background:#111}\n.m-filmbg>*{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}\n.m-filmbg .ph{animation:m-film 26s ease-in-out infinite alternate}\n.m-filmbg .ph::after{display:none}\n.m-filmbg::after{content:\"\";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.62),rgba(0,0,0,.34))}\n@keyframes m-film{from{transform:scale(1.02)}to{transform:scale(1.16) translate(-2%,-1.5%)}}\nbody.m-film>section{background:color-mix(in srgb,var(--c-dark) 78%,transparent)!important;border-radius:calc(var(--radius) + 2px);margin-top:clamp(28px,8vh,84px);overflow:clip}\nbody.m-film>section.m-film0{background:transparent!important;margin-top:0;border-radius:0}\nbody.m-film>section.m-film0>.bg,body.m-film>section.m-film0>.vid,body.m-film>section.m-film0>.shade{visibility:hidden}\nbody.m-film>header{background:var(--c-dark)!important}\nbody.m-film section :is(.eyebrow,.link,.up,.ls a,.b-c1 .it>span,.b-t1 b,.stats b,.nums b,.ico,.it>span:last-child){color:color-mix(in srgb,var(--c-accent) 48%,var(--c-on-dark))}\nbody.m-film>footer{margin-top:clamp(28px,8vh,84px)}\nbody.m-film :is(input,textarea,select)::placeholder{color:var(--c-muted)}\nbody.m-film dialog,body.m-film .w-form,body.m-film .w-pop{background:var(--c-dark)!important;color:var(--c-on-dark)}\n@media(max-width:700px){body.m-film>section,body.m-film>footer{margin-top:22px}}\n@media (prefers-reduced-motion:reduce){.m-filmbg .ph{animation:none}}",
+   "js": "\n(function(){\n  var first=document.querySelector('body>section');if(!first)return;\n  var bg=first.querySelector(':scope>.bg'),vid=first.querySelector(':scope>.vid'),box=document.createElement('div');box.className='m-filmbg';box.setAttribute('aria-hidden','true');\n  var pic=document.createElement('div');pic.className='ph';pic.dataset.img=bg&&bg.dataset.img||'factory';box.appendChild(pic);\n  var src=vid&&vid.dataset.src;\n  if(src&&innerWidth>700&&!matchMedia('(prefers-reduced-motion: reduce)').matches){var v=document.createElement('video');v.muted=true;v.loop=true;v.playsInline=true;v.src=src;v.onerror=function(){v.remove()};box.appendChild(v);v.play().catch(function(){});\n    var b=first.querySelector('.pz');if(b)b.addEventListener('click',function(){if(first.classList.contains('off'))v.pause();else v.play().catch(function(){})})}\n  if(bg||first.matches('.b-h6'))first.classList.add('m-film0');\n  document.body.insertBefore(box,document.body.firstChild);document.body.classList.add('m-film');\n})();",
+   "fit": {
+    "pages": [
+     "首页"
+    ],
+    "pos": "全站",
+    "types": [
+     "图纸定制型",
+     "大型设备型",
+     "农食型"
+    ],
+    "note": "要有暗调的工厂视频或大图",
+    "needs": []
+   }
+  },
+  {
+   "id": "M14",
+   "name": "区块浮沉",
+   "en": "Section drift",
+   "tag": "氛围",
+   "ref": "刀具工厂站 · 首页区块随滚动缩放",
+   "where": "整个首页：区块从下面进来时上浮、放大、变清楚，离开时轻轻缩小变淡，全部跟着滚动走",
+   "avoid": "文字最淡也保持能看清；很高的区块和带粘性滚动的高光会自动跳过；手机上自动关闭；和 M13 一起用最有层次",
+   "demo": [
+    "H2",
+    "T1",
+    "C1",
+    "F1",
+    "A1",
+    "Q2"
+   ],
+   "css": "\n.m-drift{transform-origin:center;will-change:transform,opacity}",
+   "js": "\n(function(){\n  if(matchMedia('(prefers-reduced-motion: reduce)').matches||innerWidth<768)return;\n  var ps=[].slice.call(document.querySelectorAll('body>section')).filter(function(p,i){\n    return i>0&&!p.matches('.b-x03,.b-x04,.b-x15,.b-x21,.b-c3,.b-c9,.b-d8,.b-r3')&&p.offsetHeight<innerHeight*1.8});\n  ps.forEach(function(p){p.classList.add('m-drift')});\n  var busy=0;\n  function paint(){busy=0;var vh=innerHeight,end=document.documentElement.scrollHeight-vh-scrollY<60;\n    ps.forEach(function(p){var top=p.offsetTop-scrollY,h=p.offsetHeight,inn=Math.min(1,Math.max(0,(vh-top)/Math.min(vh*.45,h))),out=Math.min(1,Math.max(0,(top+h)/Math.min(vh*.36,h)));\n      if(end)inn=1;var e=function(x){return 1-x*x*(3-2*x)},a=e(inn),b=e(out),y=a*70-b*26;\n      p.style.opacity=(1-a*.6-b*.55).toFixed(3);p.style.transform=a+b?'translateY('+y.toFixed(1)+'px) scale('+(1-(a+b)*.05).toFixed(4)+')':''})}\n  function on(){if(!busy)busy=requestAnimationFrame(paint)}\n  addEventListener('scroll',on,{passive:true});addEventListener('resize',on);paint();\n})();",
+   "fit": {
+    "pages": [
+     "首页"
+    ],
+    "pos": "全站",
+    "types": [],
+    "note": "手机上自动关闭；和 M13 搭配最好",
+    "needs": []
+   }
+  },
+  {
+   "id": "M15",
+   "name": "首屏开场",
+   "en": "Hero entrance",
+   "tag": "安全",
+   "ref": "刀具工厂站 · 首屏开场",
+   "where": "打开页面时：logo、菜单、按钮依次滑入，接着首屏标题、说明、按钮从左滑入并轻微回弹，全程不到 1 秒",
+   "avoid": "首屏已经是 X01、X16 这类自带开场的就不要加；不要拖长时间，标题要马上能读",
+   "demo": [
+    "N1",
+    "H1"
+   ],
+   "css": "\n@media (prefers-reduced-motion:no-preference){\n.m-open{animation:m-open var(--t,650ms) cubic-bezier(.2,.7,.2,1) var(--d,0ms) backwards}\n@keyframes m-open{from{opacity:0;translate:var(--s,-44px) 0}66%{opacity:1;translate:4px 0}to{opacity:1;translate:0 0}}\n}",
+   "js": "\n(function(){\n  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;\n  var d=0;function go(el,s,t){el.classList.add('m-open');el.style.setProperty('--d',d+'ms');el.style.setProperty('--s',s);el.style.setProperty('--t',t);d+=s==='-16px'?30:90}\n  document.querySelectorAll('body>header .logo,body>header nav>*,body>header .r>*').forEach(function(x){go(x,'-16px','460ms')});\n  var f=document.querySelector('body>section'),h=f&&f.querySelector('h1');if(!h||f.matches('.b-x01,.b-x16'))return;\n  d=140;[].slice.call(h.parentNode.children).forEach(function(x){if(x.matches('.bg,.vid,.shade,.ph,form'))return;go(x,'-44px','650ms')});\n})();",
+   "fit": {
+    "pages": [
+     "首页",
+     "产品聚合页",
+     "详情页"
+    ],
+    "pos": "全站",
+    "types": [],
+    "note": "首屏是 X01、X16 时不用加",
+    "needs": []
+   }
+  },
+  {
+   "id": "M16",
+   "name": "同排依次滑入",
+   "en": "Row stagger",
+   "tag": "安全",
+   "ref": "刀具工厂站 · 卡片按列滑入",
+   "where": "产品卡、服务卡、步骤卡：同一排从左到右一张接一张滑入；滚回上面再下来会重播一次",
+   "avoid": "和 M01 一起用时，卡片由它负责，M01 管其他内容；手机上一列时变成单张滑入",
+   "demo": [
+    "C5"
+   ],
+   "css": "\n@media (prefers-reduced-motion:no-preference){\n.m-sl{opacity:0;translate:-40px 0}\n.m-sl.go{opacity:1;translate:0 0;transition:opacity .64s cubic-bezier(.16,.78,.24,1) var(--d,0ms),translate .64s cubic-bezier(.16,.78,.24,1) var(--d,0ms)}\n.m-sl:focus-within{opacity:1;translate:0 0}\n}",
+   "js": "\n(function(){\n  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;\n  var io=new IntersectionObserver(function(es){es.forEach(function(e){var r=e.target;\n    if(e.isIntersecting)[].slice.call(r.children).forEach(function(x){x.classList.add('go')});\n    else if(e.boundingClientRect.top>innerHeight)[].slice.call(r.children).forEach(function(x){x.classList.remove('go')})})},{threshold:0,rootMargin:'0px 0px -6% 0px'});\n  document.querySelectorAll('section .grid,.b-c9 .items,.b-f8 .docs,.b-f6 .line').forEach(function(r){\n    var ks=[].slice.call(r.children);if(ks.length<2)return;\n    ks.forEach(function(x){x.classList.remove('m-fu');x.style.transitionDelay='';x.classList.add('m-sl');\n      var n=ks.filter(function(y){return y.offsetTop===x.offsetTop&&y.offsetLeft<x.offsetLeft}).length;x.style.setProperty('--d',n*105+'ms')});\n    io.observe(r)});\n})();",
+   "fit": {
+    "pages": [
+     "首页",
+     "产品聚合页",
+     "详情页"
+    ],
+    "pos": "全站",
+    "types": [],
+    "note": "有成排卡片的页面都适合",
+    "needs": []
+   }
   }
  ],
  "widgets": [
@@ -2517,6 +2879,33 @@
     "pos": "全站",
     "types": [],
     "note": "长页面才需要",
+    "needs": []
+   }
+  },
+  {
+   "id": "W04",
+   "name": "询价清单",
+   "use": "每张产品卡多一个「加入询价」按钮，选中的产品进左下角清单；点开抽屉填数量、删改，一次询多个型号。清单自动带进页面上所有询盘表单，换页面也不丢",
+   "where": "所有产品卡、类目页、详情页；清单按钮在左下角，没选产品时不出现，不挡内容",
+   "avoid": "产品和型号必须真实；正式网站里按钮要放在产品卡链接外面，清单内容要随表单一起提交到询盘系统；和 W01、W02 可以一起用",
+   "html": "<div class=\"w-quote\">\n  <button type=\"button\" class=\"wq-open\" hidden>询价清单 <b>0</b></button>\n  <dialog class=\"wq-dlg\" aria-label=\"询价清单\">\n    <div class=\"wq-hd\"><b class=\"hd\">询价清单</b><button type=\"button\" class=\"wq-x\" aria-label=\"关闭\">×</button></div>\n    <p class=\"wq-none\">还没有选产品。在产品卡上点「加入询价」。</p>\n    <ul></ul>\n    <div class=\"wq-ft\"><button type=\"button\" class=\"wq-clr\">清空</button><button type=\"button\" class=\"btn wq-go\">用清单询价</button></div>\n    <form class=\"wq-form\" hidden onsubmit=\"return false\"><input type=\"email\" placeholder=\"工作邮箱 *\" aria-label=\"工作邮箱\"><input placeholder=\"国家 / 公司\" aria-label=\"国家或公司\"><button class=\"btn\">提交询盘</button></form>\n  </dialog>\n  <span class=\"wq-st\" role=\"status\"></span>\n</div>",
+   "css": ".wq-add{position:absolute;right:12px;top:12px;z-index:3;padding:8px 12px;border:0;border-radius:999px;background:var(--c-card);color:var(--c-ink);font:700 13px var(--font-body);cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.16);transition:.2s}\n.wq-add:hover,.wq-add[aria-pressed=true]{background:var(--c-accent);color:var(--c-on-accent)}\n.wq-add.in{position:static;box-shadow:none;border:2px solid var(--c-accent);border-radius:var(--radius-btn);background:transparent;color:var(--c-accent);padding:12px 20px;font-size:15px}\n.wq-add.in[aria-pressed=true]{background:var(--c-accent);color:var(--c-on-accent)}\n.wq-host{position:relative}\n.wq-open{position:fixed;left:22px;bottom:22px;z-index:115;display:flex;align-items:center;gap:10px;padding:13px 18px;border:0;border-radius:999px;background:var(--c-accent);color:var(--c-on-accent);font:700 15px var(--font-body);cursor:pointer;box-shadow:0 10px 28px rgba(0,0,0,.24)}\n.wq-open[hidden]{display:none}\n.wq-open b{min-width:24px;height:24px;border-radius:999px;background:var(--c-on-accent);color:var(--c-accent);display:flex;align-items:center;justify-content:center;font-size:13px}\n.wq-open.pop{animation:wqpop .4s}\n@keyframes wqpop{40%{transform:scale(1.12)}}\n.wq-dlg{margin:0 0 0 auto;width:min(430px,100vw);height:100dvh;max-height:none;max-width:none;border:0;padding:24px;background:var(--c-card);color:var(--c-ink);overflow:auto}\n.wq-dlg[open]{animation:wqin .3s cubic-bezier(.2,.7,.2,1)}\n@keyframes wqin{from{transform:translateX(60px);opacity:0}}\n.wq-dlg::backdrop{background:rgba(0,0,0,.5)}\n.wq-hd{display:flex;justify-content:space-between;align-items:center;font-size:22px}\n.wq-x{border:0;background:none;font-size:30px;line-height:1;cursor:pointer;color:inherit;padding:4px 8px}\n.wq-none{color:var(--c-muted);padding:28px 0}\n.wq-dlg ul{list-style:none;padding:0;margin:12px 0}\n.wq-dlg li{display:grid;grid-template-columns:1fr auto;gap:8px 14px;padding:16px 0;border-bottom:1px solid var(--c-line);align-items:center}\n.wq-dlg li b{grid-column:1/-1;font-size:16px}\n.wq-dlg li label{font-size:13px;color:var(--c-muted);display:flex;gap:8px;align-items:center}\n.wq-dlg input{padding:10px 12px;border:1px solid var(--c-line);border-radius:var(--radius-btn);font:inherit;font-size:15px;background:var(--c-bg);color:var(--c-ink);width:100%}\n.wq-dlg li input{width:120px}\n.wq-del,.wq-clr{border:0;background:none;color:var(--c-muted);font:600 14px var(--font-body);cursor:pointer;text-decoration:underline;padding:8px 0}\n.wq-ft{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:18px}\n.wq-form{display:grid;gap:10px;margin-top:16px}\n.wq-form[hidden]{display:none}\n.wq-form .btn{justify-content:center}\n.wq-sum{border:1px dashed var(--c-accent);border-radius:var(--radius-btn);padding:12px 14px;font-size:14px;min-width:0}\n.wq-sum[hidden]{display:none}\n.wq-sum b{display:block;font-size:14px!important;margin-bottom:4px}\n.wq-sum span{white-space:pre-line}\n.wq-st{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}\n@media(max-width:700px){.wq-open{left:14px;bottom:14px;padding:11px 15px}.wq-add{padding:7px 10px;font-size:12px}}\n@media (prefers-reduced-motion:reduce){.wq-open.pop,.wq-dlg[open]{animation:none}}",
+   "js": "(function(){\n  var root=document.querySelector('.w-quote');if(!root)return;\n  var open=root.querySelector('.wq-open'),dlg=root.querySelector('dialog'),ul=root.querySelector('ul'),st=root.querySelector('.wq-st'),mini=root.querySelector('.wq-form'),KEY='b2b-quote-list';\n  var keep=location.protocol!=='about:',items=[];\n  try{if(keep)items=JSON.parse(localStorage.getItem(KEY)||'[]').filter(function(x){return x&&typeof x.name==='string'})}catch(e){items=[]}\n  function save(){try{if(keep)localStorage.setItem(KEY,JSON.stringify(items))}catch(e){}}\n  function has(n){return items.some(function(x){return x.name===n})}\n  function line(x){return x.name+(x.qty?' × '+x.qty:'')}\n  function el(t,c,s){var e=document.createElement(t);if(c)e.className=c;if(s)e.textContent=s;return e}\n  var btns=[];\n  function bind(b,n,off,on){btns.push({b:b,n:n,off:off,on:on});b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();\n    if(has(n))items=items.filter(function(x){return x.name!==n});else items.push({name:n,qty:''});\n    save();draw();st.textContent=n+(has(n)?' 已加入询价清单':' 已移出询价清单');open.classList.remove('pop');void open.offsetWidth;open.classList.add('pop')})}\n  document.querySelectorAll('.b-c3 .p,.b-c5 .p,.b-d5 .p,.b-x08 .p').forEach(function(p){var t=p.querySelector('b');if(!t)return;\n    var b=el('button','wq-add');b.type='button';p.classList.add('wq-host');p.appendChild(b);bind(b,t.textContent.trim(),'＋ 询价','✓ 已加')});\n  document.querySelectorAll('.b-c9 .p').forEach(function(p){bind(p.querySelector('.add'),p.querySelector('.sku').textContent+' '+p.querySelector('b').textContent,'＋ 加入询价','✓ 已加入')});\n  document.querySelectorAll('.b-d1 .info').forEach(function(p){var b=el('button','wq-add in');b.type='button';p.querySelector('.acts').appendChild(b);bind(b,p.querySelector('h1').textContent.trim(),'＋ 加入询价','✓ 已加入')});\n  var sums=[].slice.call(document.querySelectorAll('form')).filter(function(f){return f.querySelector('textarea')&&!f.closest('.w-quote')}).map(function(f){\n    var s=el('div','wq-sum'),h=el('input');h.type='hidden';h.name='quote_items';s.appendChild(el('b','','已选产品'));s.appendChild(el('span'));s.appendChild(h);var t=f.querySelector('textarea');t.parentNode.insertBefore(s,t);return s});\n  function sync(){var txt=items.map(line);sums.forEach(function(s){s.hidden=!items.length;s.querySelector('span').textContent=txt.join('\\n');s.querySelector('input').value=txt.join(' | ')});\n    open.hidden=!items.length;open.querySelector('b').textContent=items.length;open.setAttribute('aria-label','询价清单，'+items.length+' 个产品')}\n  function draw(){\n    btns.forEach(function(x){var on=has(x.n);x.b.textContent=on?x.on:x.off;x.b.setAttribute('aria-pressed',String(on));x.b.setAttribute('aria-label',(on?'移出询价清单：':'加入询价清单：')+x.n)});\n    root.querySelector('.wq-none').hidden=!!items.length;root.querySelector('.wq-ft').hidden=!items.length;root.querySelector('.wq-ft').style.display=items.length?'':'none';if(!items.length)mini.hidden=true;\n    ul.textContent='';items.forEach(function(x){var li=el('li'),lb=el('label','','数量'),q=el('input'),d=el('button','wq-del','删除');q.type='number';q.min='1';q.placeholder='可不填';q.value=x.qty;d.type='button';\n      q.addEventListener('input',function(){x.qty=/^[0-9]+$/.test(q.value)&&+q.value>0?q.value:'';save();sync()});\n      d.addEventListener('click',function(){items=items.filter(function(y){return y!==x});save();draw();st.textContent=x.name+' 已移出询价清单'});\n      lb.appendChild(q);li.appendChild(el('b','',x.name));li.appendChild(lb);li.appendChild(d);ul.appendChild(li)});sync()}\n  open.addEventListener('click',function(){mini.hidden=true;dlg.showModal()});\n  root.querySelector('.wq-x').addEventListener('click',function(){dlg.close()});dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});\n  root.querySelector('.wq-clr').addEventListener('click',function(){items=[];save();draw()});\n  root.querySelector('.wq-go').addEventListener('click',function(){\n    var f=[].slice.call(document.querySelectorAll('form')).filter(function(x){return x.querySelector('textarea')&&!x.closest('.w-modal,.w-quote,[hidden]')})[0],m=document.querySelector('.w-modal');\n    if(f){dlg.close();f.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}\n    else if(m){dlg.close();m.hidden=false;var i=m.querySelector('input');if(i)i.focus()}\n    else{mini.hidden=false;mini.querySelector('input').focus()}});\n  draw();\n})();",
+   "ref": "刀具工厂站 · 询价清单",
+   "fit": {
+    "pages": [
+     "首页",
+     "产品聚合页",
+     "详情页"
+    ],
+    "pos": "全站",
+    "types": [
+     "目录型",
+     "款式型",
+     "消费电子型",
+     "原材料型"
+    ],
+    "note": "产品多、一次询多个型号",
     "needs": []
    }
   }
@@ -2611,7 +3000,7 @@
      ],
      "category": [
       "H7",
-      "C3",
+      "C9",
       "C4",
       "D8",
       "Q2"
@@ -2632,6 +3021,11 @@
      "texture": [
       "G02"
      ],
+     "widget": [
+      "W01",
+      "W02",
+      "W04"
+     ],
      "fixed_motion": []
     },
     {
@@ -2642,10 +3036,12 @@
       "X01",
       "T1",
       "C1",
+      "P3",
       "F2",
       "X12",
       "A1",
       "T2",
+      "T7",
       "Q2"
      ],
      "category": [
@@ -2657,6 +3053,7 @@
      ],
      "detail": [
       "D1",
+      "D9",
       "D2",
       "D4",
       "D8",
@@ -2669,6 +3066,11 @@
      ],
      "texture": [
       "G05"
+     ],
+     "widget": [
+      "W01",
+      "W02",
+      "W04"
      ],
      "fixed_motion": []
     },
@@ -2739,6 +3141,7 @@
      "detail": [
       "D1",
       "X11",
+      "D9",
       "D2",
       "F6",
       "D8"
@@ -2964,6 +3367,7 @@
       "C6",
       "X10",
       "C1",
+      "P3",
       "F1",
       "T3",
       "Q2"
@@ -3036,6 +3440,7 @@
       "T1",
       "C1",
       "P2",
+      "A6",
       "X15",
       "F2",
       "X09",
@@ -3044,6 +3449,7 @@
      "category": [
       "H7",
       "C5",
+      "X21",
       "D8",
       "Q4"
      ],
@@ -3059,6 +3465,11 @@
      ],
      "texture": [
       "G03"
+     ],
+     "widget": [
+      "W01",
+      "W02",
+      "W04"
      ],
      "fixed_motion": [
       "M05"
@@ -3159,7 +3570,7 @@
      ],
      "category": [
       "H7",
-      "C4",
+      "C10",
       "C8",
       "D8",
       "Q4"
@@ -3167,7 +3578,7 @@
      "detail": [
       "D1",
       "D2",
-      "D4",
+      "F8",
       "D8"
      ],
      "motion": [
@@ -3517,7 +3928,8 @@
      "category": [
       "H7",
       "C3",
-      "C4",
+      "C10",
+      "X21",
       "D8",
       "Q4"
      ],
@@ -3630,6 +4042,7 @@
       "F2",
       "X12",
       "F6",
+      "F8",
       "X17",
       "Q1"
      ],
@@ -5403,6 +5816,156 @@
     }
    ],
    "notes": "只借鉴设计形式，代码、图片、文案均自行重写。页面类型上，它还有 About、FAQ、视频、Why Us、案例、博客、联系、落地页，可作为实验室扩展页面类型的依据。"
+  },
+  {
+   "id": "R002",
+   "name": "刀具工厂站",
+   "url": "",
+   "date": "2026-11-24",
+   "kind": "目录型工厂站（1,700+ 型号），首页、产品页、类目页、详情页、OEM 页、质量文件页、采购指南",
+   "tech": "WordPress 自写主题，原生 JS 和 CSS，没有动画库",
+   "core_idea": "用一段真实工厂视频贯穿首页建立信任，再让采购商一路选型号、选配置、选市场，选的内容自动写进询盘表单",
+   "patterns": [
+    {
+     "name": "询价清单：产品卡点「加入询价」，右下角计数，抽屉里填数量，自动带进所有表单",
+     "where": "类目页、详情页、全站",
+     "status": "已吸收",
+     "to": "W04"
+    },
+    {
+     "name": "OEM 需求配置器：4 步单选，实时生成项目摘要，一键写进询盘表单",
+     "where": "OEM 页",
+     "status": "已吸收",
+     "to": "X21"
+    },
+    {
+     "name": "一镜到底：首屏工厂视频固定成整页背景，各区块用半透明深色面板盖在上面",
+     "where": "首页全页",
+     "status": "已吸收",
+     "to": "M13"
+    },
+    {
+     "name": "区块浮沉：区块进入时上浮放大、离开时缩小变淡，跟着滚动走",
+     "where": "首页全页",
+     "status": "已吸收",
+     "to": "M14"
+    },
+    {
+     "name": "多级类目树 + 型号搜索 + 型号标签产品卡（目录型类目页）",
+     "where": "产品页、类目页",
+     "status": "已吸收",
+     "to": "C9"
+    },
+    {
+     "name": "出口地图可点选地区：连线高亮、区分已出口和可询价、按钮文案跟着变、国家带进表单、流光",
+     "where": "首页",
+     "status": "已吸收",
+     "to": "X06（改进）"
+    },
+    {
+     "name": "材料选择矩阵：牌号 × 硬度 × 好处 × 适合的销售渠道",
+     "where": "OEM 页",
+     "status": "已吸收",
+     "to": "C10"
+    },
+    {
+     "name": "买家类型分流三卡：自有品牌、批发、OEM",
+     "where": "首页",
+     "status": "已吸收",
+     "to": "P3"
+    },
+    {
+     "name": "资质文件档案：报告缩略图 + 编号 + 日期 + 测试范围，右侧悬浮表单",
+     "where": "质量文件页",
+     "status": "已吸收",
+     "to": "F8"
+    },
+    {
+     "name": "典型项目配方卡：销售渠道对应材料、包装和产品入口",
+     "where": "首页、OEM 页",
+     "status": "已吸收",
+     "to": "A6"
+    },
+    {
+     "name": "客户来访照片墙：自动轮换，悬停暂停，带暂停按钮",
+     "where": "首页",
+     "status": "已吸收",
+     "to": "T7"
+    },
+    {
+     "name": "表单顶部负责人卡：姓名、响应时间、电话、邮箱",
+     "where": "首页、询价页",
+     "status": "已吸收",
+     "to": "Q1（改进）"
+    },
+    {
+     "name": "首屏开场：导航和标题依次从左滑入，带轻微回弹",
+     "where": "首页首屏",
+     "status": "已吸收",
+     "to": "M15"
+    },
+    {
+     "name": "同一排卡片按列依次从左滑入，离开再进入会重播",
+     "where": "首页产品、流程",
+     "status": "已吸收",
+     "to": "M16（新动效，M01 保持原样）"
+    },
+    {
+     "name": "首屏视频：暂停按钮、手机竖版素材、播放失败换动图",
+     "where": "首页首屏",
+     "status": "已吸收",
+     "to": "X02（改进）"
+    },
+    {
+     "name": "合规标准条：目标市场说明 + 标志 + 查看文件链接",
+     "where": "首页",
+     "status": "已吸收",
+     "to": "T2（改进）"
+    },
+    {
+     "name": "详情页：选型号下拉 + 样品要确认什么 + 各型号单独询价",
+     "where": "详情页",
+     "status": "已吸收",
+     "to": "D9"
+    },
+    {
+     "name": "采购指南文章：粘性目录 + 阅读时间 + 更新日期",
+     "where": "指南文章页",
+     "status": "已吸收",
+     "to": "R3"
+    },
+    {
+     "name": "五列大菜单",
+     "where": "页头",
+     "status": "跳过",
+     "to": "已有 N3"
+    },
+    {
+     "name": "工厂视频弹窗",
+     "where": "首页",
+     "status": "跳过",
+     "to": "已有 X13"
+    },
+    {
+     "name": "正文 + 悬浮询盘表单",
+     "where": "类目页、详情页",
+     "status": "跳过",
+     "to": "已有 D8"
+    },
+    {
+     "name": "五步流程、定制选项格、目录下载横幅",
+     "where": "OEM 页、产品页",
+     "status": "跳过",
+     "to": "已有 F6/P1、P2、C8"
+    },
+    {
+     "name": "深色工业感：全黑底 + 工厂火花视频 + 单一橙色、衬线大标题配无衬线正文、4px 小圆角、短横线小标题",
+     "where": "全站视觉",
+     "status": "风格参考",
+     "to": "skill 风格调研参考，不进组件库"
+    }
+   ],
+   "notes": "只借鉴设计形式，代码、图片、文案全部重写。比原站改好的地方：悬浮清单没选产品时不出现、放左下角不挡表单；地图先点地区再询价；区块浮沉最淡时文字仍可读；过期资质标「历史存档」；配置器旁边有进度和需求单。网址不公开，存在本地 参考吸收/duck97/。"
   }
  ],
  "neutral": {
